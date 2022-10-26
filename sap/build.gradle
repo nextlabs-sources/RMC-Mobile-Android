@@ -1,0 +1,49 @@
+if (isComponent) {
+    apply plugin: 'com.android.application'
+}else {
+    apply plugin: 'com.android.library'
+}
+
+def androidConfig = rootProject.ext.androidConfig
+def sapConfig = rootProject.ext.sapConfig
+def dependencyConfig = rootProject.ext.dependencies
+
+android {
+    compileSdkVersion androidConfig.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion androidConfig.minSdkVersion
+        targetSdkVersion androidConfig.targetSdkVersion
+        versionCode sapConfig.versionCode
+        versionName sapConfig.versionName
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+			zipAlignEnabled true
+        }
+    }
+    sourceSets {
+        main {
+            // depend on system environment vairalbes
+            def sapLibPath = "${System.env.SOURCE_ANDROID_3RD_LIBS}/sap/libs"
+            jniLibs.srcDirs = ["${sapLibPath}"]
+        }
+    }
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.12'
+    // for test
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    }
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation dependencyConfig.appcompatv7
+    implementation dependencyConfig.recyclerviewv7
+}

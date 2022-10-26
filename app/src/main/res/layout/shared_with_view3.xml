@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/share_with_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/ll_container"
+    android:layout_marginEnd="17dp"
+    android:layout_marginStart="17dp"
+    android:layout_marginTop="20dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <!-- share file and email address -->
+    <TextView
+        android:id="@+id/share_file_with"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Share_with"
+        android:textColor="@color/Black"
+        android:textSize="14sp" />
+
+    <!-- input emails layout-->
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/share_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/flowLayout"
+        android:layout_marginTop="4dp">
+
+        <EditText
+            android:id="@+id/et_email_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:hint="@string/Enter_email_address"
+            android:imeOptions="flagNoExtractUi"
+            android:drawableEnd="@drawable/add_contact_btn"
+            android:inputType="text|textNoSuggestions|textMultiLine|textEmailAddress"
+            android:textColorHint="#8E8E92"
+            android:textSize="14sp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <!-- hold many email address -->
+    <com.skydrm.rmc.ui.widget.customcontrol.FlowLayout
+        android:id="@+id/flowLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/share_file_with"
+        android:layout_marginTop="10dp" />
+    <!-- comment optional -->
+    <TextView
+        android:id="@+id/comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/share_input_layout"
+        android:layout_marginTop="25dp"
+        android:text="@string/Share_comment"
+        android:textColor="@color/Black"
+        android:textSize="14sp" />
+
+    <!-- comment info -->
+    <com.skydrm.rmc.ui.widget.customcontrol.CommentWidget
+        android:id="@+id/comment_widget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/comment"
+        android:layout_marginTop="6dp"
+        android:orientation="vertical"
+        app:charLengthMax="@integer/max_250_characters"
+        app:hint="@string/add_your_message_here"
+        app:maxLines="@integer/max_lines_4" />
+
+</RelativeLayout>

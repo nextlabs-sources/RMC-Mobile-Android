@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_rights"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/command_specify_rights"
+    android:background="@color/white"
+    android:paddingTop="@dimen/dp10"
+    android:visibility="gone">
+
+    <TextView
+        android:id="@+id/rights"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp20"
+        android:text="@string/view_digital_rights"
+        android:textColor="@color/Black" />
+
+    <TextView
+        android:id="@+id/steward_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rights"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp5"
+        android:layout_marginEnd="@dimen/dp10"
+        android:text="@string/hint_msg_steward_tip"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <!-- display digital rights-->
+    <com.skydrm.rmc.ui.myspace.myvault.view.widget.ExpandableHeightGridView
+        android:id="@+id/rights_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/steward_tip"
+        android:numColumns="4"
+        android:paddingBottom="@dimen/dp10" />
+
+    <TextView
+        android:id="@+id/no_rights_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/steward_tip"
+        android:layout_marginTop="@dimen/dp30"
+        android:layout_marginBottom="@dimen/dp30"
+        android:gravity="center"
+        android:text="@string/hint_msg_nxl_not_granted_rights"
+        android:textSize="@dimen/text_size_20sp"
+        android:visibility="gone" />
+    <!-- read rights progressBar loading... -->
+    <include layout="@layout/read_rights_loading" />
+
+</RelativeLayout>

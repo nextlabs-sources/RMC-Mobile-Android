@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_permission_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="@string/permissions_applied_to_the_file"
+            android:textColor="#333333"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <com.skydrm.rmc.ui.myspace.myvault.view.widget.ExpandableHeightGridView
+            android:id="@+id/rights_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="#F2F2F2"
+            android:numColumns="4"
+            android:paddingStart="20dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="5dp" />
+
+        <include layout="@layout/read_rights_loading" />
+    </LinearLayout>
+
+    <include layout="@layout/layout_empty_rights_view" />
+
+    <include layout="@layout/layout_no_policy_view" />
+</RelativeLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ProgressBar
+        android:id="@+id/webview_load_progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="4dip"
+        android:layout_below="@id/title"
+        android:progressDrawable="@drawable/progress_bar_style"
+        android:visibility="gone" />
+
+    <!-- use LinearLayout to wrap webview aim at control the center location.-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/webview_load_progress"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <WebView
+            android:id="@+id/normalView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</RelativeLayout>

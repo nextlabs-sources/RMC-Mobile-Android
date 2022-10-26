@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="2dp"
+    android:layout_marginEnd="12dp"
+    android:layout_marginStart="12dp"
+    android:layout_marginTop="1dp"
+    android:background="@android:color/white"
+    android:padding="15dp">
+
+    <ImageView
+        android:id="@+id/iv_checked"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/icon_select"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/tv_usr_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@+id/iv_checked"
+        android:layout_toStartOf="@+id/tv_edit"
+        android:textColor="@android:color/black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="5dp"
+        android:gravity="center_vertical"
+        android:text="@string/edit_1st_Upper"
+        android:textColor="#2F80ED" />
+</RelativeLayout>

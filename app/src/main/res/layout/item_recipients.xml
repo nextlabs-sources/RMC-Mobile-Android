@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp1_5"
+    android:background="@android:color/white"
+    android:padding="@dimen/dp10">
+
+    <com.skydrm.rmc.ui.widget.avatar.AvatarView
+        android:id="@+id/user_avatar"
+        android:layout_width="@dimen/dp40"
+        android:layout_height="@dimen/dp40"
+        android:layout_alignParentStart="true"
+        android:layout_centerInParent="true"
+        android:src="@drawable/right_view_icon3" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/dp10"
+        android:layout_marginStart="@dimen/dp10"
+        android:layout_toEndOf="@+id/user_avatar"
+        android:layout_toStartOf="@+id/remove_recipients"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/recipient_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="middle"
+            android:maxLines="1"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_16sp" />
+
+        <TextView
+            android:id="@+id/recipient_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:ellipsize="middle"
+            android:maxLines="1"
+            android:textColor="#99CCA5"
+            android:textSize="@dimen/text_size_16sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/remove_recipients"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/bt_red_compbound3"
+        android:text="@string/remove"
+        android:textSize="@dimen/text_size_14sp" />
+</RelativeLayout>

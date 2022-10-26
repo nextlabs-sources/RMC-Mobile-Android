@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/view_file"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp1_5"
+        android:background="@android:color/white"
+        android:text="@string/view_file"
+        android:textAllCaps="false"
+        android:textColor="@color/sub_text_blue"
+        android:textSize="@dimen/text_size_16sp" />
+
+    <Button
+        android:id="@+id/view_file_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp1_5"
+        android:background="@android:color/white"
+        android:text="@string/view_file_info"
+        android:textAllCaps="false"
+        android:textColor="@color/sub_text_blue"
+        android:textSize="@dimen/text_size_16sp" />
+
+    <Button
+        android:id="@+id/mark_favorite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp1_5"
+        android:background="@android:color/white"
+        android:text="@string/Make_as_favorite"
+        android:textAllCaps="false"
+        android:textColor="@color/sub_text_blue"
+        android:textSize="@dimen/text_size_16sp"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/mark_offline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp1_5"
+        android:background="@android:color/white"
+        android:text="@string/Make_available_offline"
+        android:textAllCaps="false"
+        android:textColor="@color/sub_text_blue"
+        android:textSize="@dimen/text_size_16sp"
+        android:visibility="visible" />
+</LinearLayout>

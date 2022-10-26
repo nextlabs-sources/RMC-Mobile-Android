@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:focusableInTouchMode="true">
+
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:isScrollContainer="true"
+        android:orientation="vertical">
+
+        <!-- title -->
+        <include layout="@layout/more_view_title3" />
+        <!-- a split line-->
+        <View
+            android:id="@+id/horizontal_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#EFEFF1" />
+
+        <!-- file attributes: size and modified time -->
+        <LinearLayout
+            android:id="@+id/rl_fileAttribute"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="@dimen/dp10">
+            <!-- file size -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/weight_2"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/size"
+                    android:textSize="@dimen/text_size_16sp" />
+
+                <TextView
+                    android:id="@+id/file_size"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/text_size_16sp" />
+
+            </LinearLayout>
+            <!-- modified time -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/weight_3"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/last_modified_on"
+                    android:textSize="@dimen/text_size_16sp" />
+
+                <TextView
+                    android:id="@+id/last_modified_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dp5"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/text_size_16sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- content -->
+        <RelativeLayout
+            android:id="@+id/Rl_content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/ll_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- view digital rights -->
+                <include
+                    android:id="@+id/view_rights_layout"
+                    layout="@layout/view_rights_of_moreactivity3" />
+
+                <!-- protect button layout: for normal file, hide it in default. -->
+                <include layout="@layout/normal_sub_view_of_moreview3" />
+            </LinearLayout>
+
+            <!-- offline progress bar-->
+            <ProgressBar
+                android:id="@+id/offline_progressbar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_below="@+id/ll_container"
+                android:layout_marginEnd="@dimen/dp10"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp5"
+                android:background="@color/main_drak_light"
+                android:max="100"
+                android:paddingTop="0dp"
+                android:progress="0"
+                android:progressDrawable="@drawable/home_rightmenu_progressbarcolor"
+                android:visibility="invisible" />
+
+            <!-- mark favorite and offline -->
+            <!-- now hide offline mark, so remove the attr "android:weightSum="2"" in mark_layout -->
+            <!-- add attr "android:gravity="center_horizontal""-->
+
+            <LinearLayout
+                android:id="@+id/mark_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/offline_progressbar"
+                android:layout_marginEnd="@dimen/dp10"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp5"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <!-- mark as favorite -->
+                <LinearLayout
+                    android:id="@+id/favorite_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/layout_boarder3"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/make_favorite"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/dp15"
+                        android:src="@drawable/make_as_favorite_icon3" />
+
+                    <TextView
+                        android:id="@+id/tv_make_favorite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="@dimen/dp15"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:paddingEnd="@dimen/dp20"
+                        android:paddingStart="@dimen/dp20"
+                        android:text="@string/Make_as_favorite"
+                        android:textColor="@color/Black"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <!-- mark offline -->
+                <!-- hide offline feature currently -->
+                <LinearLayout
+                    android:id="@+id/offline_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/layout_boarder3"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/make_offline"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/dp15"
+                        android:src="@drawable/download_offline_icon3" />
+
+                    <TextView
+                        android:id="@+id/tv_make_offline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="@dimen/dp15"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:paddingEnd="@dimen/dp20"
+                        android:paddingStart="@dimen/dp20"
+                        android:text="@string/Make_available_offline"
+                        android:textColor="@color/Black"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Share file and Print layout -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mark_layout"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+                <!-- share file layout-->
+                <RelativeLayout
+                    android:id="@+id/share_file_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp50"
+                    android:layout_marginBottom="@dimen/dp20"
+                    android:layout_marginEnd="@dimen/dp10"
+                    android:layout_marginStart="@dimen/dp10"
+                    android:background="@drawable/layout_boarder3">
+
+                    <ImageView
+                        android:id="@+id/share_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp20"
+                        android:src="@drawable/share_black_icon3" />
+
+                    <TextView
+                        android:id="@+id/share_with_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp60"
+                        android:text="@string/Share_protected_file"
+                        android:textColor="@color/Black"
+                        android:textSize="@dimen/text_size_16sp" />
+
+                    <ImageView
+                        android:id="@+id/share_arrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="@dimen/dp20"
+                        android:src="@drawable/icon_arrow_right_black3" />
+                </RelativeLayout>
+
+                <!-- print file layout: now hide this feature  -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp50"
+                    android:layout_marginBottom="@dimen/dp20"
+                    android:layout_marginEnd="@dimen/dp20"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:background="@drawable/layout_boarder3"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp20"
+                        android:src="@drawable/print_black_icon3" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp60"
+                        android:text="@string/Print"
+                        android:textColor="@color/Black" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

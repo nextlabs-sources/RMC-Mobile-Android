@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="@integer/weight_1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <ImageButton
+                    android:id="@+id/people_particulars_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp10"
+                    android:layout_marginTop="@dimen/dp15"
+                    android:layout_marginBottom="@dimen/dp20"
+                    android:background="@color/white"
+                    android:padding="@dimen/dp15"
+                    android:src="@drawable/icon_back_3" />
+            </RelativeLayout>
+
+            <com.skydrm.rmc.ui.widget.avatar.AvatarView
+                android:id="@+id/people_particulars_avatarView"
+                android:layout_width="@dimen/dp100"
+                android:layout_height="@dimen/dp100"
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/icon_launcher" />
+
+            <TextView
+                android:id="@+id/people_particulars_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp15"
+                android:ellipsize="middle"
+                android:gravity="center"
+                android:lines="@integer/text_max_one_lines"
+                android:paddingLeft="@dimen/dp15"
+                android:paddingRight="@dimen/dp15"
+                android:text="@string/name"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/text_size_18sp" />
+
+            <TextView
+                android:id="@+id/people_particulars_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp5"
+                android:ellipsize="middle"
+                android:gravity="center"
+                android:lines="@integer/text_max_one_lines"
+                android:paddingLeft="@dimen/dp15"
+                android:paddingRight="@dimen/dp15"
+                android:text="@string/email"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/text_size_18sp" />
+
+            <RelativeLayout
+                android:id="@+id/joined_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp5"
+                android:paddingStart="@dimen/dp15"
+                android:paddingEnd="@dimen/dp15">
+
+                <TextView
+                    android:id="@+id/date_preposition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/joined_on"
+                    android:textSize="@dimen/text_size_16sp" />
+
+                <TextView
+                    android:id="@+id/people_particulars_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:layout_toEndOf="@id/date_preposition"
+                    android:textColor="@color/DimGray"
+                    android:textSize="@dimen/text_size_16sp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/pending_invited_by_name_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp5"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/dp15"
+                android:paddingEnd="@dimen/dp15">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Invited_by"
+                    android:textSize="@dimen/text_size_16sp" />
+
+                <TextView
+                    android:id="@+id/pending_invited_by_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:text=""
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/text_size_16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/pending_invited_date_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp5"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/dp15"
+                android:paddingEnd="@dimen/dp15">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/invited_on"
+                    android:textSize="@dimen/text_size_16sp" />
+
+                <TextView
+                    android:id="@+id/pending_invited_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3dp"
+                    android:text=""
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/text_size_16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/resend_and_revoke_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="@dimen/dp30"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/resend_invitation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_resend_from_project"
+            android:paddingLeft="@dimen/dp20"
+            android:paddingRight="@dimen/dp20"
+            android:text="@string/resend_invitation"
+            android:textAllCaps="false"
+            android:textColor="@color/green_light" />
+
+        <Button
+            android:id="@+id/revoke_invitation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_toEndOf="@id/resend_invitation"
+            android:background="@drawable/bg_remove_from_project"
+            android:paddingLeft="@dimen/dp20"
+            android:paddingRight="@dimen/dp20"
+            android:text="@string/revoke_invitation"
+            android:textAllCaps="false"
+            android:textColor="@color/Red" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/remove_and_invited_by_name_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="@dimen/dp30"
+        android:gravity="bottom">
+
+        <Button
+            android:id="@+id/people_remove_member"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp5"
+            android:layout_marginBottom="@dimen/dp10"
+            android:background="@drawable/bg_remove_from_project"
+            android:paddingLeft="@dimen/dp20"
+            android:paddingRight="@dimen/dp20"
+            android:text="@string/Remove_From_Project"
+            android:textAllCaps="false"
+            android:textColor="@color/Red" />
+
+        <LinearLayout
+            android:id="@+id/member_invited_by_name_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/people_remove_member"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp5"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/dp15"
+            android:paddingEnd="@dimen/dp15">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Invited_by"
+                android:textSize="@dimen/text_size_16sp" />
+
+            <TextView
+                android:id="@+id/people_invited_by_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="3dp"
+                android:text=""
+                android:textColor="@color/Black"
+                android:textSize="@dimen/text_size_16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
+
+

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_file_attr_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:padding="13dp"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/size"
+                    android:textColor="#4F4F4F"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_size_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:textColor="@color/Black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/last_modified_on"
+                    android:textColor="#4F4F4F"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tv_last_modified_time_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:textColor="@color/Black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.skydrm.rmc.ui.widget.customcontrol.rights.ADHocRightsDisplayView
+            android:id="@+id/adhoc_rights_display_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_file_attr_container"
+            android:background="#F2F2F2"
+            app:rightsTitleBackground="@android:color/white"
+            app:rightsTitleGravity="start"
+            app:rightsTitlePaddingBottom="10dp"
+            app:rightsTitlePaddingStart="10dp"
+            app:rightsTitlePaddingTop="10dp"
+            app:rightsTitleText="@string/permissions_applied_to_the_file"
+            app:rightsTitleTextColor="#333333"
+            app:rightsTitleTextSize="18sp"
+            app:showRightsTitle="true" />
+
+        <com.skydrm.rmc.ui.widget.customcontrol.share.ShareView
+            android:id="@+id/share_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/adhoc_rights_display_view" />
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center_horizontal"
+
+    >
+
+    <EditText
+        android:id="@+id/ev_ignoreReason"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/ignore_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:paddingStart="@dimen/dp10"
+        android:paddingRight="@dimen/dp10"
+        android:textSize="@dimen/text_size_15sp"
+        android:maxLength="@integer/max_250_characters"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginEnd="@dimen/dp20"
+        />
+
+</LinearLayout>

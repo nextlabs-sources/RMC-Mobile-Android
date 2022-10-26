@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="FloatingActionButton">
+        <attr name="fab_colorNormal" format="color" />
+        <attr name="fab_colorPressed" format="color" />
+        <attr name="fab_colorDisabled" format="color" />
+        <attr name="fab_colorRipple" format="color" />
+        <attr name="fab_showShadow" format="boolean" />
+        <attr name="fab_shadowColor" format="color" />
+        <attr name="fab_shadowRadius" format="dimension" />
+        <attr name="fab_shadowXOffset" format="dimension" />
+        <attr name="fab_shadowYOffset" format="dimension" />
+        <attr name="fab_size" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="mini" value="1" />
+        </attr>
+        <attr name="fab_showAnimation" format="reference" />
+        <attr name="fab_hideAnimation" format="reference" />
+        <attr name="fab_label" format="string" />
+        <attr name="fab_elevationCompat" format="dimension" />
+        <attr name="fab_progress_color" format="color" />
+        <attr name="fab_progress_backgroundColor" format="color" />
+        <attr name="fab_progress_indeterminate" format="boolean" />
+        <attr name="fab_progress_max" format="integer" />
+        <attr name="fab_progress" format="integer" />
+        <attr name="fab_progress_showBackground" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="FloatingActionMenu">
+        <attr name="menu_showShadow" format="boolean" />
+        <attr name="menu_buttonSpacing" format="dimension" />
+        <attr name="menu_labels_margin" format="dimension" />
+        <attr name="menu_labels_showAnimation" format="reference" />
+        <attr name="menu_labels_hideAnimation" format="reference" />
+        <attr name="menu_labels_paddingTop" format="dimension" />
+        <attr name="menu_labels_paddingLeft" format="dimension" />
+        <attr name="menu_labels_paddingRight" format="dimension" />
+        <attr name="menu_labels_paddingBottom" format="dimension" />
+        <attr name="menu_labels_padding" format="dimension" />
+        <attr name="menu_labels_textColor" format="reference|color" />
+        <attr name="menu_labels_textSize" format="dimension" />
+        <attr name="menu_labels_cornerRadius" format="dimension" />
+        <attr name="menu_labels_showShadow" format="boolean" />
+        <attr name="menu_labels_colorNormal" format="color" />
+        <attr name="menu_labels_colorPressed" format="color" />
+        <attr name="menu_labels_colorRipple" format="color" />
+        <attr name="menu_labels_position" format="enum">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+        <attr name="menu_icon" format="reference" />
+        <attr name="menu_animationDelayPerItem" format="integer" />
+        <attr name="menu_buttonToggleAnimation" format="reference" />
+        <attr name="menu_labels_singleLine" format="boolean" />
+        <attr name="menu_labels_ellipsize" format="enum">
+            <enum name="none" value="0" />
+            <enum name="start" value="1" />
+            <enum name="middle" value="2" />
+            <enum name="end" value="3" />
+            <enum name="marquee" value="4" />
+        </attr>
+        <attr name="menu_labels_maxLines" format="integer" />
+        <attr name="menu_fab_size" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="mini" value="1" />
+        </attr>
+        <attr name="menu_labels_style" format="reference" />
+        <attr name="menu_labels_customFont" format="string" />
+        <attr name="menu_shadowColor" format="color" />
+        <attr name="menu_shadowRadius" format="dimension" />
+        <attr name="menu_shadowXOffset" format="dimension" />
+        <attr name="menu_shadowYOffset" format="dimension" />
+        <attr name="menu_colorNormal" format="color" />
+        <attr name="menu_colorPressed" format="color" />
+        <attr name="menu_colorRipple" format="color" />
+        <attr name="menu_openDirection" format="enum">
+            <enum name="up" value="0" />
+            <enum name="down" value="1" />
+        </attr>
+        <attr name="menu_backgroundColor" format="color" />
+        <attr name="menu_fab_label" format="string" />
+        <attr name="menu_fab_show_animation" format="reference" />
+        <attr name="menu_fab_hide_animation" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="SwipeMenuLayout">
+        <attr name="leftViewId" format="reference" />
+        <attr name="rightViewId" format="reference" />
+        <attr name="contentViewId" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="SlideMenuLayout">
+        <attr name="leftViewId1" format="reference" />
+        <attr name="rightViewId1" format="reference" />
+        <attr name="contentViewId1" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="TabWidget">
+        <attr name="bottom_labels" format="reference" />
+    </declare-styleable>
+    <!--<declare-styleable name="SwipeToLoadLayout">-->
+    <!--<attr name="refresh_enabled" format="boolean" />-->
+    <!--<attr name="load_more_enabled" format="boolean" />-->
+    <!--<attr name="swipe_style" format="enum">-->
+    <!--<enum name="classic" value="0" />-->
+    <!--<enum name="above" value="1" />-->
+    <!--<enum name="blew" value="2" />-->
+    <!--<enum name="scale" value="3" />-->
+    <!--</attr>-->
+    <!--<attr name="drag_ratio" format="float" />-->
+    <!--<attr name="refresh_trigger_offset" format="dimension" />-->
+    <!--<attr name="refresh_final_drag_offset" format="dimension" />-->
+    <!--<attr name="swiping_to_refresh_to_default_scrolling_duration" format="integer" />-->
+    <!--<attr name="release_to_refreshing_scrolling_duration" format="integer" />-->
+    <!--<attr name="refresh_complete_delay_duration" format="integer" />-->
+    <!--<attr name="refresh_complete_to_default_scrolling_duration" format="integer" />-->
+    <!--<attr name="default_to_refreshing_scrolling_duration" format="integer" />-->
+    <!--<attr name="swiping_to_load_more_to_default_scrolling_duration" format="integer" />-->
+    <!--<attr name="release_to_loading_more_scrolling_duration" format="integer" />-->
+    <!--<attr name="default_to_loading_more_scrolling_duration" format="integer" />-->
+    <!--</declare-styleable>-->
+
+    <declare-styleable name="ScaleViewPage">
+        <attr name="isLeftDisplay" format="boolean" />
+        <attr name="isRightDisplay" format="boolean" />
+        <attr name="isCenterDisplay" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="AvatarView">
+        <attr name="av_border_color" format="color" />
+        <attr name="av_border_width" format="dimension" />
+        <attr name="av_text_size_percentage" format="integer" />
+    </declare-styleable>
+
+    <!-- custom ToggleButton attrs -->
+    <declare-styleable name="CustomToggleButton">
+        <attr name="onLineColor" format="color" />
+        <attr name="onCircleColor" format="color" />
+        <attr name="offLineColor" format="color" />
+        <attr name="offCircleColor" format="color" />
+        <attr name="btnWidth" format="integer" />
+        <attr name="btnHeight" format="integer" />
+        <attr name="circleRadius" format="integer" />
+        <attr name="lineWidth" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="CommentWidget">
+        <attr name="charLengthMax" format="integer" />
+        <attr name="hint" format="string" />
+        <attr name="maxLines" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="EditWatermarkWidget">
+        <attr name="editCharLengthMax" format="integer" />
+        <attr name="editHint" format="string" />
+        <attr name="editMaxLines" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="CalendarView">
+        <attr name="minDate" format="string" />
+        <attr name="maxDate" format="string" />
+        <attr name="monthTextAppearance" format="integer" />
+        <attr name="weekDayTextAppearance" format="integer" />
+        <attr name="dateTextAppearance" format="integer" />
+        <attr name="daySelectorColor" format="integer" />
+        <attr name="firstDayOfWeek" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="TextAppearance">
+        <attr name="fontFamily">sans-serif-medium</attr>
+        <attr name="textSize">16sp</attr>
+        <attr name="textColor">#000</attr>
+    </declare-styleable>
+    <declare-styleable name="AutoFlowLayout">
+        <attr name="labelTextSize" format="dimension" />
+        <attr name="normalTextColor" format="color" />
+        <attr name="normalBackground" format="reference|color" />
+        <attr name="selectTextColor" format="color" />
+        <attr name="selectBackground" format="reference|color" />
+        <attr name="disabledTextColor" format="color" />
+    </declare-styleable>
+    <declare-styleable name="ADHocRightsDisplayView">
+        <attr name="showRightsTitle" format="boolean" />
+        <attr name="rightsTitleTextSize" format="dimension" />
+        <attr name="rightsTitleMarginStart" format="dimension" />
+        <attr name="rightsTitleMarginTop" format="dimension" />
+        <attr name="rightsTitleMarginEnd" format="dimension" />
+        <attr name="rightsTitleMarginBottom" format="dimension" />
+        <attr name="rightsTitlePaddingStart" format="dimension" />
+        <attr name="rightsTitlePaddingTop" format="dimension" />
+        <attr name="rightsTitlePaddingEnd" format="dimension" />
+        <attr name="rightsTitlePaddingBottom" format="dimension" />
+        <attr name="rightsTitleTextColor" format="reference|color" />
+        <attr name="rightsTitleText" format="string" />
+        <attr name="rightsTitleBackground" format="reference|color" />
+        <attr name="rightsTitleGravity" format="enum">
+            <enum name="start" value="0" />
+            <enum name="center" value="1" />
+        </attr>
+    </declare-styleable>
+</resources>

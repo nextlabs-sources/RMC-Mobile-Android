@@ -1,0 +1,926 @@
+<!--
+Format:
+
+- use standard section to group you string set
+                    // see the first Common section for details
+- string name convention:
+       prefix_stringName_postfix
+    prefix key word:
+       c,      // common ,the value you want to share with others
+               // for example :
+               //       c_OK : OK
+                        c_Ok : Ok
+       hint,        // *** this string will as a hint message to prompt user, partly have common nature
+       hint_*,
+            hint_network
+            hint_label
+            hint_msg
+                hint_msg_ask   // something like :  are you sure, do you really want to
+            hint_expt
+       aty,         // activity
+       //others
+    postfix key word:
+       uppercase,   // all the chars in this string is UPPERCASE
+       initcap,     // first char int this string is uppercase
+       initcap_3dot // initcap with 3dot like Abc...
+       fmtmark,     // format mark, means this string has contains some format marks like this is %s book
+-->
+<resources>
+    <!---->
+    <!-- Your Section -->
+    <!---->
+    <!---->
+    <!-- End Your Section -->
+    <!---->
+
+
+    <!---->
+    <!--Common/Shared section-->
+    <!---->
+    <string name="app_name">SkyDRM</string>
+    <string name="app_chooser">Use a different app.</string>
+    <string name="no_app_choose">There is no app to choose.</string>
+    <string name="common_ok_uppercase">OK</string>
+    <string name="common_cancel_initcap">Cancel</string>
+    <string name="wait_share">Sharing&#8230;</string>
+    <string name="wait_protect">Protecting&#8230;</string>
+    <string name="wait_upload">Uploading&#8230;</string>
+    <string name="wait_load">Loading&#160;</string>
+    <string name="wait_load_3dots">Loading&#8230;</string>
+    <string name="protect">Protect</string>
+    <string name="add_email_address">Add an email address</string>
+    <string name="common_message">message</string>
+    <string name="common_waiting_initcap_3dots">Waiting&#8230;</string>
+    <string name="initcap_exit_if_press_again">Press again to exit.</string>
+    <!-- begin for const key word,  c_*-->
+    <string name="c_Ignore">Ignore</string>
+    <string name="Decline">Decline</string>
+
+    <string name="c_Loading_with3dots">Loading&#8230;</string>
+    <string name="c_Processing_with3dots">Processing&#8230;</string>
+    <!-- end for c_*-->
+
+    <!---->
+    <!-- End Common/Shared section -->
+    <!---->
+
+
+    <!---->
+    <!-- Hint Section -->
+    <!---->
+    <string name="hint_msg_repo_update_failed">Access failed. Check the status of your network or repository and try again.</string>
+    <string name="hint_msg_repo_bind_failed">An error occurred while binding the repository.</string>
+    <string name="hint_msg_repoNotExistWhenReauth">This repository does not exist.</string>
+    <string name="hint_msg_repoNameInvalid">The repository name is not valid.</string>
+    <string name="hint_msg_repoNameTooLong">The repository name is too long.</string>
+    <string name="hint_msg_repoNameViolation">The repository name contains illegal special characters.</string>
+    <string name="hint_msg_repoNameEdit_error_general">An error occurred while editing this repository name.</string>
+    <string name="hint_msg_oauth2_failed">Authentication failed for this repository.</string>
+    <string name="hint_msg_password_format">The password must be at least 8 characters long, and contain at least one alphabet, one number and one special character.</string>
+    <string name="hint_msg_username_format">The display name cannot contain special characters.</string>
+    <string name="hint_msg_require_input_userName">Enter your name.</string>
+    <string name="hint_msg_require_input_url">Enter the URL.</string>
+    <string name="hint_msg_require_input_password">Enter your password.</string>
+    <string name="hint_msg_require_input_current_password">The current password is required.</string>
+    <string name="hint_msg_require_input_new_password">The new password is required.</string>
+    <string name="hint_msg_mismatch_password">Passwords do not match.</string>
+    <string name="hint_msg_session_expired">Your session has expired. You must log in again.</string>
+    <string name="hint_msg_ask_delete_repo_in_rms">Do you really want to disconnect this repository?</string>
+    <string name="hint_msg_ask_log_out">Do you really want to log out?</string>
+    <string name="hint_msg_ask_log_out_when_marking_offline">There is marking offline task,if you login out,it will cancel task,are you sure to log out?</string>
+    <string name="hint_msg_ask_clean_cache">Are you sure you want to delete the cached files?</string>
+    <string name="hint_msg_deny_protect_nxl_file">The file you selected is already protected.</string>
+    <string name="hint_msg_deny_upload_nxl_file_to_project">You are not authorized  to upload a protected file.</string>
+    <string name="hint_msg_nxl_invalid_type">The NXL file you are trying to operate is not valid.</string>
+    <string name="error_network_unreach_msg">Network connection is required to perform this operation.</string>
+    <string name="hing_msg_create_folder_failed">An error occurred while creating the folder.</string>
+    <string name="hint_msg_download_file_failed">An error occurred while downloading the file.</string>
+    <string name="hint_msg_steward_tip">As the file owner, you have all rights to this file. Here are the rights granted to other users:</string>
+    <string name="hint_msg_show_log_not_steward_failed">Only the file owner can check the activity log.</string>
+    <string name="hint_msg_nxl_not_granted_rights">You have not been granted any rights.</string>
+    <string name="hint_msg_enter_email_requires">Add email address</string>
+    <string name="hint_msg_share_myvault_file">Add a message to be included in the notification email.</string>
+    <string name="hint_msg_upload_file_maxsize_limit">The file exceeds the maximum allowed size for upload (150MB). Reduce the file size or select a different file.</string>
+    <string name="hint_msg_valid_period">The validity period of the file is incorrectly defined. Specify it in \'Preference\' settings.</string>
+    <string name="hint_the_url_is_empty">The URL is empty.</string>
+    <string name="hint_the_url_format_is_invalid">The URL format is invalid.</string>
+    <string name="hint_the_url_is_not_changed">The URL is not changed.</string>
+    <string name="hint_msg_delete_url">Do you really want to delete the URL?</string>
+    <string name="hint_msg_delete_url_deny">Changes should be saved firstly,then can remove it.</string>
+    <string name="hint_the_url_existed">The URL already exists.</string>
+    <string name="hint_msg_repo_bind_exists">Repository already exists.</string>
+    <string name="hint_msg_share_file_expired">The file you are sharing is expired.</string>
+    <string name="hint_msg_no_rights_found">No rights found according to the given classification.</string>
+    <string name="hint_msg_no_rights_evaluated">No permissions determined by centralized policies.</string>
+    <string name="hint_msg_already_a_protected_file">The file you have selected is already protected.</string>
+    <string name="hint_create_folder_rules">The name should not exceed 50 characters or contain any special characters</string>
+    <string name="hint_msg_delete_file">Are you sure to delete file: %s ?</string>
+    <string name="hint_msg_delete_folder">Are you sure to delete folder: %s ? </string>
+
+    <!--Repo details page-->
+    <string name="hint_msg_get_repo_info_failed">An error occurred while updating the repository information.</string>
+    <!-- exception message -->
+    <string name="excep_nxl_rights_expired">The file rights protection has expired.</string>
+    <string name="excep_not_nxl_file">This is not an NXL file.</string>
+    <string name="excep_token_access_deny">You are not authorized to view this file.</string>
+    <string name="excep_token_access_deny_offline">You are not authorized to access this file.</string>
+    <string name="excep_no_share_right">You are not granted to share this file.</string>
+    <string name="excep_file_not_find">The file is not found.</string>
+    <string name="excep_invalid_name">The project name is too long or contains illegal characters.</string>
+    <string name="excep_invalid_description">The project description Too Long.</string>
+    <string name="excep_project_already_exist">The project name already exists.</string>
+    <string name="excep_network_unavailable">Network connection is unavailable. Try again later.</string>
+    <string name="excep_export_google_file">The Google file is too large to be exported.</string>
+    <string name="excep_operation_failed">The operation failed.</string>
+    <string name="excep_download_failed">Downloading failed.</string>
+    <string name="excep_folder_name">Invalid folder name.</string>
+    <string name="excep_folder_existed">The folder already exists.</string>
+    <string name="excep_invitation_expired">The invitation has expired.</string>
+    <string name="excep_invitation_declined">The invitation was already declined.</string>
+    <string name="excep_invitation_accepted">The invitation was already accepted.</string>
+    <string name="email_address_mismatch">The email address does not match.</string>
+    <string name="excep_invitation_revoked">The invitation was already revoked.</string>
+    <string name="excep_forbidden">The operation failed. You might have been removed from the project.</string>
+    <string name="excep_share_link_denied_access">You are not authorized to view this file.</string>
+    <string name="excep_file_existed">A file with the same name already exists in the current folder.</string>
+    <string name="excep_storage_exceed">The drive storage limit was exceeded.</string>
+    <string name="excep_not_granted_share_rights">You are not authorized to share this file.</string>
+    <string name="excep_file_name_too_long">This file name is too long. The file name must be less than 128 characters.</string>
+    <string name="excep_offline_token_expired">Current offline file is expired,do you want to refresh it?</string>
+
+    <string name="err_excpt_cache_file_create">Cannot create a cache file in the SD card.</string>
+    <string name="err_excpt_cache_dir_create">Cannot create a cache directory in the SD card.</string>
+    <string name="err_excpt_local_repo_invalid_mount_point">The mount point is null.</string>
+    <string name="err_excpt_local_repo_invalid_service_param">Invalid service parameter.</string>
+    <string name="err_excpt_local_repo_service_supported">This service type is not supported.</string>
+    <string name="err_excpt_local_repo_install">Cannot install this repository.</string>
+    <string name="err_reshare_revoked_file">Rights to this file have been revoked for all users.</string>
+    <string name="err_reshare_denied">You are not authorized to share this file.</string>
+    <string name="err_evaluate_denied">You are not authorized to perform this action.</string>
+    <!---->
+    <!-- End Hint Section -->
+    <!---->
+
+
+    <!---->
+    <!--Sharepoint section-->
+    <!---->
+    <string name="prompt_username">USERNAME</string>
+    <string name="add_account">Add&#8230;</string>
+    <string name="prompt_url">URL</string>
+    <string name="prompt_password">PASSWORD</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="action_add_account">ADD ACCOUNT</string>
+    <string name="error_sharePointOnline_login">Login to SharePoint Online failed. Check your credentials and try again.</string>
+    <string name="error_sharePointOnline_site_url">Binding SharePoint Online failed. Access to site URL failed.</string>
+    <!---->
+    <!--End Sharepoint section-->
+    <!---->
+
+
+    <!---->
+    <!-- Activity Supported Cloud section -->
+    <!---->
+    <string name="title_activity_supported_cloud">SupportedCloud</string>
+    <!-- start an activity to get an new account-->
+    <integer name="req_pick_a_cloud_service">0x0001</integer>
+    <string name="picked_cloud_name">PICKED_CLOUD_NAME</string>
+    <!---->
+    <!-- End Activity Supported Cloud section-->
+    <!---->
+
+    <!---->
+    <!--Activity Splash section -->
+    <!---->
+    <string name="welcome_to_skyDRM">Welcome to SkyDRM</string>
+    <string name="signup">Create one for free!</string>
+    <string name="already_have_account">Already have account?</string>
+    <string name="no_account">No account?</string>
+    <string name="login">Log in</string>
+    <!-- page 1-->
+    <string name="welcom_page1_text1">Protect, monitor, and share</string>
+    <string name="welcom_page1_text2">your files securely</string>
+    <string name="welcom_page1_text3">anywhere</string>
+    <!-- page 2-->
+    <string name="page2_text1">Share files securely using</string>
+    <string name="page2_text2">digital rights</string>
+    <string name="page2_text3">with anyone, anywhere</string>
+    <!-- page 3-->
+    <string name="page3_text1">Protect files</string>
+    <string name="page3_text2">across multiple</string>
+    <string name="page3_text3">cloud repositories</string>
+    <!-- page 4-->
+    <string name="page4_text1">Access files managed in a</string>
+    <string name="page4_text2">file vault</string>
+    <string name="page4_text3">from any device</string>
+    <!-- page 5-->
+    <string name="page5_text1">Revoke, track, and monitor</string>
+    <string name="page5_text2">usage</string>
+    <string name="page5_text3">of your files</string>
+    <!---->
+    <!--End Activity Splash section -->
+    <!---->
+
+
+    <!---->
+    <!--Repository System section-->
+    <!---->
+    <!--fields for supported repository name-->
+    <string name="name_dropbox">Dropbox</string>
+    <string name="name_onedrive">OneDrive</string>
+    <!--<string name="name_msonedrive">MicrosoftOneDrive</string>-->
+    <string name="name_sharepoint">SharePoint</string>
+    <string name="name_sharepointonline">SharePoint Online</string>
+    <string name="name_box">Box</string>
+    <string name="name_googledrive">Google Drive</string>
+    <string name="error_repo_mismatch_account">The repository details do not match the data in the server.</string>
+    <string name="fs_hint_msg_failed_listing">An error occurred while listing the files and folders.</string>
+
+    <!---->
+    <!--End Repository System section-->
+    <!---->
+
+    <!---->
+    <!-- Engine Section -->
+    <!---->
+    <string name="hint_msg_error_while_process">An error occurred while processing the file.</string>
+    <string name="hint_msg_error_while_process_bad_format_file">You are attempting to view a file in bad format.</string>
+    <string name="hint_msg_error_token_access_deny">You are not authorized to view this file.</string>
+    <string name="file_format_not_supported">You are attempting to view a file type that is not supported currently.</string>
+    <string name="hint_msg_error_view_unsupported_file_type">@string/file_format_not_supported</string>
+    <string name="check_rights">Checking rights&#8230;</string>
+    <string name="get_metaData">Getting rights&#8230;</string>
+    <string name="myVault_delete">Deleting&#8230;</string>
+    <string name="revoking">Revoking&#8230;</string>
+
+    <!---->
+    <!-- End Engine Section -->
+    <!---->
+
+
+    <!---->
+    <!-- Activity View Section -->
+    <!---->
+    <string name="down_load_failed">Download failed. Try again?</string>
+    <!---->
+    <!-- End Activity View Section -->
+    <!---->
+
+    <!---->
+    <!-- 3rd party hoops&sap Section -->
+    <!---->
+    <string name="orbit_button">Orbit button</string>
+    <string name="zoom_area_button">Zoom area button</string>
+    <string name="select_button">Select button</string>
+    <string name="select_area_button">Select area button</string>
+    <string name="fly_button">Fly</string>
+    <string name="operators">Operators</string>
+    <string name="modes">Modes</string>
+    <string name="user_code">User code</string>
+    <string name="cuttingPlane">Cutting plane</string>
+    <string name="ss">SS</string>
+    <string name="sm">SM</string>
+    <string name="hl">HL</string>
+    <string name="fr">FR</string>
+    <string name="_2">Y</string>
+    <string name="_1">X</string>
+    <string name="_3">Z</string>
+    <!---->
+    <!-- End 3rd party hoops&sap Section -->
+    <!---->
+
+
+    <string name="please_input_email">Enter an email address.</string>
+    <string name="error_email_format">The following email address is wrong:</string>
+
+
+    <string name="downloading">Downloading&#8230;</string>
+    <string name="init_value">0%</string>
+    <string name="nickname">Enter a repository name</string>
+
+
+    <!--Home activity strings-->
+    <string name="search_no_result">No result</string>
+    <string name="clean_cache_content">Cache size:</string>
+    <string name="home_left_nav_profile">Profile</string>
+    <string name="normal_drive_bind_multiple">The repository account already exists.</string>
+
+    <string name="home_rightinitial_download">  </string>
+    <string name="upload">UPLOAD</string>
+
+    <!-- ignore invite dialog in projectDetails -->
+    <string name="hint_msg_ask_ignore_reason">Are you sure you want to ignore the invitation?</string>
+    <string name="ignore_hint">Provide a reason for ignoring (Optional).</string>
+    <string name="accept_invitation_succeed">Accepted the invitation successfully.</string>
+    <string name="ignore_success">Ignored the invitation successfully.</string>
+    <string name="Remove_From_Project">Remove from project</string>
+    <string name="waite_creating">Creating&#8230;</string>
+    <!-- in view activity-->
+    <string name="label_activity_viewActivity">ViewActivity</string>
+    <string name="view_activity_share">SHARE</string>
+
+    <!-- protect view-->
+    <string name="protect_view">View</string>
+
+    <!-- rights of the protect view -->
+    <string name="protect_right_view">View</string>
+    <string name="protect_right_edit">Edit</string>
+    <string name="protect_right_print">Print</string>
+    <string name="protect_right_share">Share</string>
+    <string name="protect_right_download">Download</string>
+
+    <!-- "more" and protect, share view  -->
+
+    <string name="share_view_overlay">@string/Watermark</string>
+
+
+    <string name="add_repository_desc">Select a repository to connect to</string>
+
+    <!-- start an activity to get an new account-->
+    <string name="title_activity_new_login2">LoginActivity</string>
+    <string name="category_back2">Back</string>
+    <string name="setting">Setting</string>
+    <string name="connected_repositories">Connected repositories</string>
+    <string name="connected_repository">Connected repository</string>
+    <string name="no_repo_connect">No repository selected. Tap Repository to select a file or a folder.</string>
+    <string name="empty_folder">This folder is empty.</string>
+    <string name="changephoto">Change photo</string>
+    <string name="logout">Log out</string>
+    <!--fields for help-->
+    <string name="help">Help</string>
+    <string name="back">Back</string>
+    <string name="version_">Version %s</string>
+    <string name="cache">Cache</string>
+    <string name="edit_account">Edit account</string>
+    <string name="add_repository">Add repository</string>
+
+
+    <!-- start section for rmUse-->
+    <string name="excep_incorrect_password">The password is incorrect</string>
+    <string name="excep_too_many_attemps">Too many attempts.</string>
+    <!-- end section for rmUser-->
+
+    <!-- hint information -->
+    <string name="info_empty_file">This file is empty.</string>
+    <string name="info_invalid_file_name">The file name exceeds 128 characters.</string>
+    <string name="info_file_not_exist">The file does not exist.</string>
+
+    <!-- other -->
+    <string name="change_password">Change password</string>
+    <string name="go_select_repository">Select a repository</string>
+    <string name="my_vault">MyVault</string>
+    <string name="loading_more">loading more</string>
+    <string name="share">Share</string>
+    <string name="delete">Delete</string>
+    <string name="mySpace">MySpace</string>
+    <string name="file_has_been_shared_with">The file has been shared with:</string>
+    <string name="this_file_has_been_deleted">This file has been deleted.</string>
+
+    <string name="new_project">New project</string>
+    <string name="Description">Description</string>
+    <string name="Name_of_the_project">The name of the project</string>
+    <string name="invite_users_to_the_project">Invite users to the project</string>
+    <string name="you_can_skip_this_and_invite_people_to_the_project_later">You can skip this step and invite people to the project later</string>
+    <string name="please_input_project_name">Specify a name for the project.</string>
+    <string name="please_input_brief_for_project">Give a brief description about the project.</string>
+
+    <string name="log">Log</string>
+    <string name="Files">Files</string>
+    <string name="Add">Add</string>
+    <string name="updating">Updating&#8230;</string>
+    <string name="search_hint_tip">Begin your search</string>
+    <string name="files">Files</string>
+    <string name="myVault">MyVault</string>
+    <string name="project">Project</string>
+
+    <string name="PatchedTextView_tip">The file name contains invalid characters.</string>
+    <string name="file_list">File list</string>
+
+
+    <string name="camera">Camera</string>
+    <string name="photos">Photos</string>
+    <string name="select_type">Select type</string>
+    <string name="create_folder">Create folder</string>
+    <string name="Members">Members</string>
+    <string name="last_sync">Last sync</string>
+    <string name="license">License</string>
+    <string name="contact">Contact</string>
+    <string name="session">Session</string>
+
+    <string name="sync_now">Sync now</string>
+    <string name="failed_try_again">Failed. Try again.</string>
+    <string name="Empty_Data">Empty data. </string>
+    <string name="load_error">Network error.</string>
+    <string name="upload_file_to_repository_success">Uploading the file to the repository is successful.</string>
+    <string name="revoke_all_rights">Revoke all rights</string>
+    <string name="as_the_document_steward_you_have_all_rights_here_are_the_rights_granted_to_other_users">As the file owner, you have all rights to this file. Here are the rights granted to other users:</string>
+    <string name="file_rights">File rights:</string>
+    <string name="rights_granted">Rights granted:</string>
+    <string name="copy_link">Copy link</string>
+    <string name="file_link">File link:</string>
+    <string name="shared_on">Shared on</string>
+    <string name="share_the_file_with">Share with more people:</string>
+    <string name="comment_optional">Comment (optional):</string>
+    <string name="manage">Manage</string>
+    <string name="update">Update</string>
+    <string name="email_is_not_valid">The email address %s is not valid.</string>
+    <string name="email_is_required">An email address is required.</string>
+    <string name="Invite">Invite</string>
+    <string name="this_file_has_been_revoked">Rights to this file have been revoked for all users.</string>
+    <string name="details">DETAILS</string>
+    <string name="dialog_yes">YES</string>
+    <string name="already_member_info"> is already a member.</string>
+    <string name="already_members_info"> are already members.</string>
+    <string name="have_invited_info"> have been invited.</string>
+    <string name="has_invited_info"> has been invited.</string>
+    <!---->
+    <!--for all MSG-->
+    <!---->
+    <string name="set_password">Set password</string>
+    <string name="YES">YES</string>
+    <string name="NO">NO</string>
+    <string name="folder_name_rules">The folder name can only contain alphanumeric characters, spaces, hyphens, and underscores.</string>
+    <string name="folder_name_is_empty">The folder name is empty.</string>
+    <string name="project_name_rules">The project name only allows special characters like \' \" , - _ #</string>
+    <string name="repositories">Repositories</string>
+    <string name="additional_doc_sources">Additional Document Sources</string>
+    <string name="revoke_all_rights_warning">Revoking this file will revoke all the rights for everyone with whom this file has been shared. You can still access the file. Are you sure you want to revoke the file?</string>
+    <string name="user">User</string>
+    <string name="operation">Operation</string>
+    <string name="device_id">Device ID</string>
+    <string name="application">Application</string>
+    <string name="time">Time</string>
+    <string name="result">Result</string>
+    <string name="move_and_zoom">Move and zoom</string>
+    <string name="sure">Sure</string>
+    <string name="access_denied">Access denied</string>
+    <string name="invalid_tenant">Invalid tenant</string>
+    <!--The new UI msg -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_item_home">Home</string>
+    <string name="navigation_item_files">Files</string>
+    <string name="navigation_item_myDrive">MyDrive</string>
+    <string name="navigation_item_myVault">MyVault</string>
+    <string name="navigation_item_all_files">All Files</string>
+    <string name="navigation_item_MySpace">MySpace</string>
+    <string name="navigation_item_projects">Projects</string>
+    <string name="navigation_item_workspace">WorkSpace</string>
+    <string name="common_loading_message">Loading…</string>
+    <string name="common_error_msg">Something went wrong.</string>
+    <string name="common_no_network_msg">No network connection.</string>
+    <string name="action_settings">setting</string>
+    <string name="getting_started">Getting started</string>
+    <string name="about_skydrm">About SkyDRM</string>
+    <string name="save">Save</string>
+    <string name="copy_rights">Copyright(C) %d NextLabs,Inc. All rights reserved.</string>
+    <string name="create_a_folder">Create a folder</string>
+    <string name="add_file">Add file</string>
+    <string name="add_a_file">Add a file</string>
+    <string name="scan_a_document">Scan a document</string>
+    <string name="connect">Connect</string>
+    <string name="Add_a_Repository">Add a document source</string>
+    <string name="Repository">Repository</string>
+    <string name="Add_a_document">Add a document</string>
+    <string name="source">source</string>
+    <string name="share_lowcase">Share a protected file</string>
+    <string name="nextlabs_repos">NextLabs repositories</string>
+    <string name="user_name3">User name</string>
+    <string name="email_address">Email address</string>
+    <string name="type">Type</string>
+    <string name="offline_size">Offline size</string>
+    <string name="cache_size">Cache size</string>
+    <string name="total_size">Total size</string>
+    <string name="clean_cache">Clean cache</string>
+    <string name="remove">Remove</string>
+    <string name="edit_name">Edit name</string>
+    <string name="share_from_library">Share from library</string>
+    <string name="protect_from_library">Protect from library</string>
+    <string name="upload_from_library">Upload from library</string>
+    <string name="create">Create</string>
+    <string name="view_file">View file</string>
+    <string name="view_file_info">View file info</string>
+    <string name="file_access_link">File access link</string>
+    <string name="shared_with">Shared with</string>
+    <string name="share_with_more_people">Share with more people</string>
+    <string name="select">Select</string>
+    <string name="add_foler_to_library">Add a folder to the library</string>
+    <string name="new_folder">New folder</string>
+    <string name="name_your_folder">Name your folder</string>
+    <string name="enter_a_folder_name">Enter a folder name</string>
+    <string name="empty_msg_for_myvault">There is no file yet.</string>
+    <string name="activity_log">Activity log</string>
+    <string name="summary">Summary</string>
+    <string name="empty_search">No search result.</string>
+    <string name="folder_create_tip">Folder will be created in</string>
+    <string name="camera_file_null">Camera file null</string>
+    <string name="star">*</string>
+    <string name="name_must_not_exceed_150_characters_or">The name must not exceed 150 characters or</string>
+    <string name="contain_any_special_characters">contain any special characters.</string>
+    <!---->
+    <!--end for all MSG-->
+    <!---->
+
+    <string name="Welcome">Welcome</string>
+    <string name="left_bracket">( </string>
+    <string name="right_bracket"> )</string>
+    <string name="Alex">Alex</string>
+    <string name="used">%s used</string>
+    <string name="free">%s free</string>
+    <string name="MySpace_Storage">MySpace</string>
+    <string name="project_Files">%s</string>
+
+
+    <string-array name="repositoryName">
+        <item>@string/navigation_item_myDrive</item>
+        <item>@string/my_vault</item>
+        <item>@string/name_workspace</item>
+        <!--        <item>@string/MySpace_Storage</item>-->
+    </string-array>
+
+    <!-- protect & share -->
+    <string name="Protect">Create a protected file</string>
+    <string name="Create_protected_file">Create a protected file</string>
+    <string name="Share_protected_file">Share a protected file</string>
+    <string name="create_protected_file_and_share">Create protected file and share</string>
+    <string name="Protect_and_share">Protect and share</string>
+    <string name="Specify_digital_rights">Specify digital rights</string>
+    <string name="Content">Content</string>
+    <string name="View">View</string>
+    <string name="Print">Print</string>
+    <string name="Collaboration">Collaboration</string>
+    <string name="Share">Share</string>
+    <string name="Download">Download</string>
+    <string name="Effect">Effect</string>
+    <string name="Watermark">Watermark</string>
+    <string name="Share_with">Share with</string>
+    <string name="Share_comment">Message(optional)</string>
+    <string name="Share_file">Share file</string>
+    <string name="Enter_email_address">Enter multiple email addresses separated with space.</string>
+    <string name="view_digital_rights">Digital rights applied to this file</string>
+    <string name="Make_as_favorite">Mark as favorite</string>
+    <string name="Make_available_offline">Make available offline</string>
+    <string name="Available_offline">Available offline</string>
+    <string name="Favorited">Unmark favorite</string>
+    <string name="offlined">Make unavailable offline</string>
+    <string name="more_view_protect">Protect file</string>
+    <string name="protect_success_tip">has been successfully protected.</string>
+    <string name="share_success_tip">has been shared as a link via email with</string>
+    <string name="nxl_has_been_saved_to_myVault">The protected file has been saved to MyVault.</string>
+    <string name="and_so_on">and so on.</string>
+    <string name="Not_view_mp4">Cannot preview a video file.</string>
+    <string name="Not_view_3d">Cannot preview a 3D file.</string>
+    <string name="read_rights_failed">Read rights failed.</string>
+
+    <!-- change watermark -->
+    <string name="watermark_change">Change</string>
+    <string name="edit_watermark">Edit watermark</string>
+    <string name="add_preset">Add preset values</string>
+    <string name="add_line_break">Add a line break</string>
+    <string name="edit_watermark_tip">Edit the existing watermark by either typing a custom value or by clicking the preset values.</string>
+    <string name="watermark_empty_tip">The watermark cannot be empty.</string>
+    <string name="watermark_exceeds_50_tip">The watermark string exceeds 50 characters.</string>
+    <string name="watermark_can_not_is_empty">The watermark cannot be empty.</string>
+
+    <!-- change expiration -->
+    <string name="Expiration">Expiration</string>
+    <string name="Validity">Validity</string>
+    <string name="never_expire">Never expire</string>
+    <string name="specify_rights_expiry_date">Specify rights expiry date</string>
+    <string name="expiry_relative">Relative</string>
+    <string name="Rights_will_expire_on">Rights will expire on</string>
+    <string name="Rights_will_never_expire">Rights will never expire</string>
+    <string name="Until">Until</string>
+    <string name="Specify_relative_rights_validity_period">Specify relative digital rights validity period.</string>
+    <!-- used to prompt info when rights expired  -->
+    <string name="Not_authorized_view_when_expire">You are not authorized to view this file.</string>
+    <string name="share_rights_expired">The file you are sharing is expired.</string>
+
+    <!-- command operate file -->
+    <string name="do_not_protect_tip">Do not protect, just upload this file.</string>
+    <string name="file_will_be_saved_to">File will be saved to</string>
+    <string name="folder_will_be_saved_to">Folder will be saved to</string>
+    <string name="shared_file_will_be_added_to">Shared file will be added to</string>
+    <string name="protected_file_will_be_added_to">Protected file will be added to</string>
+    <string name="MyVault">MyVault</string>
+    <string name="adding_file">Adding file&#160;</string>
+    <string name="Change">Change</string>
+    <string name="Upload_file_succeed">Uploaded successfully.</string>
+    <string name="Upload_file_failed_no_period">Uploading failed.</string>
+    <string name="MyDrive">MyDrive</string>
+
+    <!-- others -->
+    <string name="z_to_a">Z to A</string>
+    <string name="a_to_z">A to Z</string>
+    <string name="Refresh">Refresh</string>
+    <string name="view_activity">View activity</string>
+    <string name="project_files_content_menu_view_file">View file</string>
+    <string name="project_files_content_menu_view_file_info">View file info</string>
+    <string name="invite_members">Invite members</string>
+    <string name="Invited">Invited</string>
+    <string name="size">Size</string>
+    <string name="last_modified_on">Last modified on</string>
+    <string name="apply">Apply</string>
+    <string name="Select">Select</string>
+    <string name="initialize">Initializing…</string>
+    <string name="date">Date</string>
+    <string name="filter">Filter</string>
+    <string name="sort_by">Sort by</string>
+    <string name="repository">Repository</string>
+    <string name="home_available">available</string>
+    <string name="shared_by">Shared by</string>
+    <string name="Go_to">Go to</string>
+    <string name="Switch_to">Switch to</string>
+
+    <string name="Collaborate_in_project_securely">Collaborate in a project securely</string>
+    <string name="Try_SkyDRM_Project">Try SkyDRM project.</string>
+    <string name="Activate">Activate</string>
+    <string name="The_invites_have_been_sent">The invitation has been sent.</string>
+    <string name="Project">Project</string>
+    <string name="Create_a_Project">Create a project</string>
+    <string name="Store_and_manage_documents_for_the_project_for_secure_sharing_across_project_team">Store and manage files for the project for secure sharing across project team.</string>
+    <string name="Safely">Safely</string>
+    <string name="Share_project_documents">Share project files</string>
+    <string name="Teamwork">Teamwork</string>
+    <string name="Common_collaboration_space_for_the_project_team_to_work_together">Common collaboration space for the project team to work together</string>
+    <string name="Manage_project">Manage project</string>
+    <string name="centrally">centrally</string>
+    <string name="Central_place_to_manage_and_track_all_the_critical_documents_and_sensitive_files_shared_with">Central place to share, manage, and track all the critical documents and sensitive files.</string>
+    <string name="Track_and_monitor">Track and monitor</string>
+    <string name="usage_and_risk">usage and risk</string>
+    <string name="Revoke_track_monitor_and_report_usage_of_all_project_documents_automatically">Revoke, track, monitor, and report usage of all project files automatically.</string>
+    <string name="Recent_Files">Recent files</string>
+    <string name="delete_file_success">Deleted file successfully.</string>
+    <string name="delete_folder_success">Deleted folder successfully.</string>
+    <string name="Invitation_failed">Invitation failed.</string>
+    <string name="invalid_project">You are not authorized to access this project.</string>
+    <string name="There_are_no_projects">There are no projects.</string>
+    <string name="Msg_resend_Invitation">Resent invitation successfully.</string>
+
+    <!---->
+    <!--Project context menu-->
+    <!---->
+    <string name="project_ctx_menu_go_to_all_projects">Go to all projects</string>
+    <string name="project_ctx_menu_add_file">@string/add_file</string>
+    <string name="project_ctx_menu_invite_members">@string/invite_members</string>
+    <string name="project_ctx_menu_create_a_new_folder">@string/create_a_folder</string>
+    <string name="project_ctx_menu_scan_a_doc">@string/scan_a_document</string>
+    <!---->
+    <!--switchProjectActivity3-->
+    <!---->
+    <string name="Create_new_project">Create new project</string>
+    <string name="Create_New_Project">Create New Project</string>
+    <string name="Accept_invitation">Accept invitation</string>
+    <!---->
+    <!--switchProjectActivity3-->
+    <!---->
+
+    <!---->
+    <!--ProjectSummaryFragment-->
+    <!---->
+    <string name="project_Name">Project name:</string>
+    <string name="summary_Description">Description: </string>
+    <string name="info">Info</string>
+
+    <!---->
+    <!--ProjectSummaryFragment-->
+    <!---->
+
+
+    <!---->
+    <!--MembersFragment3-->
+    <!---->
+    <string name="HOST">HOST</string>
+    <!---->
+    <!--MembersFragment3-->
+    <!---->
+
+
+    <!---->
+    <!--FileOperation-->
+    <!---->
+    <string name="You_are_not_authorized_to_access_this_project">You are not authorized to access this project.</string>
+    <!---->
+    <!--FileOperation-->
+    <!---->
+
+    <!---->
+    <!--newProjectSplashActivity-->
+    <!---->
+
+
+    <string name="page1_Work_securely_in_a_team">Work securely in a team</string>
+    <string name="page1_without_worrying_about">without worrying about</string>
+    <string name="page1_leakage_of_intellectual">leakage of intellectual</string>
+    <string name="page1_property_and_trade_secret">property and trade secret.</string>
+
+
+    <!---->
+    <!--newProjectSplashActivity-->
+    <!---->
+
+    <!---->
+    <!--createProjectActivity-->
+    <!---->
+    <string name="invite_members_optional">Invite Members(optional)</string>
+    <string name="add_your_message_here">Add a comment to be included in the notification email.</string>
+    <string name="Invitation_message">Invitation message (optional)</string>
+    <string name="permission_storage_rationale">Storage permission is needed for this operation.</string>
+    <!---->
+    <!--createProjectActivity-->
+    <!---->
+
+
+    <!---->
+    <!--projectConfiguration-->
+    <!---->
+    <string name="Invitation">Invitation</string>
+    <string name="PENDING">PENDING</string>
+    <string name="Created_by">Created by</string>
+    <string name="ME">ME</string>
+    <string name="Invited_by">Invited by</string>
+    <string name="OTHERS">OTHERS</string>
+    <string name="View_all_projects">View all projects</string>
+    <string name="Configuration">Configuration</string>
+    <string name="Project_has_been_updated_successfully">\The project has been updated successfully.</string>
+    <string name="Project_has_been_updated_unsuccessful">The project has been updated unsuccessful.</string>
+    <!---->
+    <!--projectConfiguration-->
+    <!---->
+
+    <!---->
+    <!--OwnerByOtherAdapter-->
+    <!---->
+    <string name="Invitation_not_found">The invitation is not found.</string>
+    <string name="Invitation_expired">The invitation has expired.</string>
+    <string name="Invitation_already_declined">The invitation was already declined.</string>
+    <string name="Invitation_already_accepted">The invitation was already accepted.</string>
+    <string name="Invitation_already_revoked">The invitation was already revoked.</string>
+    <string name="Decline_reason_too_long">The decline reason is too long.</string>
+    <string name="Internal_Server_Error">An internal server error occurred.</string>
+    <string name="logged_in_email_does_not_match_with_invitee_email">Th email that is logged in does not match with the invitee email.</string>
+
+    <!---->
+    <!--OwnerByOtherAdapter-->
+    <!---->
+
+    <!---->
+    <!--ProjectFileFragment-->
+    <!---->
+
+    <string name="The_folder_has_been_deleted">The folder has been deleted.</string>
+
+    <!---->
+    <!--ProjectFileFragment-->
+    <!---->
+
+
+    <!---->
+    <!--ViewAllProject-->
+    <!---->
+
+    <string name="has_invited_you_to_join_his_project">{0} has invited you to join a project {1}</string>
+    <string name="Owner">Owner:</string>
+    <string name="File_Member">{0} File , {1} Members</string>
+    <string name="Projects">Projects</string>
+
+    <string name="Projects_create_by">Projects created by</string>
+    <string name="Projects_invited_by">Projects invited by</string>
+
+    <string name="me">me&#160;</string>
+    <string name="others">others&#160;</string>
+
+    <string name="Projects_create_by_me_count">( %s )</string>
+    <string name="Projects_invited_by_other_count">( %s )</string>
+    <!---->
+    <!--ViewAllProject-->
+    <!---->
+
+    <!-- uses for preferences page -->
+    <string name="preferences">Preferences</string>
+    <string name="date_picker_month_typeface">sans-serif-medium</string>
+    <string name="date_picker_day_of_week_typeface">sans-serif-medium</string>
+    <string name="date_picker_day_typeface">sans-serif-medium</string>
+    <string name="digital_rights_validity_period">Default rights expiry date</string>
+    <string name="default_watermark">Default watermark</string>
+    <string name="day_s">Day(s)</string>
+    <string name="week_s">Week(s)</string>
+    <string name="month_s">Month(s)</string>
+    <string name="year_s">Year(s)</string>
+    <string name="cancel">Cancel</string>
+    <string name="company_defined_rights">Company-defined rights</string>
+    <string name="company_defined_rights_description">Company-defined rights are permissions determined by centralized policies</string>
+    <string name="next">Next</string>
+    <string name="remember_url">Remember URL</string>
+    <string name="enter_site_url">Enter a company URL</string>
+    <string name="hint_url_input">example: https://skydrm.microsoft.com</string>
+    <string name="specify_user_defined_or_company_defined_rights">Specify user-defined or company-defined rights.</string>
+    <string name="user_defined">User-defined</string>
+    <string name="company_defined">Company-defined</string>
+    <string name="company_defined_description">Company-defined rights are permissions determined by centralized policies defined by your administrator.</string>
+    <string name="about">ABOUT</string>
+    <string name="change_server_url">Change server URL</string>
+    <string name="hint_change_sever_url">You must log in again after saving the new URL</string>
+    <string name="enter_new_url">Enter new URL</string>
+    <string name="add_a_url">Add a URL</string>
+    <string name="txt_usr_account_footer">If you switch to a different server account, you need to enter the credentials for the selected server.</string>
+    <string name="edit_1st_Upper">Edit</string>
+    <string name="personal_account">My personal account</string>
+    <string name="company_account">My company account</string>
+    <string name="make_default">Make default</string>
+    <string name="site_url">Site URL</string>
+    <string name="prompt_sharepoint_url">SharePoint Site URL</string>
+    <string name="prompt_domain_username">Domain/username</string>
+    <string name="prompt_password_case">Password</string>
+    <string name="prompt_connect_sharepoint">Provide your SharePoint credentials to connect</string>
+    <string name="txt_add_account">Add account</string>
+    <string name="url">Company account URL</string>
+    <string name="company_account_url">Company account URL</string>>
+    <string name="sever_url">Server URL</string>
+    <string name="manage_url">Manage URL</string>
+    <string name="change_url">Change URL</string>
+    <string name="you_can_change_the_url">You can change the URL</string>
+    <string name="add_a_company_url">Add a Company URL</string>
+    <string name="edit_url">Edit URL</string>
+    <string name="remove_this_url">Remove this URL</string>
+    <string name="empt_msg_log">Empty log</string>
+    <string name="offline">OFFLINE</string>
+    <string name="hint_view_file_offline">You can only view the files made available for offline use.</string>
+    <string name="validity">Validity:</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="select_connected_repo">Choose a connected repository to select a file</string>
+    <string name="name">Name</string>
+    <string name="revoke_invitation">Revoke Invitation</string>
+    <string name="resend_invitation">Resend Invitation</string>
+    <string name="joined_on">Joined on</string>
+    <string name="invited_on">Invited on</string>
+    <string name="email">Email</string>
+    <string name="choose_connected_repo_create_folder">Choose a connected repository to create new folder</string>
+    <string name="hint_msg_cpy_link_success">Copy link successfully.</string>
+    <string name="access_your_enterprise">Access your enterprise</string>
+    <string name="account">account</string>
+    <string name="you_can_switch_the_account_after_log_out">You can switch the account after logging out.</string>
+    <string name="skydrm_com">on SkyDRM.com</string>
+    <string name="my_personal_account_with">My personal account with</string>
+    <string name="choose_account_type">Select an account type</string>
+    <string name="Save_as">Save As</string>
+    <string name="Edit">Edit</string>
+    <string name="Re_share">Re-share</string>
+    <string name="Extract">Extract</string>
+    <string name="Library">Library</string>
+    <string name="Add_to_project">Add to project</string>
+    <string name="specify_permissions_to_the_file">Specify permissions to the file</string>
+    <string name="change_save_location">Change save location</string>
+    <string name="desc_user_defined_rights">User-defined rights are pre-defined permissions that you can apply to your documents.</string>
+    <string name="file_permissions">File Permissions</string>
+    <string name="more_options">More options</string>
+    <string name="modify_rights">Modify rights</string>
+    <string name="hint_add_file_to_project_t1">This document is protected with:</string>
+    <string name="hint_add_file_to_project_t2">Permissions granted for the project %s</string>
+    <string name="hint_add_file_to_project_from_project_select_rights">Choose company defined rights for the selected project %s</string>
+    <string name="hint_select_new_classification_from_project">Choose new classification for the selected project %s</string>
+    <string name="hint_select_new_classification_from_workspace">Choose new classification for %s</string>
+    <string name="hint_add_file_to_project_from_project_display_selected_rights">New classification selected for project %s</string>
+    <string name="hint_classification_title">This document is classified as:</string>
+    <string name="hint_new_classification_title">New classification selected for project %s</string>
+    <string name="hint_new_classification_title_workspace">New classification selected for %s</string>
+    <string name="permissions_applied_to_the_file">Permissions applied to the file</string>
+    <string name="Next">Next</string>
+    <string name="share_with">Share with</string>
+    <string name="watermark_desc">Watermark:</string>
+    <string name="share_a_protect_file">Share a protected file</string>
+    <string name="message_optional">Message  (Optional)</string>
+    <string name="modify_success_tip">has been modified.</string>
+    <string name="hint_empty_classification">No classification selected.</string>
+    <string name="add_to_project_success_tip">has been added to project %s successfully.</string>
+    <string name="setting_contact_permission">The required permission is missing \n please click "Setting"-"Permission"-"open"</string>
+    <string name="permission_contacts_rationale">Contacts permission is needed for this operation.</string>
+    <string name="invalid_digital_rights_period">The digital rights validity period is invalid.</string>
+    <string name="empty_file_performed">The target file you are performing is with zero size.</string>
+    <string name="invalid_file">Invalid file</string>
+    <string name="Joined">Joined</string>
+    <string name="invited">Invited</string>
+    <string name="modified_date">Modified date</string>
+    <string name="calculating_cache_size">Calculating cache size…</string>
+    <string name="no_tag_selected">No tag selected</string>
+    <!---->
+    <!--ViewAllProject-->
+    <!---->
+    <string name="repo_drawable">Repo Drawable</string>
+    <string name="file_icon_drawable">File Icon Drawable</string>
+    <string name="name_workspace">@string/navigation_item_workspace</string>
+    <string name="hint_unsupported_nxl_file_upload_to_workspace">You\'re not allowed to upload a file protected in projects or individual accounts.</string>
+    <string name="confirm">Confirm</string>
+    <string name="users">User(s)</string>
+    <string name="add_more">Add more</string>
+    <string name="sharing_history">Sharing history</string>
+    <string name="update_sharing">Update sharing</string>
+    <string name="project_checked">Project checked</string>
+    <string name="msg_hint_file_shared_successful">The target file has been shared successfully.</string>
+    <string name="msg_hint_file_revoked">The target file has been revoked.</string>
+    <string name="msg_hint_recipient_required">An recipient is required.</string>
+    <string name="shared_with_me">Shared With Me</string>
+
+</resources>

@@ -1,0 +1,94 @@
+<com.skydrm.rmc.ui.widget.customcontrol.SoftKeyBoardStatusView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <!-- title -->
+    <include layout="@layout/command_operate_title" />
+    <!-- Content -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Black">
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/button_layout"
+            android:orientation="vertical">
+            <!-- change path -->
+            <include layout="@layout/command_change_path_layout3" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- display file preview -->
+                <LinearLayout
+                    android:id="@+id/ll_preview_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white"
+                    android:orientation="vertical" />
+
+                <!-- in order to implement scroll, here set height is 280dp -->
+                <LinearLayout
+                    android:id="@+id/ll_sub_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <ScrollView
+                        android:id="@+id/scroll_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fadeScrollbars="false"
+                        android:scrollbars="vertical">
+                        <!-- scrollView children layout! -->
+                        <RelativeLayout
+                            android:id="@+id/rl_sub_root"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <!--specify file rights-->
+                            <include layout="@layout/specify_rights_of_add_file3" />
+
+                            <!--view nxl file rights: default set it as Gone -->
+                            <!--<include layout="@layout/view_rights_of_add_nxl_file" />-->
+
+                        </RelativeLayout>
+                    </ScrollView>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!-- protect layout -->
+        <RelativeLayout
+            android:id="@+id/button_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white">
+
+            <Button
+                android:id="@+id/operate_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_background_3"
+                android:text="@string/Create_protected_file"
+                android:textAllCaps="false"
+                android:textColor="@color/button_login_color" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</com.skydrm.rmc.ui.widget.customcontrol.SoftKeyBoardStatusView>

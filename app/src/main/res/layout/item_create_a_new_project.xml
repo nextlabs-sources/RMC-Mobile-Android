@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp60"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/create_new_project"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_activate_from_home_selector"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/dp20"
+        android:paddingTop="@dimen/dp10"
+        android:paddingEnd="@dimen/dp20"
+        android:paddingBottom="@dimen/dp10">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/greenplusbutton" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp15"
+            android:paddingStart="@dimen/dp5"
+            android:paddingEnd="@dimen/dp5"
+            android:text="@string/Create_new_project"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/text_size_16sp" />
+    </LinearLayout>
+</LinearLayout>

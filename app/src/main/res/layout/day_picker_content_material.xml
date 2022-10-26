@@ -1,0 +1,35 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/day_picker_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageButton
+        android:id="@+id/prev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:minHeight="48dp"
+        android:minWidth="48dp"
+        android:nextFocusDown="@+id/month_view"
+        android:nextFocusForward="@+id/next"
+        android:src="@drawable/ic_chevron_start"
+        android:tint="@android:color/black"
+        android:visibility="invisible" />
+
+    <ImageButton
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:minHeight="48dp"
+        android:minWidth="48dp"
+        android:nextFocusDown="@+id/month_view"
+        android:nextFocusForward="@+id/month_view"
+        android:src="@drawable/ic_chevron_end"
+        android:tint="@android:color/black"
+        android:visibility="invisible" />
+</FrameLayout>

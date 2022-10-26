@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.skydrm.rmc">
+
+    <!-- App needs to download files from cloud to the external storage, set on Read&Write rights -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- App must get access to Internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- App needs to check status of network to determine to get result of REST API -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Feature: launch our app by clicked an attachment in Gmail app, it requires these permissions -->
+    <!-- for google service referencing requirements -->
+    <uses-permission android:name="com.google.android.providers.gmail.permission.READ_GMAIL" />
+    <uses-permission android:name="com.google.android.providers.gmail.permission.WRITE_GMAIL" />
+    <uses-permission android:name="com.google.android.gm.permission.READ_GMAIL" />
+    <uses-permission android:name="com.google.android.gm.permission.WRITE_GMAIL" />
+
+
+    <!-- In order to get device name(it is the same with blueTooth name) -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <!-- in order to get contact email-->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <uses-feature android:glEsVersion="0x00020000" />
+
+
+    <!-- filter for google play, make sure our app can be only running at Phone & Tablet -->
+    <compatible-screens>
+        <screen
+            android:screenDensity="ldpi"
+            android:screenSize="normal" />
+        <screen
+            android:screenDensity="mdpi"
+            android:screenSize="normal" />
+        <screen
+            android:screenDensity="hdpi"
+            android:screenSize="normal" />
+        <screen
+            android:screenDensity="xhdpi"
+            android:screenSize="normal" />
+        <screen
+            android:screenDensity="420"
+            android:screenSize="normal" />
+        <screen
+            android:screenDensity="480"
+            android:screenSize="normal" />
+        <screen
+            android:screenDensity="560"
+            android:screenSize="normal" />
+        <screen
+            android:screenDensity="640"
+            android:screenSize="normal" />
+        <screen
+            android:screenDensity="ldpi"
+            android:screenSize="large" />
+        <screen
+            android:screenDensity="mdpi"
+            android:screenSize="large" />
+        <screen
+            android:screenDensity="hdpi"
+            android:screenSize="large" />
+        <screen
+            android:screenDensity="xhdpi"
+            android:screenSize="large" />
+        <screen
+            android:screenDensity="420"
+            android:screenSize="large" />
+        <screen
+            android:screenDensity="480"
+            android:screenSize="large" />
+        <screen
+            android:screenDensity="560"
+            android:screenSize="large" />
+        <screen
+            android:screenDensity="640"
+            android:screenSize="large" />
+        <screen
+            android:screenDensity="ldpi"
+            android:screenSize="xlarge" />
+        <screen
+            android:screenDensity="mdpi"
+            android:screenSize="xlarge" />
+        <screen
+            android:screenDensity="hdpi"
+            android:screenSize="xlarge" />
+        <screen
+            android:screenDensity="xhdpi"
+            android:screenSize="xlarge" />
+        <screen
+            android:screenDensity="420"
+            android:screenSize="xlarge" />
+        <screen
+            android:screenDensity="480"
+            android:screenSize="xlarge" />
+        <screen
+            android:screenDensity="560"
+            android:screenSize="xlarge" />
+        <screen
+            android:screenDensity="640"
+            android:screenSize="xlarge" />
+    </compatible-screens>
+
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="true" />
+
+    <application
+        android:name=".SkyDRMApp"
+        android:anyDensity="true"
+        android:icon="@mipmap/icon_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${authority_name}"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+<!--        <provider-->
+<!--            android:name="com.skydrm.rmc.datalayer.repo.library.LibraryProvider"-->
+<!--            android:authorities="${authority_name}"-->
+<!--            android:exported="true"-->
+<!--            android:grantUriPermissions="true"-->
+<!--            android:permission="android.permission.MANAGE_DOCUMENTS">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.content.action.DOCUMENTS_PROVIDER" />-->
+<!--            </intent-filter>-->
+<!--        </provider>-->
+        <!-- Splash Activity -->
+        <activity
+            android:name=".ui.activity.splash.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!--use this scheme for all 3rd party repo-->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="com.skydrm.rmc" />
+            </intent-filter>
+
+
+            <!-- intercept the sharing link then view the nxl file use SkyDRM app -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <!-- for RMS debug -->
+                <data
+                    android:host="rmtest.nextlabs.solutions"
+                    android:path="/rms/main"
+                    android:scheme="https" />
+                <data
+                    android:host="rmtest.nextlabs.solutions"
+                    android:path="/rms/main"
+                    android:scheme="http" />
+                <!-- for RMS pre-release testdrm.com -->
+                <data
+                    android:host="testdrm.com"
+                    android:path="/rms/main"
+                    android:scheme="https" />
+                <data
+                    android:host="testdrm.com"
+                    android:path="/rms/main"
+                    android:scheme="http" />
+                <!-- for RMS release -->
+                <data
+                    android:host="skydrm.com"
+                    android:path="/rms/main"
+                    android:scheme="https" />
+                <data
+                    android:host="skydrm.com"
+                    android:path="/rms/main"
+                    android:scheme="http" />
+            </intent-filter>
+
+            <!-- for dropBox and oneDrive -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="*"
+                    android:mimeType="*/*"
+                    android:scheme="file" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="*"
+                    android:mimeType="*/*"
+                    android:scheme="content" />
+            </intent-filter>
+
+            <!-- for GoogleDrive -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="com.google.android.apps.docs.storage.legacy"
+                    android:mimeType="*/*"
+                    android:scheme="content" />
+            </intent-filter>
+
+            <!-- for Gmail -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="gmail-ls"
+                    android:mimeType="*/*"
+                    android:scheme="content" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.project.service.InvitationLinkActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- Welcome Activity -->
+        <activity
+            android:name=".ui.activity.splash.WelcomeActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <!-- Home Activity -->
+
+        <activity
+            android:name=".ui.activity.home.HomeActivity"
+            android:configChanges="screenSize|orientation"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <!-- Login Activity From sdk -->
+        <activity
+            android:name="com.skydrm.sdk.ui.LoginActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_new_login2"
+            android:screenOrientation="portrait" />
+        <!-- Help Activity -->
+        <!-- SupportedCloud -->
+        <activity
+            android:name=".ui.activity.repository.SupportedCloud"
+            android:label="@string/title_activity_supported_cloud"
+            android:screenOrientation="portrait"
+            android:theme="@style/Black.StatusBarTheme.SkyDRM" />
+
+        <!-- dropbox2.0 required activity -->
+        <!-- Do not change any files -->
+        <activity
+            android:name="com.dropbox.core.android.AuthActivity"
+            android:configChanges="orientation|keyboard"
+            android:launchMode="singleTask">
+            <intent-filter>
+
+                <!-- Change this to be db- followed by your app key -->
+                <!-- <data android:scheme="db-7iw0a6cmfshsxxk" /> -->
+
+
+                <!-- from RMS debug ztz47zh615kmf7b -->
+                <!-- <data android:scheme="db-ztz47zh615kmf7b" /> -->
+                <!-- form RMS release 3y95f3gtd9hii68 -->
+                <data android:scheme="db-3y95f3gtd9hii68" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Not use if for now, may be in future -->
+        <!-- <activity -->
+        <!-- android:name="appInstance.remoteRepo.sharepoint.LoginActivity" -->
+        <!-- android:screenOrientation="portrait" /> -->
+        <!--
+            <activity
+            android:name=".reposystem.remoterepo.sharepointonline.SharePointOnlineSdk$LoginActivity"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="portrait" />
+        -->
+
+
+        <!--
+             the release 2 view Activity, if forbid re-access onCreate when switch screen.
+            will affect the operation of shortcut menu of the landscape ( if add " android:configChanges="screenSize|orientation"")
+        -->
+        <activity
+            android:name=".ui.activity.ViewActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/label_activity_viewActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/Black.StatusBarTheme.SkyDRM" />
+        <activity
+            android:name=".ui.activity.profile.ClipActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:theme="@style/ThemeSwipeBack" />
+        <activity
+            android:name=".ui.activity.repository.RepoSettingActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTop"
+            android:theme="@style/Black.StatusBarTheme.SkyDRM" />
+        <activity
+            android:name=".ui.service.log.LogActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTop"
+            android:theme="@style/DarkGrey.StatusBarTheme.SkyDRM" />
+        <activity
+            android:name=".ui.project.service.NewProjectActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTop"
+            android:theme="@style/ThemeSwipeBack"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".ui.project.service.NewProjectSplashActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeSwipeBack"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".ui.project.feature.files.view.ProjectLibraryActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTop"
+            android:theme="@style/ThemeSwipeBack"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".ui.workspace.WorkSpaceLibraryActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTop"
+            android:theme="@style/ThemeSwipeBack"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".ui.project.feature.member.info.MemberInfoActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTop"
+            android:theme="@style/Black.StatusBarTheme.SkyDRM" />
+        <activity
+            android:name=".ui.project.service.SwitchProjectActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTop"
+            android:theme="@style/Black.StatusBarTheme.SkyDRM" />
+        <activity
+            android:name=".ui.activity.profile.PasswordActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ThemeSwipeBack" />
+
+        <!-- new activity register -->
+        <activity
+            android:name=".ui.activity.MoreActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop"
+            android:theme="@style/Dark.StatusBarTheme.SkyDRM" />
+
+        <activity
+            android:name=".ui.activity.CmdOperateFileActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.CmdOperateFileActivity2"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/Dark.StatusBarTheme.SkyDRM" />
+        <activity
+            android:name=".ui.activity.ProtectShareActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTop"
+            android:theme="@style/Dark.StatusBarTheme.SkyDRM" />
+
+        <activity
+            android:name=".ui.activity.profile.ProfileActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTop" />
+
+        <activity
+            android:name=".ui.activity.profile.AboutSkyDRMActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Black.StatusBarTheme.SkyDRM" />
+        <activity
+            android:name=".ui.activity.repository.RepositoryDetailActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:theme="@style/Black.StatusBarTheme.SkyDRM" />
+        <activity
+            android:name=".ui.activity.LibraryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.myspace.myvault.view.activity.MyVaultFileInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Dark.StatusBarTheme.SkyDRM" />
+        <activity
+            android:name=".ui.myspace.myvault.view.activity.RecipientsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Dark.StatusBarTheme.SkyDRM" />
+        <activity
+            android:name=".ui.myspace.myvault.view.activity.VaultFileShareActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Dark.StatusBarTheme.SkyDRM" />
+        <activity
+            android:name=".ui.activity.CreateFolderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Dark.StatusBarTheme.SkyDRM" />
+        <activity
+            android:name=".ui.service.search.SearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Black.StatusBarTheme.SkyDRM" />
+        <activity
+            android:name=".ui.project.ProjectActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ui.activity.ExpiryWindow"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/activity_popup"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name=".ui.activity.profile.PreferencesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Black.StatusBarTheme.SkyDRM" />
+
+        <activity
+            android:name=".reposystem.remoterepo.googledrive2.GoogleOAuth2"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <!--ipone use-->
+                <data android:scheme="com.googleusercontent.apps.1021466473229-gfuljuu4spgkvs4vnk6hl48ah1rcpfre" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".reposystem.remoterepo.onedrive2.OAuth2Activity" />
+
+        <activity
+            android:name=".ui.service.fileinfo.FileInfoActivity"
+            android:theme="@style/DarkGrey.StatusBarTheme.SkyDRM" />
+
+        <!-- this broadcast is used to listen the network status change -->
+        <receiver android:name=".utils.broadcast.NetworkReceiver" />
+
+        <activity
+            android:name=".ui.project.service.ViewAllProjectsActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.activity.server.CompanyAccountSelectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/White.StatusBarTheme.SkyDRM" />
+
+        <activity
+            android:name=".reposystem.remoterepo.sharepointonline.SharePointAuthActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.activity.server.CompanyAccountListActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.activity.server.ServerTypeSelectActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/White.StatusBarTheme.SkyDRM" />
+
+        <activity
+            android:name=".ui.project.service.ProjectOperateActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/Dark.StatusBarTheme.SkyDRM" />
+
+        <activity
+            android:name=".ui.service.contact.ContactActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/DarkGrey.StatusBarTheme.SkyDRM" />
+
+        <activity
+            android:name=".ui.service.protect.ProtectActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/Dark.StatusBarTheme.SkyDRM" />
+
+        <activity
+            android:name=".ui.service.share.ShareActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/Dark.StatusBarTheme.SkyDRM" />
+
+    </application>
+</manifest>

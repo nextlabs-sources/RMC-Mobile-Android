@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cv_item_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/icon_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_horizontal"
+        android:padding="@dimen/dp5">
+
+        <ImageView
+            android:id="@+id/iv_file_icon_local_file"
+            android:layout_width="@dimen/dp48"
+            android:layout_height="@dimen/dp48"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="@dimen/dp10"
+            android:layout_marginStart="@dimen/dp10"
+            android:scaleType="centerCrop" />
+
+        <ImageButton
+            android:id="@+id/ib_item_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="3dp"
+            android:layout_marginTop="3dp"
+            android:background="@null"
+            android:clickable="false"
+            android:src="@drawable/file_list_item_selector"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_toEndOf="@+id/icon_container"
+        android:layout_toStartOf="@+id/checkbox"
+        android:orientation="vertical"
+        android:padding="@dimen/dp5">
+
+        <TextView
+            android:id="@+id/tv_file_name_local_file"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/text_size_18sp" />
+
+        <TextView
+            android:id="@+id/sub_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/text_size_14sp" />
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/dp5"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/divide_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1_5"
+        android:layout_alignParentBottom="true"
+        android:background="#ECECF1" />
+</RelativeLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/share_file_with"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp15"
+        android:text="@string/share_with"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_size_16sp" />
+
+    <com.skydrm.rmc.ui.widget.customcontrol.FlowLayout
+        android:id="@+id/fl_email_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginEnd="@dimen/dp20" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginEnd="@dimen/dp10">
+
+        <EditText
+            android:id="@+id/et_email_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:drawableEnd="@drawable/add_contact_btn"
+            android:hint="@string/hint_msg_enter_email_requires"
+            android:imeOptions="flagNoExtractUi"
+            android:inputType="textMultiLine|textEmailAddress"
+            android:paddingStart="@dimen/dp6"
+            android:paddingEnd="6dp"
+            android:textColorHint="@android:color/darker_gray"
+            android:textSize="@dimen/text_size_12sp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_message_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp15"
+        android:text="@string/message_optional"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_size_16sp" />
+
+    <com.skydrm.rmc.ui.widget.customcontrol.CommentWidget
+        android:id="@+id/cw_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginEnd="@dimen/dp20"
+        android:orientation="vertical"
+        app:charLengthMax="@integer/max_250_characters"
+        app:hint="@string/hint_msg_share_myvault_file"
+        app:maxLines="@integer/max_lines_4" />
+
+    <!--<EditText-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="100dp"-->
+    <!--android:layout_marginStart="20dp"-->
+    <!--android:layout_marginTop="5dp"-->
+    <!--android:layout_marginEnd="20dp"-->
+    <!--android:background="@drawable/bg_server_account_type" />-->
+</LinearLayout>

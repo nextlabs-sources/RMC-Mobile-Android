@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/dp15">
+
+    <LinearLayout
+        android:id="@+id/project_owner_by_me_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/text_project_create_by_me"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start|center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/dp15"
+            android:paddingTop="@dimen/dp10"
+            android:paddingEnd="5dp"
+            android:paddingBottom="@dimen/dp10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Projects_create_by"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/text_size_16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp5"
+                android:text="@string/me"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp5"
+                android:ellipsize="end"
+                android:maxLines="@integer/text_max_one_lines"
+                android:text="@string/left_bracket"
+                android:textColor="@color/gray_text"
+                android:textSize="@dimen/text_size_16sp" />
+
+            <TextView
+                android:id="@+id/tv_created_by_me_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="@integer/text_max_one_lines"
+                android:textColor="@color/gray_text"
+                android:textSize="@dimen/text_size_16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp5"
+                android:ellipsize="end"
+                android:maxLines="@integer/text_max_one_lines"
+                android:text="@string/right_bracket"
+                android:textColor="@color/gray_text"
+                android:textSize="@dimen/text_size_16sp" />
+
+            <TextView
+                android:id="@+id/bt_update_owner_by_me"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp15"
+                android:background="@drawable/bg_host"
+                android:gravity="center"
+                android:padding="@dimen/dp5"
+                android:text="@string/update"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_14sp"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/project_owner_by_me"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp200">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/create_new_project"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp20"
+        android:background="@drawable/back_home2_drive_info"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/dp20"
+        android:paddingTop="@dimen/dp10"
+        android:paddingEnd="@dimen/dp20"
+        android:paddingBottom="@dimen/dp10"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="@dimen/dp15"
+                android:layout_height="@dimen/dp2"
+                android:layout_centerInParent="true"
+                android:background="@color/green_light" />
+
+            <FrameLayout
+                android:layout_width="@dimen/dp2"
+                android:layout_height="@dimen/dp15"
+                android:layout_centerInParent="true"
+                android:background="@color/green_light" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:text="@string/Create_new_project"
+            android:textColor="@color/green_light"
+            android:textSize="@dimen/text_size_16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/project_owner_by_other_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/text_project_invited_by_others"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start|center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/dp15"
+            android:paddingTop="@dimen/dp10"
+            android:paddingEnd="15dp"
+            android:paddingBottom="@dimen/dp10">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Projects_invited_by"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/text_size_16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp5"
+                android:text="@string/others"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp5"
+                android:ellipsize="end"
+                android:maxLines="@integer/text_max_one_lines"
+                android:text="@string/left_bracket"
+                android:textColor="@color/gray_text"
+                android:textSize="@dimen/text_size_16sp" />
+
+            <TextView
+                android:id="@+id/tv_invited_by_other_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="@integer/text_max_one_lines"
+                android:textColor="@color/gray_text"
+                android:textSize="@dimen/text_size_16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp5"
+                android:ellipsize="end"
+                android:maxLines="@integer/text_max_one_lines"
+                android:text="@string/right_bracket"
+                android:textColor="@color/gray_text"
+                android:textSize="@dimen/text_size_16sp" />
+
+            <TextView
+                android:id="@+id/bt_update_owner_by_other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp15"
+                android:background="@drawable/bg_host"
+                android:gravity="center"
+                android:padding="@dimen/dp5"
+                android:text="@string/update"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_14sp"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/project_owner_by_other"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp200" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/project_activate_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp20"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/dp15"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Collaborate_in_project_securely"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/text_size_18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:text="@string/Try_SkyDRM_Project"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/text_size_16sp" />
+
+        <Button
+            android:id="@+id/bt_active_project"
+            style="?attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp5"
+            android:layout_marginBottom="@dimen/dp10"
+            android:background="@drawable/bg_activate_from_home_normal"
+            android:paddingLeft="@dimen/dp40"
+            android:paddingTop="@dimen/dp10"
+            android:paddingRight="@dimen/dp40"
+            android:paddingBottom="@dimen/dp10"
+            android:text="@string/Activate"
+            android:textAllCaps="false"
+            android:textColor="@color/Black" />
+    </LinearLayout>
+</LinearLayout>

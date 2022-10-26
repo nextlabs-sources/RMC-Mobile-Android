@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.skydrm.rmc.ui.widget.swipelayout.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:swipe="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipe_menu_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    swipe:contentViewId="@+id/swipe_content_view"
+    swipe:leftViewId="@+id/swipe_left_view"
+    swipe:rightViewId="@+id/swipe_right_view">
+
+    <include layout="@layout/list_recyclerview_item_content2" />
+
+    <include layout="@layout/list_recyclerview_item_left_menu2" />
+
+    <include layout="@layout/list_recyclerview_item_right_menu2" />
+
+</com.skydrm.rmc.ui.widget.swipelayout.SwipeMenuLayout>

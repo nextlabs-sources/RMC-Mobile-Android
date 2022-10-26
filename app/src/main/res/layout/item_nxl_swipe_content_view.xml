@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_item_nxl_swipe_content_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="70dp">
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="@dimen/dp48"
+        android:layout_height="@dimen/dp48"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/dp3"
+        android:layout_marginEnd="@dimen/dp3"
+        android:background="@android:color/transparent"
+        android:padding="@dimen/dp8"
+        android:src="@drawable/icon_png_nxl" />
+
+    <RelativeLayout
+        android:layout_width="@dimen/dp50"
+        android:layout_height="@dimen/dp60"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="6dp"
+        android:background="@android:color/transparent"
+        android:padding="@dimen/dp6">
+
+        <ImageView
+            android:id="@+id/iv_favorite_flag"
+            android:layout_width="@dimen/dp15"
+            android:layout_height="@dimen/dp15"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/dp5"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/favorited_icon3"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_offline_flag"
+            android:layout_width="@dimen/dp15"
+            android:layout_height="@dimen/dp15"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/dp5"
+            android:background="@android:color/transparent"
+            android:scaleType="fitXY"
+            android:src="@drawable/available_offline_icon3"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toStartOf="@+id/iv_menu"
+        android:layout_toEndOf="@id/iv_icon">
+        <!-- note: if use "android:maxLines= 1" to replace "android:singleLine="true"" ,
+             sometimes will crash in Nexus 6, Android 5.0.1 when the text contains some special chars;-->
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:textAllCaps="false"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/text_size_18sp" />
+
+        <TextView
+            android:id="@+id/tv_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center_vertical"
+            android:textAllCaps="false"
+            android:textColor="@color/today_text_color"
+            android:textSize="@dimen/text_size_12sp" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="@dimen/dp5"
+            android:layout_toEndOf="@+id/tv_size"
+            android:ellipsize="middle"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textAllCaps="false"
+            android:textColor="@color/sub_text_color"
+            android:textSize="@dimen/text_size_12sp" />
+
+        <TextView
+            android:id="@+id/tv_drive_path"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_size"
+            android:layout_marginTop="2dp"
+            android:ellipsize="middle"
+            android:gravity="start"
+            android:singleLine="true"
+            android:textColor="@color/sub_text_color"
+            android:textSize="@dimen/text_size_12sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_shared_with"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_drive_path"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:gravity="start"
+            android:textColor="@color/sub_text_color"
+            android:textSize="@dimen/text_size_12sp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_offline_status"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_below="@+id/tv_shared_with"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/icon_offline_status_error"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_offline_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_shared_with"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toEndOf="@+id/iv_offline_status"
+            android:gravity="center_vertical"
+            android:text="Error in downloading file."
+            android:textColor="#EB5757"
+            android:textSize="@dimen/text_size_12sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/iv_menu"
+        android:layout_width="@dimen/dp45"
+        android:layout_height="@dimen/dp45"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@null"
+        android:padding="@dimen/dp6"
+        android:src="@drawable/icon_setting_v3" />
+</RelativeLayout>

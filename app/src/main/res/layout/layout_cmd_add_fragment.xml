@@ -1,0 +1,106 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:navigationIcon="@drawable/icon_back_3">
+
+        <Button
+            android:id="@+id/bt_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:background="@null"
+            android:text="@string/cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/dark_blue" />
+    </android.support.v7.widget.Toolbar>
+
+    <!-- Content -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/Black">
+        <!-- change path -->
+        <include layout="@layout/command_change_path_layout_myspace" />
+        <!-- display file preview -->
+        <RelativeLayout
+            android:id="@+id/rl_preview_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rl_protect_site"
+            android:layout_below="@+id/command_change_path"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white"
+            android:orientation="vertical" />
+        <!-- protect file layout-->
+        <RelativeLayout
+            android:id="@+id/rl_protect_site"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:layout_above="@+id/rl_share_site"
+            android:layout_marginStart="@dimen/dp20"
+            android:layout_marginEnd="@dimen/dp20"
+            android:background="@drawable/layout_boarder3">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:drawableStart="@drawable/protect_black_icon3"
+                android:drawableEnd="@drawable/icon_arrow_right_black3"
+                android:drawablePadding="10dp"
+                android:gravity="start|center_vertical"
+                android:text="@string/Protect"
+                android:textColor="@color/Black" />
+
+        </RelativeLayout>
+        <!-- share file layout-->
+        <RelativeLayout
+            android:id="@+id/rl_share_site"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp50"
+            android:layout_above="@+id/tv_upload_normal"
+            android:layout_marginStart="@dimen/dp20"
+            android:layout_marginEnd="@dimen/dp20"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/layout_boarder3">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:drawableStart="@drawable/share_black_icon3"
+                android:drawableEnd="@drawable/icon_arrow_right_black3"
+                android:drawablePadding="10dp"
+                android:gravity="start|center_vertical"
+                android:text="@string/share_a_protect_file"
+                android:textColor="@color/Black" />
+
+        </RelativeLayout>
+        <!-- don't protect tip  -->
+        <TextView
+            android:id="@+id/tv_upload_normal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:text="@string/do_not_protect_tip"
+            android:textColor="#a9eafe" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp10">
+
+        <ImageView
+            android:id="@+id/bottom_sheet_home_repo_thumbnail"
+            android:layout_width="@dimen/dp35"
+            android:layout_height="@dimen/dp35"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="10dp"
+            android:adjustViewBounds="true"
+            android:background="@android:color/transparent"
+            android:cropToPadding="true"
+            android:padding="3dp"
+            android:src="@drawable/icon_share3" />
+
+        <TextView
+            android:id="@+id/bottom_sheet_home_repo_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="@dimen/dp10"
+            android:layout_marginStart="@dimen/dp15"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/abc_action_bar_home_description"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_16sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divide_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/dp20"
+        android:background="#F2F3F5" />
+</RelativeLayout>

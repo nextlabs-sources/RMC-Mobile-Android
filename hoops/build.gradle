@@ -1,0 +1,70 @@
+if (isComponent) {
+    apply plugin: 'com.android.application'
+}else {
+    apply plugin: 'com.android.library'
+}
+
+def androidConfig = rootProject.ext.androidConfig
+def hoopsConfig = rootProject.ext.hoopsConfig
+
+android {
+    compileSdkVersion androidConfig.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion androidConfig.minSdkVersion
+        targetSdkVersion androidConfig.targetSdkVersion
+        versionCode hoopsConfig.versionCode
+        versionName hoopsConfig.versionName
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        externalNativeBuild {
+            cmake {
+                // Passes optional arguments to CMake.
+                arguments "-DANDROID_ARM_NEON=TRUE", "-DANDROID_TOOLCHAIN=gcc", "-VERBOSE=1"
+
+                // Sets optional flags for the C compiler.
+                cFlags "-DANDROID_NDK", "-DUNIX_SYSTEM", "-DHPS_CORE_BUILD", "-DTARGET_OS_ANDROID=1", "-DLINUX_SYSTEM"
+
+                // Sets a flag to enable format macro constants for the C++ compiler.
+                cppFlags "-frtti", "-fexceptions", "-fsigned-char", "-std=c++11", "-Wno-narrowing", "-DUSING_EXCHANGE=1"
+
+                // Specifies the ABI configurations of your native
+                // libraries Gradle should build and package with your APK.
+                //abiFilters 'x86', 'x86_64', 'armeabi', 'armeabi-v7a', 'arm64-v8a'
+                // for everest release only supported 'armeabi-v7a'
+                //            abiFilters 'armeabi-v7a'
+                abiFilters 'armeabi-v7a', 'arm64-v8a'
+            }
+        }
+    }
+    externalNativeBuild {
+        cmake {
+            path 'CMakeLists.txt'
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+			zipAlignEnabled true
+        }
+    }
+
+    sourceSets {
+        main {
+            // depend on system environment vairalbes
+            def HoopsLibPath = "${System.env.SOURCE_ANDROID_3RD_LIBS}/hoops/libs"
+            println "debug use to show wheather HoopsLibPath defined: ${HoopsLibPath}"
+
+            jniLibs.srcDirs = ["${HoopsLibPath}"]
+        }
+    }
+
+}
+
+

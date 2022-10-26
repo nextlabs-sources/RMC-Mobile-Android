@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:opacity="opaque">
+    <item android:drawable="@drawable/green_bg" />
+    <!--<item android:bottom="100dp">-->
+        <!--<bitmap-->
+            <!--android:gravity="center"-->
+            <!--android:src="@drawable/skydrm_logo_white" />-->
+    <!--</item>-->
+</layer-list>

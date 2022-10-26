@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="#b0000000"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="420dp"
+        android:layout_above="@+id/ll_button"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/item_bg_color"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp20"
+                android:text="@string/specify_rights_expiry_date"
+                android:textColor="@color/Black" />
+            <!-- specify expiry -->
+            <TextView
+                android:id="@+id/specify_rights"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp20"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/textview_border"
+                android:drawableEnd="@drawable/expand_arrow_24"
+                android:drawablePadding="5dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp"
+                android:text="@string/expiry_relative" />
+
+            <include layout="@layout/common_timetable" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <!-- button -->
+    <LinearLayout
+        android:id="@+id/ll_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp10">
+
+        <Button
+            android:id="@+id/bt_cancel"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="@integer/weight_1"
+            android:background="@drawable/btn_gray_combound"
+            android:text="@string/cancel"
+            android:textAllCaps="false"
+            android:textColor="@color/normal_text_color" />
+
+        <Button
+            android:id="@+id/bt_ok"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_weight="@integer/weight_1"
+            android:background="@drawable/btn_edit_watermark_ok"
+            android:text="@string/common_ok_uppercase"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</RelativeLayout>

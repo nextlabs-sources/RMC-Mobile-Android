@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SkyDRM PRO</string>
+    <string name="welcome_to_skyDRM_pro">Welcome to SkyDRM PRO</string>
+    <string name="about_skydrm_pro">About SkyDRM PRO</string>
+    <string name="about_skydrm">@string/about_skydrm_pro</string>
+</resources>

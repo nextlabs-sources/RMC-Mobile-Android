@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@android:color/black">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp10"
+            android:background="@android:color/white"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/search_view"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp40"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_weight="8"
+                android:background="@null"
+                android:hint="@string/search_hint_tip"
+                android:singleLine="true"
+                android:textColorHint="#bcbcbc"
+                android:textSize="@dimen/text_size_14sp" />
+
+            <ImageView
+                android:id="@+id/delete_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/dp10"
+                android:src="@drawable/login_gb"
+                android:visibility="gone" />
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/home_files_category_layout2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp30"
+        android:background="@drawable/white"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/home_files_back2"
+            android:layout_width="@dimen/dp80"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:drawableStart="@drawable/file_category_back"
+            android:gravity="start|center_vertical"
+            android:paddingLeft="@dimen/dp5"
+            android:paddingRight="@dimen/dp5"
+            android:textColor="@color/main_green_light"
+            android:textSize="@dimen/text_size_14sp" />
+
+        <TextView
+            android:id="@+id/home_files_current_category2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="@dimen/dp80"
+            android:layout_marginStart="@dimen/dp80"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:textColor="@color/main_green_light"
+            android:textSize="@dimen/text_size_14sp" />
+    </RelativeLayout>
+
+    <com.skydrm.rmc.ui.widget.swipelayout.SwipeMenuRecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

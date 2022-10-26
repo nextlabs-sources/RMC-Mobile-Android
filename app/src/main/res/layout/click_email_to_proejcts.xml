@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/accept_invitation"
+        style="?attr/buttonBarButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp48"
+        android:layout_marginTop="@dimen/dp5"
+        android:layout_marginEnd="@dimen/dp48"
+        android:layout_marginBottom="@dimen/dp10"
+        android:background="@drawable/bg_activate_from_home_normal"
+        android:text="@string/Accept_invitation"
+        android:textAllCaps="false"
+        android:textColor="#202020"
+        android:textSize="@dimen/text_size_16sp"
+        android:textStyle="normal" />
+
+    <Button
+        android:id="@+id/ignore_invited"
+        style="?attr/buttonBarButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp48"
+        android:layout_marginTop="@dimen/dp5"
+        android:layout_marginEnd="@dimen/dp48"
+        android:layout_marginBottom="@dimen/dp10"
+        android:background="@drawable/bg_activate_from_home_normal"
+        android:text="@string/c_Ignore"
+        android:textAllCaps="false"
+        android:textColor="#202020"
+        android:textSize="@dimen/text_size_16sp"
+        android:textStyle="normal" />
+
+</LinearLayout>

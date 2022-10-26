@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        app:navigationIcon="@drawable/icon_back_3"
+        app:title="@string/Add_to_project"
+        app:titleTextColor="@android:color/black">
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="15dp"
+            android:text="@string/cancel"
+            android:textColor="@color/dark_blue" />
+    </android.support.v7.widget.Toolbar>
+    <!-- Content -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_button_layout"
+        android:layout_below="@+id/toolbar"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/Black"
+            android:orientation="vertical">
+
+            <!-- change path -->
+            <include layout="@layout/command_change_path_layout" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_preview_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_content"
+            android:background="@android:color/black">
+            <!-- display file preview -->
+            <LinearLayout
+                android:id="@+id/ll_preview_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_sub_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_preview_bg" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white">
+
+        <Button
+            android:id="@+id/bt_add_file"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="80dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/button_background_3"
+            android:text="@string/add_file"
+            android:textAllCaps="false"
+            android:textColor="@color/button_login_color" />
+    </RelativeLayout>
+</RelativeLayout>

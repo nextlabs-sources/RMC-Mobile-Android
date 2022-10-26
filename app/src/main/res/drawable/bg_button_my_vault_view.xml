@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/main_green_dark"/>
+            <gradient
+                android:angle="90"
+                android:endColor="@color/button_signup_endcolor"
+                android:startColor="@color/button_signup_startcolor" />
+            <corners
+                android:bottomLeftRadius="@dimen/button_radius"
+                android:bottomRightRadius="@dimen/button_radius"
+                android:topLeftRadius="@dimen/button_radius"
+                android:topRightRadius="@dimen/button_radius" />
+        </shape>
+    </item>
+    <item android:state_enabled="false">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/white"/>
+            <gradient
+                android:angle="90"
+                android:endColor="#8868B159"
+                android:startColor="#68379B4D" />
+            <corners
+                android:bottomLeftRadius="@dimen/button_radius"
+                android:bottomRightRadius="@dimen/button_radius"
+                android:topLeftRadius="@dimen/button_radius"
+                android:topRightRadius="@dimen/button_radius" />
+        </shape>
+    </item>
+</selector>

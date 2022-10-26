@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="@dimen/dp200"
+        android:layout_height="@dimen/dp180"
+        android:layout_above="@+id/tv1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/share_files_securely3" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="@string/Share_project_documents"
+        android:textColor="@color/Black"
+        android:textSize="@dimen/text_size_21sp" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv1"
+        android:layout_marginTop="@dimen/dp5"
+        android:gravity="center"
+        android:text="@string/Safely"
+        android:textColor="@color/green_light"
+        android:textSize="@dimen/text_size_21sp" />
+
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp10"
+        android:gravity="center"
+        android:padding="@dimen/dp10"
+        android:text="@string/Store_and_manage_documents_for_the_project_for_secure_sharing_across_project_team"
+        android:textColor="@color/gray_text"
+        android:textSize="@dimen/text_size_20sp" />
+</RelativeLayout>

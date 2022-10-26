@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="true">
+        <!--the shape status of button enabled-->
+        <shape android:shape="rectangle">
+
+            <!-- padding color：setting the background transparency -->
+            <solid android:color="@color/light_green" />
+
+            <!-- set the four corners of the button into camber-->
+            <!-- android:radius of camber -->
+            <corners
+                android:bottomLeftRadius="5dip"
+                android:bottomRightRadius="5dip"
+                android:topLeftRadius="5dip"
+                android:topRightRadius="5dip" />
+
+            <!--  background color gradient change -->
+            <gradient
+                android:angle="0"
+                android:startColor="@color/button_signup_startcolor"
+                android:endColor="@color/button_signup_endcolor">
+            </gradient>
+
+            <!-- padding： the space between the content of button and the button boarder -->
+            <padding android:left="5dp"
+                android:right="5dp"
+                android:top="5dp"
+                android:bottom="5dp"/>
+
+        </shape>
+    </item>
+
+    <item android:state_enabled="false">
+        <!--the shape status of button disabled-->
+        <shape android:shape="rectangle">
+
+            <!-- padding color：setting the background transparency -->
+            <solid android:color="@color/Gray" />
+
+            <!-- set the four corners of the button into camber-->
+            <!-- android:radius of camber -->
+            <corners
+                android:bottomLeftRadius="5dip"
+                android:bottomRightRadius="5dip"
+                android:topLeftRadius="5dip"
+                android:topRightRadius="5dip" />
+
+            <!--  background color gradient change -->
+            <gradient
+                android:angle="0"
+                android:startColor="@color/Gray"
+                android:endColor="@color/Gray">
+            </gradient>
+
+            <!-- padding： the space between the content of button and the button boarder -->
+            <padding android:left="5dp"
+                android:right="5dp"
+                android:top="5dp"
+                android:bottom="5dp"/>
+
+        </shape>
+    </item>
+</selector>

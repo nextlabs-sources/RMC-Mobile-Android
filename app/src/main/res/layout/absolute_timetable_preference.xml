@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/absolute_timetable"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginEnd="@dimen/dp10"
+    android:layout_marginStart="@dimen/dp20"
+    android:layout_marginTop="@dimen/dp20"
+    android:orientation="horizontal"
+    android:weightSum="@integer/weight_sum_8">
+
+    <TextView
+        android:id="@+id/expire_on"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="@integer/weight_3"
+        android:text="Rights will Expire on" />
+
+    <TextView
+        android:id="@+id/to_day_absolute"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="@integer/weight_1"
+        android:text="09"
+        android:textColor="@color/num_color"
+        android:textSize="@dimen/text_size_21sp" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="@integer/weight_2"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/to_month_absolute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="September"
+            android:textSize="@dimen/text_size_18sp" />
+
+        <TextView
+            android:id="@+id/to_week_absolute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="sat"
+            android:textSize="@dimen/text_size_16sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/count_day_absolute"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_weight="@integer/weight_2"
+        android:text="12 Days" />
+
+</LinearLayout>

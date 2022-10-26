@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+    >
+
+    <RelativeLayout
+        android:id="@+id/scaleViewPager_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+        <com.skydrm.rmc.ui.widget.customcontrol.ClipViewPager
+            android:id="@+id/scaleViewPager"
+            android:layout_width="@dimen/dp250"
+            android:layout_height="@dimen/dp180"
+            android:clipChildren="false"
+            android:overScrollMode="never"/>
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/scaleViewPage_horizontalScrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scaleViewPager_container"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/dp15"
+        android:layout_marginTop="@dimen/dp10"
+        >
+
+        <com.skydrm.rmc.ui.widget.customcontrol.FlowLayout
+            android:id="@+id/point_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+        </com.skydrm.rmc.ui.widget.customcontrol.FlowLayout>
+
+    </HorizontalScrollView>
+
+    <RelativeLayout
+        android:id="@+id/scaleViewPage_progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp180"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:clickable="true"
+        android:visibility="gone"
+        >
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/scaleViewPage_empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp180"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:clickable="true"
+        android:visibility="gone"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/Empty_Data"
+            android:textSize="@dimen/text_size_23sp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/scaleViewPage_network_anomalies_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp180"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:clickable="true"
+
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="@dimen/dp10"
+            android:text="@string/error_network_unreach_msg"
+            android:textSize="@dimen/text_size_18sp"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

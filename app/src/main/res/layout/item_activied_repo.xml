@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_thumbnail_actived_repo"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:adjustViewBounds="true"
+        android:background="@android:color/transparent"
+        android:cropToPadding="true"
+        android:scaleType="fitXY"
+        android:tint="@android:color/black" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="45dp"
+        android:layout_toEndOf="@+id/iv_thumbnail_actived_repo"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:id="@+id/tv_name_actived_repo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/normal_text_color"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_account_id_actived_repo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name_actived_repo"
+            android:layout_marginTop="10dp"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:textColor="@color/sub_text_gray"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_account_actived_repo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_account_id_actived_repo"
+            android:layout_marginBottom="3dp"
+            android:layout_marginTop="10dp"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:textColor="@color/sub_text_gray"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <!--<CheckBox-->
+    <!--android:id="@+id/bottom_sheet_home_repo_checked"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentEnd="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginEnd="10dp" />-->
+
+    <!--<CheckedTextView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:checkMark="?android:attr/listChoiceIndicatorSingle"-->
+    <!--android:ellipsize="marquee"-->
+    <!--android:gravity="center_vertical"-->
+    <!--android:minHeight="?android:attr/listPreferredItemHeight"-->
+    <!--android:paddingEnd="7dip"-->
+    <!--android:paddingStart="12dip"-->
+    <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+    <!--android:textColor="?android:attr/textColorAlertDialogListItem" />-->
+
+    <RadioButton
+        android:id="@+id/rb_actived_repo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:checked="false"
+        android:clickable="false"
+        android:focusable="false"
+        android:gravity="center_vertical"
+        android:paddingEnd="7dip"
+        android:paddingStart="12dip" />
+</RelativeLayout>
+

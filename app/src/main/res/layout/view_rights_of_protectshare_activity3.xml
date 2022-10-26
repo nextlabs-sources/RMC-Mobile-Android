@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/view_rights_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/specify_rights_layout"
+    android:background="#F2F2F2"
+    android:paddingTop="15dp"
+    android:visibility="gone">
+
+    <TextView
+        android:id="@+id/rights"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/view_digital_rights"
+        android:textColor="@color/Black" />
+
+    <TextView
+        android:id="@+id/steward_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rights"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="@dimen/dp10"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp5"
+        android:text="@string/hint_msg_steward_tip"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <!-- display digital rights-->
+    <com.skydrm.rmc.ui.myspace.myvault.view.widget.ExpandableHeightGridView
+        android:id="@+id/rights_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/steward_tip"
+        android:numColumns="4"
+        android:paddingBottom="@dimen/dp10" />
+
+    <View
+        android:id="@+id/divide_line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/rights_view"
+        android:layout_marginEnd="14dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="22dp"
+        android:background="#E0E0E0" />
+
+    <!--  display validity  -->
+    <LinearLayout
+        android:id="@+id/validity_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divide_line"
+        android:layout_marginBottom="13dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp20"
+            android:text="@string/validity"
+            android:textColor="#494949"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/validity_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:textColor="#828282"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/no_rights_tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/steward_tip"
+        android:layout_marginBottom="@dimen/dp30"
+        android:layout_marginTop="@dimen/dp30"
+        android:gravity="center"
+        android:text="@string/hint_msg_nxl_not_granted_rights"
+        android:textSize="@dimen/text_size_20sp"
+        android:visibility="gone" />
+    <!-- read rights progressBar loading... -->
+    <include layout="@layout/read_rights_loading" />
+
+</RelativeLayout>

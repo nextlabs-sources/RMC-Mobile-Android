@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:elevation="5dp"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:padding="@dimen/dp15">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/repository_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="@integer/text_max_one_lines"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/text_size_18sp" />
+
+        <TextView
+            android:id="@+id/total_free"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="@integer/text_max_one_lines"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/text_size_18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="@integer/text_max_one_lines"
+            android:text="@string/home_available"
+            android:textColor="@color/gray_text"
+            android:textSize="@dimen/text_size_18sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp10"
+            android:src="@drawable/right_arrow_icon3" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/repository_progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp15"
+        android:background="@color/light_gray"
+        android:maxHeight="@dimen/dp10"
+        android:minHeight="@dimen/dp10"
+        android:progressDrawable="@drawable/shape_progressbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="@integer/text_max_one_lines"
+            android:text="@string/used"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/text_size_18sp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="@integer/text_max_one_lines"
+            android:text="@string/free"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/text_size_18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

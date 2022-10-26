@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:checked="false"
+            android:icon="@drawable/radio_button_home2"
+            android:title="@string/navigation_item_home" />
+        <item
+            android:id="@+id/nav_files"
+            android:checked="false"
+            android:icon="@drawable/icon_file_black"
+            android:title="@string/navigation_item_files" />
+        <item
+            android:id="@+id/nav_myDrive"
+            android:checked="false"
+            android:icon="@drawable/bottom_sheet_my_drive"
+            android:title="@string/navigation_item_myDrive" />
+        <item
+            android:id="@+id/nav_myVault"
+            android:checked="false"
+            android:icon="@drawable/icon_drawer_myvault"
+            android:title="@string/navigation_item_myVault" />
+    </group>
+
+</menu>

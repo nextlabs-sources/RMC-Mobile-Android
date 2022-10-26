@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/dp10">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:text="@string/default_watermark"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_size_16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/ll_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp15"
+                        android:text="@string/edit_watermark_tip" />
+
+                    <!-- input -->
+                    <com.skydrm.rmc.ui.widget.customcontrol.EditWatermarkWidget
+                        android:id="@+id/edit_watermark_widget"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp10"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:focusableInTouchMode="true"
+                        android:orientation="vertical"
+                        app:editCharLengthMax="@integer/max_50_characters"
+                        app:editMaxLines="@integer/max_lines_4" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#F2F3F5"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/dp20">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp20"
+                        android:layout_marginTop="@dimen/dp20"
+                        android:text="@string/digital_rights_validity_period"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_size_16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/specify_rights"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp40"
+                        android:layout_marginEnd="@dimen/dp20"
+                        android:layout_marginStart="@dimen/dp20"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/textview_border"
+                        android:drawableEnd="@drawable/expand_arrow_24"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="5dp"
+                        android:text="@string/never_expire"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/text_validity_period"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp10"
+                        android:layout_marginEnd="@dimen/dp20"
+                        android:layout_marginStart="@dimen/dp20"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:padding="@dimen/dp10"
+                        android:textSize="@dimen/text_size_16sp"
+                        android:visibility="gone" />
+
+                    <include layout="@layout/common_timetable" />
+
+                    <include
+                        layout="@layout/absolute_timetable_preference"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bt_ok"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp80"
+                android:layout_marginEnd="@dimen/dp40"
+                android:layout_marginStart="@dimen/dp40"
+                android:layout_marginTop="@dimen/dp20"
+                android:background="@drawable/btn_edit_watermark_ok"
+                android:text="@string/save"
+                android:textAllCaps="false"
+                android:textColor="@color/prefer_text_selector" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

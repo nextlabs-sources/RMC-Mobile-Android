@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp"
+    android:background="@android:color/white"
+    android:elevation="2dp"
+    android:orientation="horizontal">
+
+    <com.skydrm.rmc.ui.widget.avatar.AvatarView
+        android:id="@+id/contact_avatar"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="3dp"
+        android:src="@drawable/people_grey" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="2dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/name_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="5dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/Black"
+            android:textSize="16sp" />
+
+        <com.skydrm.rmc.ui.service.contact.impl.EmailListView
+            android:id="@+id/email_ls_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

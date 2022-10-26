@@ -1,0 +1,101 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/project_files_toolbar3"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            android:minHeight="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_menu_black_24dp_v3"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:theme="@style/ThemeOverlay.AppCompat.Light">
+
+            <ImageButton
+                android:id="@+id/to_switch_project_activity"
+                android:layout_width="@dimen/dp40"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@null"
+                android:src="@drawable/icon_down_arrow_black" />
+        </android.support.v7.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="@dimen/dp2"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ProgressBar
+                android:id="@+id/pb_project_usage"
+                style="@style/ProgressBar_ProjectSpace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/dp20"
+                android:paddingEnd="@dimen/dp20" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/dp20"
+                android:paddingEnd="@dimen/dp20">
+
+                <TextView
+                    android:id="@+id/project_used"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gray_text" />
+
+                <TextView
+                    android:id="@+id/project_free"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/text_black" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/project_summary_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLength="@integer/max_250_characters"
+                android:maxLines="@integer/weight_2"
+                android:paddingStart="@dimen/dp20"
+                android:paddingEnd="@dimen/dp20"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/text_size_16sp" />
+
+            <com.skydrm.rmc.ui.widget.customcontrol.FlowLayout
+                android:id="@+id/project_members"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp10" />
+        </LinearLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/layout_project_file" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/summary_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/icon_add_white"
+        app:fabSize="normal" />
+</android.support.design.widget.CoordinatorLayout>

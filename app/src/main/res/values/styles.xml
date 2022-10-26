@@ -1,0 +1,198 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="NXViewTheme">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimaryDark">@color/main_green_light</item>
+
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="SplashTheme" parent="AppTheme">
+        <item name="android:windowBackground">@drawable/splash</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="Theme.Swipe.Back" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--<item name="android:windowIsTranslucent">true</item>-->
+        <!--<item name="android:windowBackground">@android:color/white</item>-->
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="colorPrimaryDark">@color/main_green_light</item>
+    </style>
+
+    <style name="ThemeSwipeBack" parent="Theme.Swipe.Back">
+        <item name="colorPrimary">@color/main_green_light</item>
+        <item name="colorPrimaryDark">@color/main_green_light</item>
+    </style>
+
+    <!-- custom Dialog -->
+
+    <style name="NXViewTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/main_color_primary</item>
+        <item name="colorPrimaryDark">@color/main_color_primary_dark</item>
+        <item name="colorAccent">@color/main_color_accent</item>
+        <item name="android:textColorPrimary">@color/normal_text_color</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:actionOverflowButtonStyle">@style/ActionButton.Overflow.SkyDRM</item>
+    </style>
+
+
+    <style name="BottomSheetAnimation">
+        <item name="android:windowEnterAnimation">@anim/popup_show_anim</item>
+        <item name="android:windowExitAnimation">@anim/popup_hidden_anim</item>
+    </style>
+
+    <style name="ProgressBar_Mini" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:maxHeight">50dip</item>
+        <item name="android:minHeight">8dip</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">
+            @android:drawable/progress_indeterminate_horizontal
+        </item>
+        <item name="android:progressDrawable">@drawable/progressbar_mini</item>
+    </style>
+
+    <style name="ProgressBar_ProjectSpace" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:maxHeight">50dip</item>
+        <item name="android:minHeight">8dip</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">
+            @android:drawable/progress_indeterminate_horizontal
+        </item>
+        <item name="android:progressDrawable">@drawable/progressbar_project_space</item>
+    </style>
+
+    <style name="ActionButton.Overflow.SkyDRM" parent="android:style/Widget.Holo.Light.ActionButton.Overflow">
+        <item name="android:src">@drawable/home_activity_navi_icon2</item>
+    </style>
+
+    <style name="CustomCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/check_box_selector</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:gravity">center_vertical|start</item>
+        <item name="android:padding">5dp</item>
+    </style>
+
+    <style name="UserProfileText.Theme.SkyDRM" parent="android:Widget.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_16sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginStart">@dimen/dp10</item>
+        <item name="android:layout_marginEnd">@dimen/dp10</item>
+    </style>
+
+    <style name="Black.StatusBarTheme.SkyDRM" parent="Theme.Swipe.Back">
+        <item name="colorPrimaryDark">@android:color/black</item>
+    </style>
+
+    <style name="Dark.StatusBarTheme.SkyDRM" parent="Theme.Swipe.Back">
+        <item name="colorPrimaryDark">#808080</item>
+    </style>
+
+    <style name="White.StatusBarTheme.SkyDRM" parent="Theme.Swipe.Back">
+        <item name="colorPrimaryDark">@android:color/white</item>
+    </style>
+
+    <style name="DarkGrey.StatusBarTheme.SkyDRM" parent="Theme.Swipe.Back">
+        <item name="colorPrimaryDark">#5E5E5E</item>
+    </style>
+
+    <array name="repository_bar_colors">
+        <item>#7daff4</item>
+        <item>#70b55b</item>
+        <item>#ff0088ff</item>
+    </array>
+
+    <style name="tab_style" parent="Widget.Design.TabLayout">
+        <item name="tabMaxWidth">@dimen/design_tab_max_width</item>
+        <!--<item name="tabMinWidth">@dimen/design_tab_min_width</item>-->
+        <item name="tabPaddingStart">24dp</item>
+        <item name="tabPaddingEnd">24dp</item>
+        <item name="tabIndicatorColor">@color/main_green_light</item>
+        <item name="tabIndicatorHeight">4dp</item>
+        <item name="tabTextAppearance">@style/CustomTabTextAppearance</item>
+        <item name="tabBackground">@android:color/white</item>
+        <item name="tabSelectedTextColor">@color/main_green_light</item>
+    </style>
+
+    <style name="CustomTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/text_size_16sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <!-- style for switch compat.-->
+    <style name="SwitchCompat.Control" parent="Theme.AppCompat.Light">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">#46bdbf</item>
+        <!-- inactive thumb color -->
+        <item name="colorSwitchThumbNormal">#f1f1f1</item>
+        <!-- inactive track color (30% transparency) -->
+        <item name="android:colorForeground">#42221f1f</item>
+    </style>
+
+    <style name="SwitchCompat.Default_view" parent="Theme.AppCompat.Light">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">#000000</item>
+        <!-- inactive thumb color -->
+        <item name="colorSwitchThumbNormal">#f1f1f1</item>
+        <!-- inactive track color (30% transparency) -->
+        <item name="android:colorForeground">#42221f1f</item>
+    </style>
+
+    <style name="SwitchCompat.Default_disable_share" parent="Theme.AppCompat.Light">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">#46bdbf</item>
+        <!-- inactive thumb color -->
+        <item name="colorSwitchThumbNormal">#000000</item>
+        <!-- inactive track color (30% transparency) -->
+        <item name="android:colorForeground">#000000</item>
+    </style>
+
+    <!-- for expiry window -->
+
+    <!--<style name="activity_popup" parent="android:Theme.Translucent.NoTitleBar">-->
+    <!--<item name="android:windowAnimationStyle">@style/AnimBottom</item>-->
+    <style name="activity_popup" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:windowAnimationStyle">@style/AnimBottom</item>
+    </style>
+
+
+    <style name="AnimBottom" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+    </style>
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textStyle">normal</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="TransparentBottomSheetStyle" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/SheetStyle</item>
+    </style>
+
+    <style name="SheetStyle" parent="android:Widget">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="behavior_peekHeight">auto</item>
+        <item name="behavior_hideable">true</item>
+        <item name="behavior_skipCollapsed">false</item>
+    </style>
+
+</resources>

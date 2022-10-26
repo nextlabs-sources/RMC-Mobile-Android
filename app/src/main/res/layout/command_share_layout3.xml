@@ -1,0 +1,189 @@
+<com.skydrm.rmc.ui.widget.customcontrol.SoftKeyBoardStatusView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <!-- title -->
+    <!--<include layout="@layout/command_operate_title3"/>-->
+    <include layout="@layout/command_operate_title" />
+    <!-- Content -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Black">
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/button_layout"
+            android:orientation="vertical">
+            <!-- change path -->
+            <include layout="@layout/command_change_path_layout3" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!-- display file preview -->
+                <LinearLayout
+                    android:id="@+id/ll_preview_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginStart="20dp"
+                    android:background="@color/white"
+                    android:orientation="vertical" />
+
+                <LinearLayout
+                    android:id="@+id/ll_sub_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+                    <!-- used to display rights and flowLayout emails, so here use ScrollView -->
+                    <!-- in order in implement scroll, here set height is 280dp -->
+                    <ScrollView
+                        android:id="@+id/scrollView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fadeScrollbars="false"
+                        android:scrollbars="vertical">
+                        <!-- scrollView children layout! -->
+                        <RelativeLayout
+                            android:id="@+id/rl_share_subView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <!--specify file rights-->
+                            <include layout="@layout/specify_rights_of_command_share_used_in_scrollview3" />
+
+                            <!--view nxl file rights: default set it as Gone -->
+                            <include layout="@layout/view_rights_of_share_nxl_file" />
+
+                            <!--  display validity expiry tip -->
+                            <LinearLayout
+                                android:id="@+id/validity_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/view_rights"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/dp20"
+                                    android:text="Validity: "
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/validity_content"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="" />
+                            </LinearLayout>
+
+                            <!-- share with edit -->
+                            <RelativeLayout
+                                android:id="@+id/share_with"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/validity_layout"
+                                android:background="@color/white"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:paddingEnd="20dp"
+                                android:paddingStart="20dp">
+
+                                <!-- share file and email address -->
+                                <TextView
+                                    android:id="@+id/share_file_with"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/Share_with" />
+
+                                <!-- hold many email address -->
+                                <com.skydrm.rmc.ui.widget.customcontrol.FlowLayout
+                                    android:id="@+id/flowLayout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/share_file_with"
+                                    android:layout_marginTop="10dp" />
+
+                                <!-- input emails layout-->
+                                <android.support.design.widget.TextInputLayout
+                                    android:id="@+id/share_input_layout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/flowLayout"
+                                    android:layout_marginEnd="@dimen/dp10"
+                                    android:layout_marginTop="@dimen/dp10">
+
+                                    <EditText
+                                        android:id="@+id/et_email_address"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_marginTop="15dp"
+                                        android:hint="@string/Enter_email_address"
+                                        android:imeOptions="flagNoExtractUi"
+                                        android:drawableEnd="@drawable/add_contact_btn"
+                                        android:inputType="text|textNoSuggestions|textMultiLine|textEmailAddress"
+                                        android:paddingStart="@dimen/dp10"
+                                        android:textSize="@dimen/text_size_12sp" />
+
+                                </android.support.design.widget.TextInputLayout>
+
+                                <!-- comment optional -->
+                                <TextView
+                                    android:id="@+id/comment"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/share_input_layout"
+                                    android:layout_marginTop="@dimen/dp5"
+                                    android:text="@string/Share_comment" />
+
+                                <!-- comment info -->
+                                <com.skydrm.rmc.ui.widget.customcontrol.CommentWidget
+                                    android:id="@+id/comment_widget"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/comment"
+                                    android:layout_marginEnd="@dimen/dp10"
+                                    android:layout_marginTop="@dimen/dp10"
+                                    android:orientation="vertical"
+                                    app:charLengthMax="@integer/max_250_characters"
+                                    app:hint="@string/add_your_message_here"
+                                    app:maxLines="@integer/max_lines_4" />
+
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </ScrollView>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+        <!-- share layout -->
+        <RelativeLayout
+            android:id="@+id/button_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white">
+
+            <Button
+                android:id="@+id/operate_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginStart="50dp"
+                android:background="@drawable/button_background_3"
+                android:text="@string/Share_protected_file"
+                android:textAllCaps="false"
+                android:textColor="@color/button_login_color" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</com.skydrm.rmc.ui.widget.customcontrol.SoftKeyBoardStatusView>

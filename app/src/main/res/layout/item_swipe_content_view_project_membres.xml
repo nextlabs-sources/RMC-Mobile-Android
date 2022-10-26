@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipe_content_view_project_file"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/dp15"
+        android:orientation="vertical">
+
+        <com.skydrm.rmc.ui.widget.avatar.AvatarView
+            android:id="@+id/members_round_Head"
+            android:layout_width="@dimen/dp45"
+            android:layout_height="@dimen/dp45"
+            android:src="@drawable/people_grey" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/dp15"
+        android:layout_toStartOf="@+id/members_info_button"
+        android:layout_toEndOf="@id/head"
+        android:orientation="vertical">
+
+        <!-- note: if use "android:maxLines= 1" to replace "android:singleLine="true"" ,
+         sometimes will crash in Nexus 6, Android 5.0.1 when the text contains some special chars;-->
+        <TextView
+            android:id="@+id/tv_file_name_project"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:text="name"
+            android:textAllCaps="false"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/text_size_18sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp10"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_action_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Joined"
+                android:textAllCaps="false"
+                android:textColor="@color/sub_text_color"
+                android:textSize="@dimen/text_size_12sp" />
+
+            <TextView
+                android:id="@+id/people_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp5"
+                android:ellipsize="middle"
+                android:singleLine="true"
+                android:text="Today"
+                android:textAllCaps="false"
+                android:textColor="@color/sub_text_color"
+                android:textSize="@dimen/text_size_12sp" />
+
+            <TextView
+                android:id="@+id/people_host"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp5"
+                android:background="@drawable/bg_host"
+                android:paddingStart="@dimen/dp5"
+                android:paddingTop="@dimen/dp2"
+                android:paddingEnd="@dimen/dp5"
+                android:paddingBottom="@dimen/dp2"
+                android:text="@string/HOST"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_10sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/members_info_button"
+        android:layout_width="@dimen/dp45"
+        android:layout_height="@dimen/dp45"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@null"
+        android:padding="@dimen/dp6"
+        android:scaleType="centerInside"
+        android:src="@drawable/icon_setting_v3" />
+</RelativeLayout>

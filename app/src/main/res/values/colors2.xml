@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="main_color_primary">#FFFFFF</color>
+    <color name="main_color_primary_dark">@android:color/darker_gray</color>
+    <color name="main_color_accent">@color/main_green_light</color>
+    <color name="normal_text_color">#4C4E64</color>
+    <color name="sub_text_blue">#75C2E9</color>
+    <color name="sub_text_color">#5F5B67</color>
+    <color name="sub_text_gray">#A5A6B1</color>
+    <color name="main_float_actionbtn_tint">@android:color/holo_red_light</color>
+    <color name="main_black_gray">#6D6D6D</color>
+    <color name="main_green_dark">#99CC33</color>
+
+    <!-- switch colors -->
+    <color name="disable_thumb_grey">#1c000000</color>
+
+    <!--for steward background-->
+
+    <color name="text_black">#4C4E64</color>
+    <color name="light_gray">#D3D3D3</color>
+
+
+    <color name="transparent">#00000000</color>
+    <color name="white">#ffffffff</color>
+    <color name="item_bg_color">#F2F2F2</color>
+
+    <color name="num_color">#F2994A</color>
+
+    <!--Special For Overlay-->
+    <color name="Black">#000000</color>
+    <color name="Red">#ff0000</color>
+    <color name="Blue">#0000ff</color>
+    <color name="Gray">#BEBEBE</color>
+    <color name="DimGray">#808A87</color>
+    <!--app color-->
+    <!--allen-->
+    <color name="White">#ffffffff</color>
+    <color name="green_light">#399649</color>
+    <color name="light_green">#66cc99</color>
+    <color name="transparent_Black">#cc000000</color>
+    <!--henry-->
+    <!--<color name="colorPrimary">#3F51B5</color>-->
+    <!--<color name="colorPrimaryDark">#303F9F</color>-->
+    <!--<color name="colorAccent">#FF4081</color>-->
+    <!--<color name="main_green_light">#55A467</color>-->
+    <color name="main_drak_light">#808080</color>
+    <color name="description2_color">#AED5A2</color>
+    <color name="button_login_color">#ffffff</color>
+    <color name="button_signup_endcolor">#68B159</color>
+    <color name="button_signup_startcolor">#379B4D</color>
+    <!--<color name="main_float_actionbtn_ripple">#34994C</color>-->
+    <color name="toolbar_backgroud">#34994C</color>
+    <color name="recyclerview_item_header_background">#F2F2F2</color>
+    <color name="recyclerview_item_divide_color">#dddddd</color>
+    <!--<color name="sub_text_color">#5F5B67</color>-->
+    <!--<color name="normal_text_color">#4C4E64</color>-->
+    <color name="repository_activity_toobar_title_color">#333333</color>
+    <color name="color_blue">#cc68B159</color>
+    <color name="main_green_light">#399649</color>
+    <color name="shallow_black">#666666</color>
+    <color name="view_files">@color/dark_blue</color>
+    <color name="projects_background">#ececf1</color>
+    <color name="gray_text">#9c9c9d</color>
+    <color name="gray_point">#e0e0e0</color>
+    <color name="av_default_border">@android:color/white</color>
+    <color name="av_bitmap_background_color">#424242</color>
+    <color name="today_text_color">#7b7b7b</color>
+
+
+    <color name="default_background">#333333</color>
+    <color name="default_textColor">#ffffff</color>
+
+    <color name="a_background">#DD212B</color>
+    <color name="a_textColor">#ffffff</color>
+
+    <color name="b_background">#FDCB8A</color>
+    <color name="b_textColor">#8F9394</color>
+
+    <color name="c_background">#98C44A</color>
+    <color name="c_textColor">#ffffff</color>
+
+    <color name="d_background">#1A5279</color>
+    <color name="d_textColor">#ffffff</color>
+
+    <color name="e_background">#EF6645</color>
+    <color name="e_textColor">#ffffff</color>
+
+    <color name="f_background">#72CAC1</color>
+    <color name="f_textColor">#ffffff</color>
+
+    <color name="g_background">#B7DCAF</color>
+    <color name="g_textColor">#8F9394</color>
+
+    <color name="h_background">#705A9E</color>
+    <color name="h_textColor">#ffffff</color>
+
+    <color name="i_background">#FCDA04</color>
+    <color name="i_textColor">#8F9394</color>
+
+    <color name="j_background">#ED1D7C</color>
+    <color name="j_textColor">#ffffff</color>
+
+    <color name="k_background">#F7AAA5</color>
+    <color name="k_textColor">#ffffff</color>
+
+    <color name="l_background">#4AB9E6</color>
+    <color name="l_textColor">#ffffff</color>
+
+    <color name="m_background">#603A18</color>
+    <color name="m_textColor">#ffffff</color>
+
+    <color name="n_background">#88B8BC</color>
+    <color name="n_textColor">#ffffff</color>
+
+    <color name="o_background">#ECA81E</color>
+    <color name="o_textColor">#ffffff</color>
+
+    <color name="p_background">#DAACD0</color>
+    <color name="p_textColor">#ffffff</color>
+
+    <color name="q_background">#6D6E73</color>
+    <color name="q_textColor">#ffffff</color>
+
+    <color name="r_background">#9D9FA2</color>
+    <color name="r_textColor">#ffffff</color>
+
+    <color name="s_background">#B5E3EE</color>
+    <color name="s_textColor">#ffffff</color>
+
+    <color name="t_background">#90633D</color>
+    <color name="t_textColor">#ffffff</color>
+
+    <color name="u_background">#BDAE9E</color>
+    <color name="u_textColor">#ffffff</color>
+
+    <color name="v_background">#C8B58E</color>
+    <color name="v_textColor">#ffffff</color>
+
+    <color name="w_background">#F8BDD2</color>
+    <color name="w_textColor">#ffffff</color>
+
+    <color name="x_background">#FED968</color>
+    <color name="x_textColor">#8F9394</color>
+
+    <color name="y_background">#F69679</color>
+    <color name="y_textColor">#ffffff</color>
+
+    <color name="z_background">#EE6769</color>
+    <color name="z_textColor">#ffffff</color>
+
+    <color name="background_0">#D3E050</color>
+    <color name="textColor_0">#8F9394</color>
+
+    <color name="background_1">#D8EBD5</color>
+    <color name="textColor_1">#8F9394</color>
+
+    <color name="background_2">#F27EA9</color>
+    <color name="textColor_2">#ffffff</color>
+
+    <color name="background_3">#1782C0</color>
+    <color name="textColor_3">#ffffff</color>
+
+    <color name="background_4">#CDECF9</color>
+    <color name="textColor_4">#8F9394</color>
+
+    <color name="background_5">#FDE9E6</color>
+    <color name="textColor_5">#8F9394</color>
+
+    <color name="background_6">#FCED95</color>
+    <color name="textColor_6">#8F9394</color>
+
+    <color name="background_7">#F99D21</color>
+    <color name="textColor_7">#ffffff</color>
+
+    <color name="background_8">#F9A85D</color>
+    <color name="textColor_8">#ffffff</color>
+
+    <color name="background_9">#BCE2D7</color>
+    <color name="textColor_9">#8F9394</color>
+
+    <color name="base_bg">#ffeeeeee</color>
+    <color name="base_msg_color">#ff999999</color>
+
+    <!-- custom toggle button color-->
+    <color name="onLineColor_default">#79C4BF</color>
+    <color name="onCircleColor_default">#009688</color>
+    <color name="offLineColor_default">#BCBCBD</color>
+    <color name="offCircleColor_default">#FFFFFF</color>
+
+    <color name="popup_window_bg">#34994C</color>
+    <color name="share_success_window_emails">#E6D792</color>
+
+    <color name="button_start_color">#359a4d</color>
+    <color name="button_end_color">#70B65B</color>
+    <color name="add_connect_bg">#387f43</color>
+    <color name="transparency_shade">#88888888</color>
+
+    <color name="watermark_change_color">#6CA4EF</color>
+    <color name="day_select_color">#6FCF97</color>
+    <color name="date_text_color">#959DB3</color>
+    <color name="week_text_color">#C1C7CD</color>
+    <color name="validity_text_color">#27AE60</color>
+    <color name="dark_blue">#2F80ED</color>
+</resources>

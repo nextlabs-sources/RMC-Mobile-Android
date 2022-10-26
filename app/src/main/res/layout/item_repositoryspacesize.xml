@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dp180"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:elevation="5dp"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:padding="@dimen/dp15">
+
+    <ImageView
+        android:id="@+id/repository_color_bar"
+        android:layout_width="@dimen/dp35"
+        android:layout_height="@dimen/dp6" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <TextView
+            android:id="@+id/repository_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5"
+            android:ellipsize="end"
+            android:maxLines="@integer/text_max_one_lines"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/text_size_18sp" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:src="@drawable/right_arrow_icon3" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/repository_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="@integer/text_max_one_lines"
+        android:textColor="@color/Black"
+        android:textSize="@dimen/text_size_18sp" />
+</LinearLayout>

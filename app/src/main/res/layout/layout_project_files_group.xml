@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/project_section_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/recyclerview_item_header_background"
+        android:gravity="center_vertical"
+        android:paddingStart="@dimen/dp15"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_size_17sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/recyclerview_item_divide_color" />
+
+    <include layout="@layout/layout_project_files_item" />
+</LinearLayout>

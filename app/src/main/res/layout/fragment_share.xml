@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/white"
+        app:navigationIcon="@drawable/icon_back_3" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_file_attr_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="@android:color/white"
+                android:baselineAligned="false"
+                android:elevation="1dp"
+                android:orientation="horizontal"
+                android:padding="13dp"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/size"
+                        android:textColor="#4F4F4F"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_size_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/last_modified_on"
+                        android:textColor="#4F4F4F"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tv_last_modified_time_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:textColor="@color/Black"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_place_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_revoke_rights"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:gravity="end|center_vertical"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="@string/revoke_all_rights"
+                android:textColor="#EB5757"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@android:color/white"
+                android:gravity="start|center_vertical"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="@string/share_with"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="#FFDADADA" />
+
+            <com.skydrm.rmc.ui.widget.customcontrol.FlowLayout
+                android:id="@+id/fl_sharing_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:minHeight="60dp"
+                android:paddingStart="10dp"
+                android:paddingTop="3dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="3dp" />
+
+            <TextView
+                android:id="@+id/tv_add_more"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:drawableStart="@drawable/icon_add_black3"
+                android:drawablePadding="10dp"
+                android:gravity="start|center_vertical"
+                android:minHeight="40dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="@string/add_more"
+                android:textColor="#2F80ED"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_sharing_history"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                android:background="@android:color/white"
+                android:drawableEnd="@drawable/icon_arrow_right_black3"
+                android:elevation="1dp"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="@string/sharing_history"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/bt_update_sharing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_common_imagebutton_2"
+            android:minHeight="50dp"
+            android:paddingStart="80dp"
+            android:paddingEnd="80dp"
+            android:text="@string/update_sharing"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</LinearLayout>

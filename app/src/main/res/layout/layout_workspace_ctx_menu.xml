@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_create_folder"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp48"
+        android:background="#FBFBFB"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/UserProfileText.Theme.SkyDRM"
+            android:layout_gravity="center_vertical"
+            android:drawableStart="@drawable/icon_add_folder3"
+            android:drawablePadding="@dimen/dp17"
+            android:text="@string/create_a_folder" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1_5"
+        android:background="#F4F4F4" />
+
+    <LinearLayout
+        android:id="@+id/ll_add_file"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp48"
+        android:background="#FBFBFB"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/UserProfileText.Theme.SkyDRM"
+            android:layout_gravity="center_vertical"
+            android:drawableStart="@drawable/icon_add_file3"
+            android:drawablePadding="@dimen/dp20"
+            android:text="@string/add_a_file" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1_5"
+        android:background="#F4F4F4" />
+
+    <LinearLayout
+        android:id="@+id/ll_scan_doc"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp48"
+        android:background="#FBFBFB"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/UserProfileText.Theme.SkyDRM"
+            android:layout_gravity="center_vertical"
+            android:drawableStart="@drawable/icon_scan_a_doc3"
+            android:drawablePadding="@dimen/dp20"
+            android:text="@string/scan_a_document" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#273238"
+        android:visibility="gone"
+        app:navigationIcon="@drawable/icon_back_white"
+        app:titleTextColor="@color/white">
+
+        <Button
+            android:id="@+id/bt_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:background="@null"
+            android:text="@string/cancel"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white" />
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:id="@+id/rl_path_site"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp30"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            android:drawableStart="@drawable/file_category_back"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:text="@string/back"
+            android:textColor="@color/Black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_file_path"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp30"
+            android:layout_toEndOf="@+id/tv_back"
+            android:ellipsize="middle"
+            android:gravity="center"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:singleLine="true"
+            android:textColor="@color/main_green_light"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <include layout="@layout/layout_common_files_recyclerview" />
+</LinearLayout>

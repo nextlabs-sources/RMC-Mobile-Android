@@ -1,0 +1,112 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.project.fragment.ProjectConfigurationFragment">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/project_configuration_toolbar3"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:elevation="@dimen/dp2"
+        android:minHeight="?attr/actionBarSize"
+        app:navigationIcon="@drawable/ic_menu_black_24dp_v3"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:theme="@style/ThemeOverlay.AppCompat.Light">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/to_switch_project_activity"
+                android:layout_width="@dimen/dp40"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@null"
+                android:src="@drawable/icon_down_arrow_black" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp20">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dp20">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/edText_name_textInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edText_name_of_the_project"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false"
+                    android:gravity="top"
+                    android:hint="@string/Name_of_the_project"
+                    android:inputType="textMultiLine"
+                    android:maxLength="@integer/max_50_characters"
+                    android:minLines="1"
+                    android:padding="@dimen/dp10"
+                    android:scrollbars="vertical"
+                    android:textSize="@dimen/text_size_16sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/editText_description_textInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10">
+
+                <EditText
+                    android:id="@+id/editText_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="true"
+                    android:gravity="top"
+                    android:hint="@string/Description"
+                    android:inputType="textMultiLine"
+                    android:maxLength="@integer/max_250_characters"
+                    android:maxLines="@integer/max_lines_6"
+                    android:minLines="1"
+                    android:padding="@dimen/dp10"
+                    android:scrollbars="vertical"
+                    android:textSize="@dimen/text_size_16sp" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <com.skydrm.rmc.ui.widget.customcontrol.CommentWidget
+                android:id="@+id/comment_widget"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp10"
+                android:orientation="vertical"
+                app:charLengthMax="@integer/max_250_characters"
+                app:hint="@string/Invitation_message"
+                app:maxLines="@integer/max_lines_4" />
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp8"
+                android:background="@drawable/bg_project_configuration_save"
+                android:enabled="false"
+                android:text="@string/save"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

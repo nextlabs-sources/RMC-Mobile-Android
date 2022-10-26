@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <NxlIcons>
+        <Icon
+            name=".png.nxl"
+            resource="R.drawable.icon_png_nxl" />
+        <Icon
+            name=".jpg.nxl"
+            resource="R.drawable.icon_jpg_nxl" />
+        <Icon
+            name=".pdf.nxl"
+            resource="R.drawable.icon_pdf_nxl" />
+        <Icon
+            name=".bmp.nxl"
+            resource="R.drawable.icon_bmp_nxl" />
+        <Icon
+            name=".doc.nxl"
+            resource="R.drawable.icon_doc_nxl" />
+        <Icon
+            name=".docx.nxl"
+            resource="R.drawable.icon_docx_nxl" />
+        <Icon
+            name=".dwg.nxl"
+            resource="R.drawable.icon_dwg_nxl" />
+        <Icon
+            name=".exe.nxl"
+            resource="R.drawable.icon_exe_nxl" />
+        <Icon
+            name=".gif.nxl"
+            resource="R.drawable.icon_gif_nxl" />
+        <Icon
+            name=".jt.nxl"
+            resource="R.drawable.icon_jt_nxl" />
+        <Icon
+            name=".txt.nxl"
+            resource="R.drawable.icon_txt_nxl" />
+        <Icon
+            name=".ppt.nxl"
+            resource="R.drawable.icon_ppt_nxl" />
+        <Icon
+            name=".pptx.nxl"
+            resource="R.drawable.icon_pptx_nxl" />
+        <Icon
+            name=".rtf.nxl"
+            resource="R.drawable.icon_rtf_nxl" />
+        <Icon
+            name=".tif.nxl"
+            resource="R.drawable.icon_tif_nxl" />
+        <Icon
+            name=".tiff.nxl"
+            resource="R.drawable.icon_tiff_nxl" />
+        <Icon
+            name=".vds.nxl"
+            resource="R.drawable.icon_vds_nxl" />
+        <Icon
+            name=".vsd.nxl"
+            resource="R.drawable.icon_vsd_nxl" />
+        <Icon
+            name=".vsdx.nxl"
+            resource="R.drawable.icon_vsdx_nxl" />
+        <Icon
+            name=".xls.nxl"
+            resource="R.drawable.icon_xls_nxl" />
+        <Icon
+            name=".xlsx.nxl"
+            resource="R.drawable.icon_xlsx_nxl" />
+        <Icon
+            name=".c.nxl"
+            resource="R.drawable.icon_c_nxl" />
+        <Icon
+            name=".cpp.nxl"
+            resource="R.drawable.icon_cpp_nxl" />
+        <Icon
+            name=".csv.nxl"
+            resource="R.drawable.icon_csv_nxl" />
+        <Icon
+            name=".docm.nxl"
+            resource="R.drawable.icon_docm_nxl" />
+        <Icon
+            name=".dotx.nxl"
+            resource="R.drawable.icon_dotx_nxl" />
+        <Icon
+            name=".err.nxl"
+            resource="R.drawable.icon_err_nxl" />
+        <Icon
+            name=".h.nxl"
+            resource="R.drawable.icon_h_nxl" />
+        <Icon
+            name=".java.nxl"
+            resource="R.drawable.icon_java_nxl" />
+        <Icon
+            name=".js.nxl"
+            resource="R.drawable.icon_js_nxl" />
+        <Icon
+            name=".log.nxl"
+            resource="R.drawable.icon_log_nxl" />
+        <Icon
+            name=".m.nxl"
+            resource="R.drawable.icon_m_nxl" />
+        <Icon
+            name=".md.nxl"
+            resource="R.drawable.icon_md_nxl" />
+        <Icon
+            name=".potm.nxl"
+            resource="R.drawable.icon_potm_nxl" />
+        <Icon
+            name=".potx.nxl"
+            resource="R.drawable.icon_potx_nxl" />
+        <Icon
+            name=".py.nxl"
+            resource="R.drawable.icon_py_nxl" />
+        <Icon
+            name=".rft.nxl"
+            resource="R.drawable.icon_rft_nxl" />
+        <Icon
+            name=".sql.nxl"
+            resource="R.drawable.icon_sql_nxl" />
+        <Icon
+            name=".swift.nxl"
+            resource="R.drawable.icon_swift_nxl" />
+        <Icon
+            name=".vb.nxl"
+            resource="R.drawable.icon_vb_nxl" />
+        <Icon
+            name=".xml.nxl"
+            resource="R.drawable.icon_xml_nxl" />
+        <Icon
+            name=".xmt_txt.nxl"
+            resource="R.drawable.icon_xmt_nxl" />
+        <Icon
+            name=".xlsb.nxl"
+            resource="R.drawable.icon_xlsb_nxl" />
+        <Icon
+            name=".xlsm.nxl"
+            resource="R.drawable.icon_xlsm_nxl" />
+        <Icon
+            name=".xlt.nxl"
+            resource="R.drawable.icon_xlt_nxl" />
+        <Icon
+            name=".xltm.nxl"
+            resource="R.drawable.icon_xltm_nxl" />
+        <Icon
+            name=".xltx.nxl"
+            resource="R.drawable.icon_xltx_nxl" />
+        <Icon
+            name=".properties.nxl"
+            resource="R.drawable.icon_prop_nxl" />
+        <Icon
+            name=".model.nxl"
+            resource="R.drawable.icon_model_nxl" />
+        <Icon
+            name=".zip.nxl"
+            resource="R.drawable.icon_zip_nxl" />
+        <Icon
+            name=".x_t.nxl"
+            resource="R.drawable.icon_xt_nxl" />
+        <Icon
+            name=".x_b.nxl"
+            resource="R.drawable.icon_xb_nxl" />
+        <Icon
+            name=".3dxml.nxl"
+            resource="R.drawable.icon_3dxm_nxl" />
+        <Icon
+            name=".catpart.nxl"
+            resource="R.drawable.icon_catp_nxl" />
+        <Icon
+            name=".catshape.nxl"
+            resource="R.drawable.icon_cats_nxl" />
+        <Icon
+            name=".cgr.nxl"
+            resource="R.drawable.icon_cgr_nxl" />
+        <Icon
+            name=".dxf.nxl"
+            resource="R.drawable.icon_dxf_nxl" />
+        <Icon
+            name=".ext.nxl"
+            resource="R.drawable.icon_ext_nxl" />
+        <Icon
+            name=".iges.nxl"
+            resource="R.drawable.icon_iges_nxl" />
+        <Icon
+            name=".igs.nxl"
+            resource="R.drawable.icon_igs_nxl" />
+        <Icon
+            name=".ipt.nxl"
+            resource="R.drawable.icon_ipt_nxl" />
+        <Icon
+            name=".json.nxl"
+            resource="R.drawable.icon_json_nxl" />
+        <Icon
+            name=".par.nxl"
+            resource="R.drawable.icon_par_nxl" />
+        <Icon
+            name=".prt.nxl"
+            resource="R.drawable.icon_prt_nxl" />
+        <Icon
+            name=".psm.nxl"
+            resource="R.drawable.icon_psm_nxl" />
+        <Icon
+            name=".rh.nxl"
+            resource="R.drawable.icon_rh_nxl" />
+        <Icon
+            name=".sldasm.nxl"
+            resource="R.drawable.icon_slda_nxl" />
+        <Icon
+            name=".sldprt.nxl"
+            resource="R.drawable.icon_sldp_nxl" />
+        <Icon
+            name=".step.nxl"
+            resource="R.drawable.icon_step_nxl" />
+        <Icon
+            name=".stl.nxl"
+            resource="R.drawable.icon_stl_nxl" />
+        <Icon
+            name=".stp.nxl"
+            resource="R.drawable.icon_stp_nxl" />
+        <Icon
+            name=".gdoc.nxl"
+            resource="R.drawable.icon_gdoc_nxl" />
+        <Icon
+            name=".hsf.nxl"
+            resource="R.drawable.icon_hsf_nxl" />
+        <Icon
+            name=".htm.nxl"
+            resource="R.drawable.icon_htm_nxl" />
+        <Icon
+            name=".html.nxl"
+            resource="R.drawable.icon_html_nxl" />
+        <Icon
+            name=".key.nxl"
+            resource="R.drawable.icon_key_nxl" />
+        <Icon
+            name=".mp3.nxl"
+            resource="R.drawable.icon_mp3_nxl" />
+        <Icon
+            name=".mp4.nxl"
+            resource="R.drawable.icon_mp4_nxl" />
+        <Icon
+            name=".numbers.nxl"
+            resource="R.drawable.icon_numb_nxl" />
+        <Icon
+            name=".pages.nxl"
+            resource="R.drawable.icon_page_nxl" />
+        <Icon
+            name=".mov.nxl"
+            resource="R.drawable.icon_mov_nxl" />
+        <Icon
+            name=".missing.nxl"
+            resource="R.drawable.icon_missing_nxl" />
+    </NxlIcons>
+    <NormalIcons>
+        <Icon
+            name=".pdf"
+            resource="R.drawable.icon_pdf_normal" />
+        <Icon
+            name=".ppa"
+            resource="R.drawable.icon_pdf_normal" />
+        <Icon
+            name=".pps"
+            resource="R.drawable.icon_pdf_normal" />
+        <Icon
+            name=".ppt"
+            resource="R.drawable.icon_ppt_normal" />
+        <Icon
+            name=".pot"
+            resource="R.drawable.icon_ppt_normal" />
+        <Icon
+            name=".ppam"
+            resource="R.drawable.icon_ppt_normal" />
+        <Icon
+            name=".ppsm"
+            resource="R.drawable.icon_ppt_normal" />
+        <Icon
+            name=".pptm"
+            resource="R.drawable.icon_ppt_normal" />
+        <Icon
+            name=".txt"
+            resource="R.drawable.icon_txt_normal" />
+        <Icon
+            name=".png"
+            resource="R.drawable.icon_png_normal" />
+        <Icon
+            name=".jpg"
+            resource="R.drawable.icon_jpg_normal" />
+        <Icon
+            name=".bmp"
+            resource="R.drawable.icon_bmp_normal" />
+        <Icon
+            name=".dwg"
+            resource="R.drawable.icon_dwg_normal" />
+        <Icon
+            name=".exe"
+            resource="R.drawable.icon_exe_normal" />
+        <Icon
+            name=".gif"
+            resource="R.drawable.icon_gif_normal" />
+        <Icon
+            name=".jt"
+            resource="R.drawable.icon_jt_normal" />
+        <Icon
+            name=".pptx"
+            resource="R.drawable.icon_pptx_normal" />
+        <Icon
+            name=".rtf"
+            resource="R.drawable.icon_rtf_normal" />
+        <Icon
+            name=".tif"
+            resource="R.drawable.icon_tif_normal" />
+        <Icon
+            name=".tiff"
+            resource="R.drawable.icon_tiff_normal" />
+        <Icon
+            name=".vds"
+            resource="R.drawable.icon_vds_normal" />
+        <Icon
+            name=".vsd"
+            resource="R.drawable.icon_vsd_normal" />
+        <Icon
+            name=".vsdx"
+            resource="R.drawable.icon_vsdx_normal" />
+        <Icon
+            name=".xls"
+            resource="R.drawable.icon_xls_normal" />
+        <Icon
+            name=".xlsx"
+            resource="R.drawable.icon_xlsx_normal" />
+        <Icon
+            name=".doc"
+            resource="R.drawable.icon_doc_normal" />
+        <Icon
+            name=".docx"
+            resource="R.drawable.icon_docx_normal" />
+        <Icon
+            name=".c"
+            resource="R.drawable.icon_c_normal" />
+        <Icon
+            name=".cpp"
+            resource="R.drawable.icon_cpp_normal" />
+        <Icon
+            name=".csv"
+            resource="R.drawable.icon_csv_normal" />
+        <Icon
+            name=".docm"
+            resource="R.drawable.icon_docm_normal" />
+        <Icon
+            name=".dotx"
+            resource="R.drawable.icon_dotx_normal" />
+        <Icon
+            name=".err"
+            resource="R.drawable.icon_err_normal" />
+        <Icon
+            name=".h"
+            resource="R.drawable.icon_h_normal" />
+        <Icon
+            name=".java"
+            resource="R.drawable.icon_java_normal" />
+        <Icon
+            name=".js"
+            resource="R.drawable.icon_js_normal" />
+        <Icon
+            name=".log"
+            resource="R.drawable.icon_log_normal" />
+        <Icon
+            name=".m"
+            resource="R.drawable.icon_m_normal" />
+        <Icon
+            name=".md"
+            resource="R.drawable.icon_md_normal" />
+        <Icon
+            name=".potm"
+            resource="R.drawable.icon_potm_normal" />
+        <Icon
+            name=".potx"
+            resource="R.drawable.icon_potx_normal" />
+        <Icon
+            name=".py"
+            resource="R.drawable.icon_py_normal" />
+        <Icon
+            name=".rft"
+            resource="R.drawable.icon_rft_normal" />
+        <Icon
+            name=".sql"
+            resource="R.drawable.icon_sql_normal" />
+        <Icon
+            name=".swift"
+            resource="R.drawable.icon_swift_normal" />
+        <Icon
+            name=".vb"
+            resource="R.drawable.icon_vb_normal" />
+        <Icon
+            name=".xml"
+            resource="R.drawable.icon_xml_normal" />
+        <Icon
+            name=".xmt_txt"
+            resource="R.drawable.icon_xmt_normal" />
+        <Icon
+            name=".xlsb"
+            resource="R.drawable.icon_xlsb_normal" />
+        <Icon
+            name=".xlsm"
+            resource="R.drawable.icon_xlsm_normal" />
+        <Icon
+            name=".xlt"
+            resource="R.drawable.icon_xlt_normal" />
+        <Icon
+            name=".xltm"
+            resource="R.drawable.icon_xltm_normal" />
+        <Icon
+            name=".xltx"
+            resource="R.drawable.icon_xltx_normal" />
+        <Icon
+            name=".properties"
+            resource="R.drawable.icon_prop_normal" />
+        <Icon
+            name=".model"
+            resource="R.drawable.icon_model_normal" />
+        <Icon
+            name=".zip"
+            resource="R.drawable.icon_zip_normal" />
+        <Icon
+            name=".x_t"
+            resource="R.drawable.icon_xt_normal" />
+        <Icon
+            name=".x_b"
+            resource="R.drawable.icon_xb_normal" />
+        <Icon
+            name=".3dxml"
+            resource="R.drawable.icon_3dxm_normal" />
+        <Icon
+            name=".catpart"
+            resource="R.drawable.icon_catp_normal" />
+        <Icon
+            name=".catshape"
+            resource="R.drawable.icon_cats_normal" />
+        <Icon
+            name=".cgr"
+            resource="R.drawable.icon_cgr_normal" />
+        <Icon
+            name=".dxf"
+            resource="R.drawable.icon_dxf_normal" />
+        <Icon
+            name=".ext"
+            resource="R.drawable.icon_ext_normal" />
+        <Icon
+            name=".iges"
+            resource="R.drawable.icon_iges_normal" />
+        <Icon
+            name=".igs"
+            resource="R.drawable.icon_igs_normal" />
+        <Icon
+            name=".ipt"
+            resource="R.drawable.icon_ipt_normal" />
+        <Icon
+            name=".ipt"
+            resource="R.drawable.icon_ipt_normal" />
+        <Icon
+            name=".json"
+            resource="R.drawable.icon_json_normal" />
+        <Icon
+            name=".par"
+            resource="R.drawable.icon_par_normal" />
+        <Icon
+            name=".prt"
+            resource="R.drawable.icon_prt_normal" />
+        <Icon
+            name=".psm"
+            resource="R.drawable.icon_psm_normal" />
+        <Icon
+            name=".rh"
+            resource="R.drawable.icon_rh_normal" />
+        <Icon
+            name=".sldasm"
+            resource="R.drawable.icon_slda_normal" />
+        <Icon
+            name=".sldprt"
+            resource="R.drawable.icon_sldp_normal" />
+        <Icon
+            name=".step"
+            resource="R.drawable.icon_step_normal" />
+        <Icon
+            name=".stl"
+            resource="R.drawable.icon_stl_normal" />
+        <Icon
+            name=".stp"
+            resource="R.drawable.icon_stp_normal" />
+        <Icon
+            name=".hsf"
+            resource="R.drawable.icon_hsf_normal" />
+        <Icon
+            name=".htm"
+            resource="R.drawable.icon_htm_normal" />
+        <Icon
+            name=".html"
+            resource="R.drawable.icon_html_normal" />
+        <Icon
+            name=".key"
+            resource="R.drawable.icon_key_normal" />
+        <Icon
+            name=".mp3"
+            resource="R.drawable.icon_mp3_normal" />
+        <Icon
+            name=".mp4"
+            resource="R.drawable.icon_mp4_normal" />
+        <Icon
+            name=".numbers"
+            resource="R.drawable.icon_numb_normal" />
+        <Icon
+            name=".pages"
+            resource="R.drawable.icon_page_normal" />
+        <Icon
+            name=".mov"
+            resource="R.drawable.icon_mov_normal" />
+        <Icon
+            name=".missing"
+            resource="R.drawable.icon_missing_normal" />
+    </NormalIcons>
+</resources>

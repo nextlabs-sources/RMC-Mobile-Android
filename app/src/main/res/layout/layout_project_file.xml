@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <RelativeLayout
+        android:id="@+id/project_files_path_widget"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white"
+        android:visibility="gone">
+
+        <ImageButton
+            android:id="@+id/project_files_folder_back"
+            android:layout_width="@dimen/dp40"
+            android:layout_height="@dimen/dp30"
+            android:background="@drawable/white"
+            android:gravity="center_vertical"
+            android:src="@drawable/file_category_back" />
+
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="@dimen/dp40"
+            android:layout_height="@dimen/dp30"
+            android:layout_toEndOf="@+id/project_files_folder_back"
+            android:gravity="center"
+            android:text="@string/back"
+            android:textColor="@color/Black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/project_files_folder_path"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp30"
+            android:layout_toEndOf="@+id/tv_back"
+            android:ellipsize="middle"
+            android:gravity="center"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:singleLine="true"
+            android:textColor="@color/main_green_light"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <include layout="@layout/layout_common_files_recyclerview" />
+</LinearLayout>

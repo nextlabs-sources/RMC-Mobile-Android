@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/radio_button_home2"
+            android:title="@string/navigation_item_home" />
+        <item
+            android:id="@+id/nav_summary_project"
+            android:icon="@drawable/icon_project_summary"
+            android:title="@string/summary" />
+        <item
+            android:id="@+id/nav_files_project"
+            android:icon="@drawable/icon_file_black"
+            android:title="@string/files" />
+        <item
+            android:id="@+id/nav_people_project"
+            android:icon="@drawable/icon_project_members"
+            android:title="@string/Members" />
+        <item
+            android:id="@+id/nav_people_configuration"
+            android:icon="@drawable/icon_setting_white3"
+            android:title="@string/Configuration" />
+    </group>
+</menu>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/viewActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- title for view page -->
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/white">
+
+        <ImageButton
+            android:id="@+id/imageView_close"
+            android:layout_width="@dimen/dp40"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:src="@drawable/icon_back_3" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/imageView_close"
+            android:orientation="vertical">
+
+            <!-- note: if use "android:maxLines= 1" to replace "android:singleLine="true"" ,
+             sometimes will crash in Nexus 6, Android 5.0.1 when the text contains some special chars;-->
+            <com.skydrm.rmc.utils.PatchedTextView
+                android:id="@+id/projects_files_info_fileName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="middle"
+                android:singleLine="true"
+                android:textColor="@color/Black"
+                android:textSize="18sp" />
+
+            <!-- now hide this. -->
+            <TextView
+                android:id="@+id/driveName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/White"
+                android:textSize="12sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView_menu"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/icon_setting_v3" />
+
+        <!-- currently hide this because of no supporting print!-->
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="54dp"
+            android:src="@drawable/print_icon_2"
+            android:tint="@color/White"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+    <!-- a split line-->
+    <View
+        android:id="@+id/horizontal_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/title"
+        android:background="#EFEFF1"></View>
+
+    <!--this field used to display file content, and also a shortcut menu will above it on the bottom-->
+    <RelativeLayout
+        android:id="@+id/view_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/horizontal_line">
+        <!-- simple remote view loading -->
+        <include layout="@layout/remote_loading_layout"/>
+   </RelativeLayout>
+
+    <com.skydrm.rmc.ui.widget.Spotlight
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/spot"
+        android:visibility="invisible" />
+    <!-- shortcut menu layout -->
+
+    <!--  dynamically control DragImageView location (relative location) in java code!! -->
+    <com.skydrm.rmc.ui.widget.customcontrol.DragImageView
+        android:id="@+id/arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="4dp"
+        android:src="@drawable/navi_arrow" />
+
+    <!--  dynamically control DragImageView location in java code!! -->
+    <com.skydrm.rmc.ui.widget.customcontrol.DragViewGroup
+        android:id="@+id/shortcut_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageButton
+            android:id="@+id/favorite_button"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:background="@drawable/bg_favorite_button_2"
+            android:src="@drawable/favorite_icon_2" />
+
+        <View
+            android:id="@+id/view_short_line"
+            android:layout_width="0.1dp"
+            android:layout_height="40dp"
+            android:background="@color/transparent_Black"></View>
+
+        <ImageButton
+            android:id="@+id/offline_button"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:background="@drawable/bg_offline_button_2"
+            android:src="@drawable/offline_icon_2" />
+
+        <ImageButton
+            android:id="@+id/protect_button"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:background="@drawable/bg_protect_button_2"
+            android:src="@drawable/protect_icon_2" />
+
+        <com.skydrm.rmc.ui.widget.customcontrol.DrawableCenterButton
+            android:id="@+id/share_button"
+            android:layout_width="120dp"
+            android:layout_height="42dp"
+            android:layout_gravity="start"
+            android:background="@drawable/bg_share_button_2"
+            android:drawablePadding="@dimen/activity_horizontal_margin"
+            android:drawableStart="@drawable/share_icon_2"
+            android:text="@string/view_activity_share"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+    </com.skydrm.rmc.ui.widget.customcontrol.DragViewGroup>
+
+    <!-- this used to display overlay -->
+    <FrameLayout
+        android:id="@+id/view_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title"
+        android:background="@android:color/transparent"
+        android:visibility="gone" />
+
+    <!-- will use it when display vds 3D -->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/id_recyclerview_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/background_dark"
+        android:scrollbarStyle="insideOverlay"
+        android:visibility="invisible" />
+
+</RelativeLayout>

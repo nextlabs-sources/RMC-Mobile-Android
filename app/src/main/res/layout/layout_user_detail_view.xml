@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F3F5"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/side_nav_bar"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp48"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/ib_close"
+                android:layout_width="@dimen/dp40"
+                android:layout_height="@dimen/dp40"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:background="@null"
+                android:src="@drawable/icon_back_3"
+                android:tint="@android:color/white" />
+
+            <TextView
+                android:id="@+id/tv_user_name_toolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dp80"
+                android:layout_marginStart="@dimen/dp80"
+                android:ellipsize="middle"
+                android:singleLine="true"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_20sp" />
+
+            <TextView
+                android:id="@+id/tv_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dp16"
+                android:text="@string/logout"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp160"
+            android:orientation="vertical">
+
+            <com.skydrm.rmc.ui.widget.avatar.AvatarView
+                android:id="@+id/user_avatar_detail_page"
+                android:layout_width="@dimen/dp92"
+                android:layout_height="@dimen/dp92"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="fitXY"
+                app:av_border_color="@android:color/white"
+                app:av_border_width="@dimen/dp2" />
+
+            <TextView
+                android:id="@+id/tv_select_avatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/dp15"
+                android:text="@string/changephoto"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_16sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp16"
+        android:layout_marginStart="@dimen/dp16"
+        android:layout_marginTop="@dimen/dp185"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_change_username_site"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/dp17"
+            android:paddingTop="@dimen/dp17">
+
+            <TextView
+                android:id="@id/tv_user_name"
+                style="@style/UserProfileText.Theme.SkyDRM"
+                android:drawableEnd="@drawable/icon_arrow_right_black3"
+                android:maxLength="150" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp48"
+            android:layout_marginTop="@dimen/dp1_5"
+            android:background="@android:color/white"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_user_email"
+                style="@style/UserProfileText.Theme.SkyDRM" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

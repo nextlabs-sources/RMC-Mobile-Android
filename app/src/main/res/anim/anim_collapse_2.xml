@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!--
+    duration（长整型）属性为动画持续时间。说明: 时间以毫秒为单位
+
+    fromXScale（浮点型）属性为动画起始时X坐标上的缩放尺寸   1.0 正常无缩放
+
+    fromYScale（浮点型）属性为动画起始时Y坐标上的缩放尺寸   0.0 收缩到没有
+
+    toXScale（浮点型） 属性为动画结束时X坐标上的缩放尺寸
+
+    toYScale（浮点型） 属性为动画结束时Y坐标上的缩放尺寸
+
+    pivotX（浮点型） 属性为动画相对于物件的X坐标的开始位置
+
+    pivotY（浮点型） 属性为动画相对于物件的Y坐标的开始位置
+    -->
+    <scale
+        android:duration="120"
+        android:fromXScale="1."
+        android:fromYScale="1."
+        android:pivotX="50%"
+        android:pivotY="0%"
+        android:toXScale="1."
+        android:toYScale="0." />
+
+</set>

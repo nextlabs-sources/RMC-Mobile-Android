@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ScrollView
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/subview_container">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/share_site"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp48"
+                android:background="#FBFBFB"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/UserProfileText.Theme.SkyDRM"
+                    android:layout_gravity="center_vertical"
+                    android:drawableStart="@drawable/icon_share3"
+                    android:drawablePadding="@dimen/dp20"
+                    android:text="@string/share_lowcase" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp1_5"
+                android:background="#F4F4F4" />
+
+            <LinearLayout
+                android:id="@+id/protect_site"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp48"
+                android:background="#FBFBFB"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/UserProfileText.Theme.SkyDRM"
+                    android:layout_gravity="center_vertical"
+                    android:drawableStart="@drawable/icon_protect3"
+                    android:drawablePadding="@dimen/dp20"
+                    android:text="@string/Protect" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp1_5"
+                android:background="#F4F4F4" />
+
+            <LinearLayout
+                android:id="@+id/connect_site"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp48"
+                android:background="#FBFBFB"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/UserProfileText.Theme.SkyDRM"
+                    android:layout_gravity="center_vertical"
+                    android:drawableStart="@drawable/icon_connect3"
+                    android:drawablePadding="@dimen/dp20"
+                    android:text="@string/Add_a_Repository" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp1_5"
+                android:background="#F4F4F4" />
+
+            <LinearLayout
+                android:id="@+id/create_new_project"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp48"
+                android:background="#FBFBFB"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/UserProfileText.Theme.SkyDRM"
+                    android:layout_gravity="center_vertical"
+                    android:drawableStart="@drawable/icon_add_black3"
+                    android:drawablePadding="26dp"
+                    android:text="@string/Create_New_Project" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/subContextContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FBFBFB"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="@dimen/dp120"
+                        android:layout_height="@dimen/dp1_5"
+                        android:layout_marginStart="@dimen/dp10"
+                        android:background="@android:color/black" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/create_new_folder_site"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp48"
+                    android:background="#FBFBFB"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/UserProfileText.Theme.SkyDRM"
+                        android:layout_gravity="center_vertical"
+                        android:drawableStart="@drawable/icon_add_folder3"
+                        android:drawablePadding="@dimen/dp17"
+                        android:text="@string/create_a_folder" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp1_5"
+                    android:background="#F4F4F4" />
+
+                <LinearLayout
+                    android:id="@+id/add_file_site"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp48"
+                    android:background="#FBFBFB"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/UserProfileText.Theme.SkyDRM"
+                        android:layout_gravity="center_vertical"
+                        android:drawableStart="@drawable/icon_add_file3"
+                        android:drawablePadding="@dimen/dp20"
+                        android:text="@string/add_a_file" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp1_5"
+                    android:background="#F4F4F4" />
+
+                <LinearLayout
+                    android:id="@+id/scan_doc_site"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp48"
+                    android:background="#FBFBFB"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/UserProfileText.Theme.SkyDRM"
+                        android:layout_gravity="center_vertical"
+                        android:drawableStart="@drawable/icon_scan_a_doc3"
+                        android:drawablePadding="@dimen/dp20"
+                        android:text="@string/scan_a_document" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dp2"
+                    android:visibility="gone">
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@null"
+                        android:src="@drawable/icon_cancel_white3" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/subview_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+</RelativeLayout>

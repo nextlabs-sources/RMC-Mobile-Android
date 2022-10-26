@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">PDF Viewer</string>
+    <string name="item_name_pdf_menu">PDF menu item</string>
+</resources>

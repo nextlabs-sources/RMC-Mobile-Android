@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/ll_protect_desc_manage_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp20"
+            android:layout_marginStart="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp10"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_protected_on"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shared_on"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_protect_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp6"
+                android:textColor="@color/repository_activity_toobar_title_color"
+                android:textSize="@dimen/text_size_16sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_up_arrow_my_vault"
+            android:layout_width="@dimen/dp40"
+            android:layout_height="@dimen/dp15"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:rotation="-90"
+            android:src="@drawable/right_arrow_icon_2"
+            android:tint="@color/Gray" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_file_link_manage_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp20"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp10"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/file_link"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1.8">
+
+            <TextView
+                android:id="@+id/tv_file_link"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp30"
+                android:layout_weight="1.2"
+                android:background="@drawable/rect_edit_text_background"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                />
+
+            <Button
+                android:id="@+id/bt_copy_link"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_weight="0.5"
+                android:background="@drawable/copy_link_btn_bg"
+                android:text="@string/copy_link"
+                android:textColor="@android:color/black" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp20"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp10"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_rights_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/file_rights"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp6"
+            android:text="@string/as_the_document_steward_you_have_all_rights_here_are_the_rights_granted_to_other_users"
+            android:textColor="@color/repository_activity_toobar_title_color"
+            android:textSize="@dimen/text_size_14sp" />
+    </LinearLayout>
+    <!-- rights -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp20"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp10"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp6">
+
+        <TextView
+            android:id="@+id/projects_file_info_tv_view"
+            android:layout_width="@dimen/dp70"
+            android:layout_height="@dimen/dp70"
+            android:background="@drawable/shareview_rights_icon_2"
+            android:gravity="center"
+            android:text="@string/protect_right_view"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_12sp" />
+
+        <TextView
+            android:id="@+id/projects_file_info_tv_edit"
+            android:layout_width="@dimen/dp70"
+            android:layout_height="@dimen/dp70"
+            android:background="@drawable/shareview_rights_icon_2"
+            android:gravity="center"
+            android:text="@string/protect_right_edit"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_12sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/projects_file_info_tv_print"
+            android:layout_width="@dimen/dp70"
+            android:layout_height="@dimen/dp70"
+            android:background="@drawable/shareview_rights_icon_2"
+            android:gravity="center"
+            android:text="@string/protect_right_print"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_12sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/projects_file_info_tv_share"
+            android:layout_width="@dimen/dp70"
+            android:layout_height="@dimen/dp70"
+            android:background="@drawable/shareview_rights_icon_2"
+            android:gravity="center"
+            android:text="@string/protect_right_share"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_12sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/projects_file_info_tv_download"
+            android:layout_width="@dimen/dp70"
+            android:layout_height="@dimen/dp70"
+            android:background="@drawable/shareview_rights_icon_2"
+            android:gravity="center"
+            android:text="@string/protect_right_download"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_10sp"
+            android:visibility="gone" />
+    </LinearLayout>
+    <!-- the divider line-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginEnd="@dimen/dp20"
+        android:layout_marginStart="@dimen/dp20"
+        android:background="@color/Gray" />
+
+    <!-- watermark,we use a textView and a checkbox to custom a new style box -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp20"
+        android:layout_marginStart="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/share_view_overlay"
+            android:textColor="#333333" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <CheckBox
+                android:id="@+id/cb_overlay"
+                style="@style/CustomCheckboxTheme"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="@dimen/dp15"
+                android:checked="false"
+                android:clickable="false" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

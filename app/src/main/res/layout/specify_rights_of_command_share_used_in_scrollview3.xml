@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/command_specify_rights"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingTop="@dimen/dp10">
+
+    <TextView
+        android:id="@+id/rights"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:text="@string/Specify_digital_rights"
+        android:textColor="@color/Black" />
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rights"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/Content" />
+
+    <!-- Content: View and Print -->
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/toggle_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:clickable="false"
+            android:textSize="20sp"
+            app:switchMinWidth="55dp"
+            app:switchPadding="20dp"
+            app:theme="@style/SwitchCompat.Default_view" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="5dp"
+            android:text="@string/View"
+            android:textColor="@color/Black" />
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/toggle_print"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:textSize="20sp"
+            app:switchMinWidth="55dp"
+            app:switchPadding="20dp"
+            app:theme="@style/SwitchCompat.Control" />
+
+        <TextView
+            android:id="@+id/textPrint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="5dp"
+            android:text="@string/Print"
+            android:textColor="@color/Black" />
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/toggle_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:textSize="20sp"
+            app:switchMinWidth="55dp"
+            app:switchPadding="20dp"
+            app:theme="@style/SwitchCompat.Control" />
+
+        <TextView
+            android:id="@+id/textEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="5dp"
+            android:text="@string/Edit"
+            android:textColor="@color/Black" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/collaboration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/Collaboration" />
+
+    <!-- Collaboration: Share and Download -->
+    <LinearLayout
+        android:id="@+id/ll_collaboration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/collaboration"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/toggle_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            app:switchMinWidth="55dp"
+            app:switchPadding="20dp"
+            app:theme="@style/SwitchCompat.Control" />
+
+        <TextView
+            android:id="@+id/textDownload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="5dp"
+            android:text="@string/Save_as"
+            android:textColor="@color/Black" />
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/toggle_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:textSize="20sp"
+            app:switchMinWidth="55dp"
+            app:switchPadding="20dp"
+            app:theme="@style/SwitchCompat.Control" />
+
+        <TextView
+            android:id="@+id/textShare"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="5dp"
+            android:text="@string/Re_share"
+            android:textColor="@color/Black" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/effect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_collaboration"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/Effect" />
+
+    <!-- Effect:Watermark -->
+    <LinearLayout
+        android:id="@+id/ll_watermark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/effect"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/toggle_watermark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            app:switchMinWidth="55dp"
+            app:switchPadding="20dp"
+            app:theme="@style/SwitchCompat.Control" />
+
+        <TextView
+            android:id="@+id/textWatermark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="15dp"
+            android:text="@string/Watermark"
+            android:textColor="@color/Black" />
+
+    </LinearLayout>
+
+    <!-- change watermark -->
+    <!-- init is Gone -->
+    <RelativeLayout
+        android:id="@+id/change_watermark_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_watermark"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/watermark_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/dp5"
+            android:layout_toStartOf="@+id/change_label"
+            android:textSize="@dimen/text_size_14sp" />
+
+        <TextView
+            android:id="@+id/change_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp10"
+            android:text="@string/watermark_change"
+            android:textColor="@color/watermark_change_color" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/Expiration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/change_watermark_layout"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:text="@string/Expiration" />
+
+    <!-- expiration layout -->
+    <LinearLayout
+        android:id="@+id/ll_expiration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Expiration"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp">
+
+        <android.support.v7.widget.SwitchCompat
+            android:id="@+id/toggle_validity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:clickable="false"
+            android:textSize="20sp"
+            app:switchMinWidth="55dp"
+            app:switchPadding="20dp"
+            app:theme="@style/SwitchCompat.Default_view" />
+
+        <TextView
+            android:id="@+id/text_validity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="15dp"
+            android:text="@string/Validity"
+            android:textColor="@color/Black" />
+    </LinearLayout>
+
+    <!-- change never expiry layout -->
+    <include
+        android:id="@+id/change_never_layout"
+        layout="@layout/change_never_timetable" />
+
+    <!-- change common expiry time -->
+    <include
+        android:id="@+id/change_common_layout"
+        layout="@layout/change_common_timetable" />
+
+    <!-- change absolute expiry time -->
+    <include layout="@layout/change_absolute_timetable" />
+
+</RelativeLayout>

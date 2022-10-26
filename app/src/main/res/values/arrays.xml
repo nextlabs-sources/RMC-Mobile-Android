@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="name_ascend">A to Z</string>
+    <string name="name_descend">Z to A</string>
+    <string name="size_ascend">Size</string>
+    <string name="size_descend">Size</string>
+    <string name="time_ascend">Modified date</string>
+    <string name="time_descend">Modified date</string>
+    <string name="shared_by_ascend">Shared By</string>
+    <string name="shared_by_descend">Shared By</string>
+    <string name="driver_type">Repository</string>
+    <string name="log_sort_operation_ascend">Operation</string>
+    <string name="log_sort_operation_descend">Operation</string>
+    <string name="log_sort_result_ascend">Result</string>
+    <string name="log_sort_result_descend">Result</string>
+
+    <string-array name="sort_menu_common">
+        <item>@string/time_descend</item>
+        <item>@string/name_ascend</item>
+        <item>@string/name_descend</item>
+        <item>@string/size_ascend</item>
+    </string-array>
+    <string-array name="sort_menu_myspace">
+        <item>@string/name_ascend</item>
+        <item>@string/size_ascend</item>
+        <item>@string/time_descend</item>
+        <item>@string/driver_type</item>
+    </string-array>
+    <string-array name="sort_menu_log">
+        <item>@string/time_descend</item>
+        <item>@string/name_ascend</item>
+        <item>@string/log_sort_operation_ascend</item>
+        <item>@string/log_sort_result_ascend</item>
+    </string-array>
+
+</resources>

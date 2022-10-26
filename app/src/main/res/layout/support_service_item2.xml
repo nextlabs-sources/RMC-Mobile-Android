@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:padding="2dp">
+
+        <ImageView
+            android:id="@+id/service_image"
+            android:layout_width="@dimen/dp35"
+            android:layout_height="@dimen/dp35"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="7dp"
+            android:layout_marginStart="7dp"
+            android:padding="@dimen/dp1_5"
+            android:src="@drawable/bottom_sheet_box"
+            android:tint="@android:color/black" />
+
+        <TextView
+            android:id="@+id/service_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/service_image"
+            android:layout_toStartOf="@+id/icon_navi"
+            android:maxLength="40"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@android:color/black" />
+
+        <ImageView
+            android:id="@+id/icon_navi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="7dp"
+            android:layout_marginStart="7dp"
+            android:background="@drawable/icon_arrow_right_black3" />
+
+        <View
+            android:id="@+id/divide_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp1"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="49dp"
+            android:background="#F2F3F5" />
+    </RelativeLayout>
+</LinearLayout>

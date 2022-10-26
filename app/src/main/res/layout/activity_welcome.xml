@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <com.skydrm.rmc.ui.widget.autoscrollviewpager.AutoScrollViewPager
+            android:id="@+id/splash_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/splash_dot_height"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dp40"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <include layout="@layout/layout_circle_dot_of_welcom_page_2" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp20"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/login"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_button_background_2"
+            android:paddingEnd="28dp"
+            android:paddingStart="28dp"
+            android:text="@string/login"
+            android:textAllCaps="false"
+            android:textColor="#202020" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp20"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_account" />
+
+            <TextView
+                android:id="@+id/signup"
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:autoLink="all"
+                android:text="@string/signup"
+                android:textColor="@color/button_start_color" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

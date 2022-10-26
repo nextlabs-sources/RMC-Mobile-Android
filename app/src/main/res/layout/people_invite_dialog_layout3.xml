@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/White">
+
+    <RelativeLayout
+        android:id="@+id/invited_member_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp60"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <ImageButton
+            android:id="@+id/invited_member_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp20"
+            android:background="@color/white"
+            android:padding="@dimen/dp10"
+            android:rotation="180"
+            android:scaleType="center"
+            android:src="@drawable/icon_close3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/invite_members"
+            android:textAllCaps="false"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/text_size_20sp" />
+
+        <Button
+            android:id="@+id/invite_people"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="@null"
+            android:paddingLeft="@dimen/dp25"
+            android:paddingRight="@dimen/dp25"
+            android:text="@string/Invite"
+            android:textAllCaps="false"
+            android:textColor="@color/Black"
+            android:textSize="@dimen/text_size_18sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/invited_member_bar"
+        android:layout_marginTop="@dimen/dp15"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dp20">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/editText_textInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="@dimen/dp15">
+
+            <EditText
+                android:id="@+id/people_invited_et_email_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/people_invited_flowLayout"
+                android:hint="@string/hint_msg_enter_email_requires"
+                android:imeOptions="flagNoExtractUi"
+                android:drawableEnd="@drawable/add_contact_btn"
+                android:inputType="text|textNoSuggestions|textMultiLine|textEmailAddress"
+                android:textSize="@dimen/text_size_12sp" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <com.skydrm.rmc.ui.widget.customcontrol.CommentWidget
+            android:id="@+id/comment_widget"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginEnd="@dimen/dp15"
+            android:orientation="vertical"
+            app:charLengthMax="@integer/max_250_characters"
+            app:hint="@string/Invitation_message"
+            app:maxLines="@integer/max_lines_4">
+
+        </com.skydrm.rmc.ui.widget.customcontrol.CommentWidget>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- hold many email address -->
+            <com.skydrm.rmc.ui.widget.customcontrol.FlowLayout
+                android:id="@+id/people_invited_flowLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="@dimen/dp15"
+                android:paddingBottom="@dimen/dp15" />
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

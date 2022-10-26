@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/project_menu_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_menu_go_to_all_project"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp48"
+            android:background="#FBFBFB"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/UserProfileText.Theme.SkyDRM"
+                android:layout_gravity="center_vertical"
+                android:drawableStart="@drawable/icon_go_to_all_projects"
+                android:drawablePadding="@dimen/dp20"
+                android:text="@string/project_ctx_menu_go_to_all_projects" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_divider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FBFBFB"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="@dimen/dp120"
+                android:layout_height="@dimen/dp1_5"
+                android:layout_marginStart="@dimen/dp10"
+                android:background="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_menu_add_file"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp48"
+            android:layout_margin="1dp"
+            android:background="#FBFBFB"
+            android:elevation="0.6dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/UserProfileText.Theme.SkyDRM"
+                android:layout_gravity="center_vertical"
+                android:drawableStart="@drawable/icon_add_file3"
+                android:drawablePadding="@dimen/dp20"
+                android:text="@string/project_ctx_menu_add_file" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_menu_invite_members"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp48"
+            android:layout_margin="1dp"
+            android:background="#FBFBFB"
+            android:elevation="0.6dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/UserProfileText.Theme.SkyDRM"
+                android:layout_gravity="center_vertical"
+                android:drawableStart="@drawable/radio_button_profile2"
+                android:drawablePadding="@dimen/dp20"
+                android:text="@string/project_ctx_menu_invite_members" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_menu_create_new_folder"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp48"
+            android:layout_margin="1dp"
+            android:background="#FBFBFB"
+            android:elevation="0.6dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/UserProfileText.Theme.SkyDRM"
+                android:layout_gravity="center_vertical"
+                android:drawableStart="@drawable/icon_add_folder3"
+                android:drawablePadding="@dimen/dp17"
+                android:text="@string/project_ctx_menu_create_a_new_folder" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_menu_scan_a_document"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp48"
+            android:background="#FBFBFB"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/UserProfileText.Theme.SkyDRM"
+                android:layout_gravity="center_vertical"
+                android:drawableStart="@drawable/icon_scan_a_doc3"
+                android:drawablePadding="@dimen/dp20"
+                android:text="@string/project_ctx_menu_scan_a_doc" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp48"
+        android:background="@android:color/white"
+        android:elevation="@dimen/dp1">
+
+        <TextView
+            android:id="@+id/file_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/dp5"
+            android:layout_marginEnd="@dimen/dp5"
+            android:ellipsize="middle"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_size_16sp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/view_file"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp1_5"
+        android:background="@android:color/white"
+        android:elevation="@dimen/dp1"
+        android:minHeight="@dimen/dp48"
+        android:text="@string/view_file"
+        android:textAllCaps="false"
+        android:textColor="@color/sub_text_blue"
+        android:textSize="@dimen/text_size_16sp" />
+
+    <Button
+        android:id="@+id/mark_offline"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp1_5"
+        android:background="@android:color/white"
+        android:elevation="@dimen/dp1"
+        android:minHeight="@dimen/dp48"
+        android:text="@string/Make_available_offline"
+        android:textAllCaps="false"
+        android:textColor="@color/mark_offline_color_selector"
+        android:textSize="@dimen/text_size_16sp" />
+
+    <Button
+        android:id="@+id/view_file_info"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp1_5"
+        android:background="@android:color/white"
+        android:elevation="@dimen/dp1"
+        android:minHeight="@dimen/dp48"
+        android:text="@string/view_file_info"
+        android:textAllCaps="false"
+        android:textColor="@color/sub_text_blue"
+        android:textSize="@dimen/text_size_16sp" />
+
+    <Button
+        android:id="@+id/share_file"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp1_5"
+        android:background="@android:color/white"
+        android:elevation="@dimen/dp1"
+        android:minHeight="@dimen/dp48"
+        android:text="@string/Re_share"
+        android:textAllCaps="false"
+        android:textColor="@color/sub_text_blue"
+        android:textSize="@dimen/text_size_16sp" />
+
+    <Button
+        android:id="@+id/view_activity"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp1_5"
+        android:background="@android:color/white"
+        android:elevation="@dimen/dp1"
+        android:minHeight="@dimen/dp48"
+        android:text="@string/view_activity"
+        android:textAllCaps="false"
+        android:textColor="@color/sub_text_blue"
+        android:textSize="@dimen/text_size_16sp" />
+
+</LinearLayout>

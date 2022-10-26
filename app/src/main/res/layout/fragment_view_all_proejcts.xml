@@ -1,0 +1,216 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.project.service.ViewAllProjectsActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@drawable/home_fragment_logo_in_tool_bar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/dp15"
+            android:paddingTop="@dimen/dp8"
+            android:paddingEnd="@dimen/dp15"
+            android:paddingBottom="@dimen/dp8">
+
+            <LinearLayout
+                android:id="@+id/pending_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/weight_1"
+                android:background="@drawable/pendingbg"
+                android:elevation="3dp"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/dp5"
+                android:paddingBottom="@dimen/dp5">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp5"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/pending"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:textColor="#F5AC6C"
+                        android:textSize="@dimen/text_size_23sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/pending_comment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_toEndOf="@+id/pending"
+                        android:gravity="start"
+                        android:textColor="#F5AC6C"
+                        android:textSize="@dimen/text_size_15sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp5"
+                    android:text="@string/Invitation"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/text_size_10sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp5"
+                    android:text="@string/PENDING"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/owner_by_me_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp8"
+                android:layout_marginEnd="@dimen/dp8"
+                android:layout_weight="@integer/weight_1"
+                android:background="@drawable/created_bg"
+                android:elevation="3dp"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/dp5"
+                android:paddingBottom="@dimen/dp5">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp5"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/create_by_me"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:textColor="#57C184"
+                        android:textSize="@dimen/text_size_23sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/create_by_me_comment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_toEndOf="@+id/create_by_me"
+                        android:gravity="start"
+                        android:textColor="#57C184"
+                        android:textSize="@dimen/text_size_15sp" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp5"
+                    android:text="@string/Created_by"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/text_size_10sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp5"
+                    android:text="@string/ME"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/owner_by_other_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="@integer/weight_1"
+                android:background="@drawable/invitedbg"
+                android:elevation="3dp"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/dp5"
+                android:paddingBottom="@dimen/dp5">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp5"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/invited_by_other"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:textColor="#5B9FF1"
+                        android:textSize="@dimen/text_size_23sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/invited_by_other_comment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="5dp"
+                        android:layout_toEndOf="@+id/invited_by_other"
+                        android:gravity="start"
+                        android:textColor="#5B9FF1"
+                        android:textSize="@dimen/text_size_15sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp5"
+                    android:text="@string/Invited_by"
+                    android:textColor="#333333"
+                    android:textSize="@dimen/text_size_10sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp5"
+                    android:text="@string/OTHERS"
+                    android:textColor="@color/Black"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/projects_background"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/list_project"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+</android.support.design.widget.CoordinatorLayout>

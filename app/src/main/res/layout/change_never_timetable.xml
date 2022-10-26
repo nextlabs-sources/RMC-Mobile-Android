@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/ll_expiration"
+    android:layout_marginStart="85dp"
+    android:layout_marginTop="@dimen/dp10"
+    android:orientation="horizontal">
+
+    <!-- Never expiry -->
+    <TextView
+        android:id="@+id/text_never_expire"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="@string/never_expire"
+        android:textColor="#828282"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/never_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp30"
+        android:text="@string/Change"
+        android:textColor="@color/watermark_change_color"
+        android:textSize="13sp"
+        android:textStyle="italic" />
+
+</LinearLayout>

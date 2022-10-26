@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.skydrm.rmc.ui.widget.swipelayout.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    xmlns:swipe="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipe_menu_layout_my_vault"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    swipe:contentViewId="@+id/swipe_content_view_my_vault"
+    swipe:leftViewId="@+id/swipe_left_view_my_vault"
+    swipe:rightViewId="@+id/swipe_right_view_my_vault"
+    app:ignore="NamespaceTypo">
+
+    <include layout="@layout/item_swipe_content_view_my_vault" />
+
+    <include layout="@layout/item_swipe_left_view_my_vault" />
+
+    <include layout="@layout/item_swipe_right_view_my_vault" />
+</com.skydrm.rmc.ui.widget.swipelayout.SwipeMenuLayout>

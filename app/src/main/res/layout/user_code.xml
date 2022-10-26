@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/userCode1Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="70dp"
+        android:onClick="toolbarButtonPressed"
+        android:text="@string/_1"
+        android:textColor="#ffffff"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <!--<TextView-->
+    <!--android:id="@+id/userCode4Button"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentEnd="true"-->
+    <!--android:layout_below="@+id/userCode3Button"-->
+    <!--android:onClick="toolbarButtonPressed"-->
+    <!--android:text="@string/_4"-->
+    <!--android:textColor="#ffffff"-->
+    <!--android:textSize="22sp"-->
+    <!--android:textStyle="bold" />-->
+
+    <TextView
+        android:id="@+id/userCode3Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/userCode2Button"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:onClick="toolbarButtonPressed"
+        android:text="@string/_3"
+        android:textColor="#ffffff"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/userCode2Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/userCode1Button"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:onClick="toolbarButtonPressed"
+        android:text="@string/_2"
+        android:textColor="#ffffff"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

@@ -1,0 +1,71 @@
+ext {
+    // false:assembly mode
+    // true:component mode
+    isComponent = false;
+    baseAppId = "com.skydrm.rmc"
+
+    androidConfig = [
+        compileSdkVersion:29,
+        minSdkVersion:21,
+        targetSdkVersion:29,
+        versionCode:25,
+        versionName:"10"
+    ]
+
+    saaSConfig = [
+        dimension:"default",
+        versionCode:25,
+        versionName:"2020.04",
+        applicationId:"${baseAppId}.saas"
+    ]
+
+    proConfig = [
+        dimension:"default",
+        versionCode:1,
+        versionName:"2020.04",
+        applicationId:"${baseAppId}.paas"
+    ]
+
+    sdkConfig = [
+        versionCode:2,
+        versionName:"1.1.0"
+    ]
+
+    sapConfig = [
+        versionCode:1,
+        versionName:"1.0"
+    ]
+
+    hoopsConfig = [
+        versionCode:1,
+        versionName:"1.0"
+    ]
+
+    pdfViewerConfig = [
+        versionCode:1,
+        versionName:"1.0"
+    ]
+
+    appIdConfig = [
+        app_pro:"${baseAppId}.paas",
+        app_saas:"${baseAppId}.saas"
+    ]
+
+    dependencies = [
+        findbugs:"com.google.code.findbugs:jsr305:1.3.9",
+        guava:"com.google.guava:guava:23.0-android",
+        appcompatv7:"com.android.support:appcompat-v7:28.0.0",
+        design:"com.android.support:design:28.0.0",
+        supportv4:"com.android.support:support-v4:28.0.0",
+        recyclerviewv7:"com.android.support:recyclerview-v7:28.0.0",
+        cardviewv7:"com.android.support:cardview-v7:28.0.0",
+        constraintlayout:"com.android.support.constraint:constraint-layout:1.1.3",
+        eventbus:"org.greenrobot:eventbus:3.0.0",
+        dropboxcoresdk:"com.dropbox.core:dropbox-core-sdk:3.0.3",
+        butterknife:"com.jakewharton:butterknife:8.4.0",
+        butterknifecompiler:"com.jakewharton:butterknife-compiler:8.4.0",
+        okhttp:"com.squareup.okhttp3:okhttp:3.4.2",
+        gson:"com.google.code.gson:gson:2.2.4",
+        pdfbox:"com.tom_roush:pdfbox-android:1.8.10.1"
+    ]
+}

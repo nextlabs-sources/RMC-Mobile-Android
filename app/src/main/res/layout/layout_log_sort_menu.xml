@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/dp8">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp20"
+            android:layout_marginStart="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp10"
+            android:text="@string/sort_by"
+            android:textColor="@color/normal_text_color"
+            android:textSize="@dimen/text_size_16sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp40"
+            android:layout_marginEnd="@dimen/dp20"
+            android:layout_marginStart="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp5"
+            android:background="@drawable/indicator_bg_my_vault"
+            android:orientation="horizontal">
+
+            <CheckedTextView
+                android:id="@+id/ctv_date"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/my_vault_indicator_item_selector"
+                android:gravity="center"
+                android:text="@string/date"
+                android:textAlignment="center"
+                android:textColor="@color/selector_sort_by_indicator_textcolor"
+                android:textSize="@dimen/text_size_16sp" />
+
+            <CheckedTextView
+                android:id="@+id/ctv_a2z"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/my_vault_indicator_item_selector"
+                android:gravity="center"
+                android:text="@string/a_to_z"
+                android:textAlignment="center"
+                android:textColor="@color/selector_sort_by_indicator_textcolor"
+                android:textSize="@dimen/text_size_16sp" />
+
+            <CheckedTextView
+                android:id="@+id/ctv_operation"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/my_vault_indicator_item_selector"
+                android:gravity="center"
+                android:text="@string/operation"
+                android:textAlignment="center"
+                android:textColor="@color/selector_sort_by_indicator_textcolor"
+                android:textSize="@dimen/text_size_16sp" />
+
+
+            <CheckedTextView
+                android:id="@+id/ctv_result"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/my_vault_indicator_item_selector"
+                android:gravity="center"
+                android:text="@string/result"
+                android:textAlignment="center"
+                android:textColor="@color/selector_sort_by_indicator_textcolor"
+                android:textSize="@dimen/text_size_16sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

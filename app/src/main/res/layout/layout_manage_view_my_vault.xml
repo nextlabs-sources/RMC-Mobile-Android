@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#88000000"
+    android:paddingBottom="@dimen/dp10"
+    android:paddingEnd="@dimen/dp10"
+    android:paddingStart="@dimen/dp10"
+    android:paddingTop="@dimen/dp10">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#e2e2e2">
+
+        <LinearLayout
+            android:id="@+id/ll_header_manage_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:weightSum="2.5">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp6"
+                android:layout_weight="1.5"
+                android:orientation="vertical"
+                android:padding="@dimen/dp6">
+
+                <TextView
+                    android:id="@+id/tv_manage_my_vault_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/manage"
+                    android:textColor="@color/repository_activity_toobar_title_color"
+                    android:textSize="@dimen/text_size_16sp" />
+
+                <TextView
+                    android:id="@+id/tv_file_name_manage_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp6"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dp6">
+
+                    <Button
+                        android:id="@+id/btn_cancel"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cancel_btn_bg_my_vault"
+                        android:text="@string/common_cancel_initcap"
+                        android:textColor="@color/repository_activity_toobar_title_color"
+                        android:textSize="@dimen/text_size_12sp"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/btn_ok"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp2"
+                        android:layout_marginStart="@dimen/dp2"
+                        android:background="@drawable/bg_button_my_vault_view"
+                        android:text="@string/common_ok_uppercase"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/text_size_12sp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <!-- the divider line-->
+        <View
+            android:id="@+id/view_divider_manage_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/ll_header_manage_view"
+            android:background="@color/Gray" />
+
+        <RelativeLayout
+            android:id="@+id/ll_file_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view_divider_manage_view"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_file_status_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="@dimen/dp20"
+                android:layout_marginStart="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp10"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_revoke_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingEnd="@dimen/dp10"
+                    android:paddingStart="@dimen/dp10"
+                    android:textColor="#AD4842"
+                    android:textSize="@dimen/text_size_16sp"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/expand_view_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_file_status"
+            android:layout_marginTop="@dimen/dp10">
+
+            <RelativeLayout
+                android:id="@+id/rl_expand_director"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dp60"
+                android:background="@android:color/white"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="File Information"
+                        android:textSize="@dimen/text_size_15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="View"
+                        android:textColor="@color/description2_color"
+                        android:textSize="@dimen/text_size_14sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_up_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dp18"
+                    android:rotation="90"
+                    android:src="@drawable/right_arrow_icon_2"
+                    android:tint="@color/Gray" />
+            </RelativeLayout>
+
+            <com.skydrm.rmc.ui.widget.customcontrol.ExpandView
+                android:id="@+id/expandview_my_vault"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_expand_director"
+                android:background="@android:color/white" />
+
+        </RelativeLayout>
+        <!-- the divider line-->
+
+        <!-- share file and email address -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/expand_view_container"
+            android:layout_marginTop="@dimen/dp10"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/share_file_with"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp6"
+                android:text="@string/share_with_more_people"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_size_16sp"
+                android:textStyle="bold" />
+            <!-- hold many email address -->
+
+            <com.skydrm.rmc.ui.widget.customcontrol.FlowLayout
+                android:id="@+id/flowLayout_vault_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp20"
+                android:layout_marginStart="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp10" />
+
+            <TextView
+                android:id="@+id/tv_email_input_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp20"
+                android:layout_marginStart="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp6"
+                android:text="@string/email_is_required"
+                android:textColor="@android:color/holo_red_dark"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/et_email_address_vault_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp40"
+                android:layout_marginEnd="@dimen/dp20"
+                android:layout_marginStart="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp10"
+                android:background="@drawable/rect_edit_text_bg_selector"
+                android:hint="@string/add_email_address"
+                android:imeOptions="flagNoExtractUi"
+                android:inputType="textMultiLine|textEmailAddress"
+                android:paddingEnd="@dimen/dp6"
+                android:paddingStart="@dimen/dp6"
+                android:textColorHint="@android:color/darker_gray"
+                android:textSize="@dimen/text_size_14sp" />
+
+
+            <Button
+                android:id="@+id/bt_revoke_all_rights"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp30"
+                android:layout_marginEnd="@dimen/dp20"
+                android:layout_marginStart="@dimen/dp20"
+                android:layout_marginTop="@dimen/dp40"
+                android:background="@drawable/revoke_button_bg"
+                android:padding="@dimen/dp15"
+                android:text="@string/revoke_all_rights"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </RelativeLayout>
+</ScrollView>

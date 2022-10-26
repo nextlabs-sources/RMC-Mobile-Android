@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_feature_page3"
+        android:layout_width="@dimen/dp200"
+        android:layout_height="@dimen/dp180"
+        android:layout_above="@+id/page3_text1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dp20"
+        android:src="@drawable/splash_activity_splash3_icon3" />
+
+    <TextView
+        android:id="@+id/page3_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/page3_text1"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_size_21sp" />
+
+    <TextView
+        android:id="@+id/page3_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/page3_text1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dp1_5"
+        android:layout_marginTop="@dimen/dp1_5"
+        android:text="@string/page3_text2"
+        android:textColor="@color/green_light"
+        android:textSize="@dimen/text_size_21sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/page3_text2"
+        android:layout_centerHorizontal="true"
+        android:text="@string/page3_text3"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/text_size_21sp" />
+
+
+</RelativeLayout>

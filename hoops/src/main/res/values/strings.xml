@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">hoops</string>
+    <string name="title_activity_model_view">HPS Sandbox File Viewer</string>
+
+    <string name="item">Item</string>
+
+    <string name="orbit_button">Orbit Button</string>
+    <string name="zoom_area_button">Zoom Area Button</string>
+    <string name="select_button">Select Button</string>
+    <string name="select_area_button">Select Area Button</string>
+    <string name="ss">SS</string>
+    <string name="sm">SM</string>
+    <string name="hl">HL</string>
+    <string name="fr">FR</string>
+    <string name="_2">2</string>
+    <string name="_1">1</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
+    <string name="operators">Operators</string>
+    <string name="modes">Modes</string>
+    <string name="user_code">User Code</string>
+    <string name="walk_button">Walk Button</string>
+    <string name="fly_button">Fly</string>
+</resources>

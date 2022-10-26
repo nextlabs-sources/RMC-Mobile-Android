@@ -1,0 +1,89 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!--<dimen name="dp10">10dp</dimen>-->
+
+    <!--SplashActivity-->
+    <dimen name="button_radius_5dp">5dp</dimen>
+    <dimen name="button_radius">8dp</dimen>
+    <dimen name="splash_dot_height">40dp</dimen>
+    <dimen name="circle_dot_margin_right">10dp</dimen>
+    <dimen name="scroll_dot_radius">5dp</dimen>
+    <!--<dimen name="fab_margin_bottom">80dp</dimen>-->
+    <!--<dimen name="fab_margin_right">40dp</dimen>-->
+    <dimen name="text_size_16sp">16sp</dimen>
+    <dimen name="margin_15dp">15dp</dimen>
+
+    <dimen name="dp1">1dp</dimen>
+    <dimen name="dp1_5">1.5dp</dimen>
+    <dimen name="dp2">2dp</dimen>
+    <dimen name="dp3">3dp</dimen>
+    <dimen name="dp5">5dp</dimen>
+    <dimen name="dp6">6dp</dimen>
+    <dimen name="dp10">10dp</dimen>
+    <dimen name="dp15">15dp</dimen>
+    <dimen name="dp12">12dp</dimen>
+    <dimen name="dp16">16dp</dimen>
+    <dimen name="dp18">18.0dp</dimen>
+    <dimen name="dp20">20dp</dimen>
+    <dimen name="dp25">25dp</dimen>
+    <dimen name="dp30">30dp</dimen>
+    <dimen name="dp32">32.0dp</dimen>
+    <dimen name="dp40">40dp</dimen>
+    <dimen name="dp45">45dp</dimen>
+    <dimen name="dp50">50dp</dimen>
+    <dimen name="dp60">60dp</dimen>
+    <dimen name="dp70">70dp</dimen>
+    <dimen name="dp80">80dp</dimen>
+    <dimen name="dp90">90dp</dimen>
+    <dimen name="dp120">120dp</dimen>
+    <dimen name="dp130">130dp</dimen>
+    <dimen name="dp150">150dp</dimen>
+    <dimen name="dp160">160dp</dimen>
+    <dimen name="dp180">180dp</dimen>
+    <dimen name="dp185">185dp</dimen>
+    <dimen name="dp200">200dp</dimen>
+    <dimen name="dp240">240dp</dimen>
+    <dimen name="dp250">250dp</dimen>
+    <dimen name="dp300">300dp</dimen>
+
+    <dimen name="av_default_border_width">2dp</dimen>
+
+    <!--dimen for text size-->
+    <dimen name="text_size_10sp">10sp</dimen>
+    <dimen name="text_size_12sp">12sp</dimen>
+    <dimen name="text_size_13sp">13sp</dimen>
+    <dimen name="text_size_14sp">14sp</dimen>
+    <dimen name="text_size_15sp">15sp</dimen>
+    <dimen name="text_size_17sp">17sp</dimen>
+    <dimen name="text_size_18sp">18sp</dimen>
+    <dimen name="text_size_20sp">20sp</dimen>
+    <dimen name="text_size_21sp">21sp</dimen>
+    <dimen name="text_size_23sp">23sp</dimen>
+    <dimen name="dp8">8dp</dimen>
+    <dimen name="dp17">17dp</dimen>
+    <dimen name="dp92">92dp</dimen>
+    <dimen name="dp48">48dp</dimen>
+    <dimen name="dp35">35dp</dimen>
+
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="common_loading_progress_size">35dp</dimen>
+    <dimen name="common_loading_text_margin">10dp</dimen>
+    <dimen name="common_loading_text_lines_spacing">5dp</dimen>
+    <dimen name="dp100">100dp</dimen>
+    <dimen name="dp96">96dp</dimen>
+    <dimen name="date_picker_month_text_size">14sp</dimen>
+    <dimen name="date_picker_day_of_week_text_size">12sp</dimen>
+    <dimen name="date_picker_day_text_size">12sp</dimen>
+    <dimen name="date_picker_month_height">56dp</dimen>
+    <dimen name="date_picker_day_of_week_height">26dp</dimen>
+    <dimen name="date_picker_day_height">30dp</dimen>
+    <dimen name="date_picker_day_width">44dp</dimen>
+    <dimen name="date_picker_day_selector_radius">20dp</dimen>
+    <dimen name="day_picker_padding_horizontal">20dp</dimen>
+    <dimen name="day_picker_padding_top">6dp</dimen>
+</resources>

@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">SkyDRM SDK</string>
+    <string name="edit">edit</string>
+    <string name="SignIn">Sign In</string>
+    <string name="SignUp">Sign Up</string>
+    <string name="tenantId">Tenant ID:</string>
+    <string name="common_ok_uppercase">OK</string>
+    <string name="common_cancel_initcap">Cancel</string>
+    <string name="Reset">Reset</string>
+    <string name="dialog_edit_msg">Please input new tenant ID:</string>
+    <string name="c_Loading_with3dots">Loading...</string>
+    <string name="default_tenant_name">skydrm.com</string>
+    <string name="msg_failed_get_rms_address">Failed to get server address, please check the network.</string>
+    <string name="notification_error_ssl_cert_invalid">The ssl certification is invalid</string>
+</resources>

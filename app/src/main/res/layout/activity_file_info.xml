@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <!-- title -->
+    <include layout="@layout/more_view_title3" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- file attributes: size and modified time -->
+            <LinearLayout
+                android:id="@+id/rl_fileAttribute"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:background="@android:color/white"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/dp10">
+                <!-- file size -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@integer/weight_2"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="@string/size"
+                        android:textSize="@dimen/text_size_16sp" />
+
+                    <TextView
+                        android:id="@+id/file_size"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:layout_marginBottom="3dp"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:textColor="@color/Black"
+                        android:textSize="@dimen/text_size_16sp" />
+
+                </LinearLayout>
+                <!-- modified time -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="@integer/weight_3"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="@string/last_modified_on"
+                        android:textSize="@dimen/text_size_16sp" />
+
+                    <TextView
+                        android:id="@+id/file_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:layout_marginBottom="3dp"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:textColor="@color/Black"
+                        android:textSize="@dimen/text_size_16sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_rights_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|top"
+                android:orientation="vertical" />
+
+            <include layout="@layout/read_rights_loading" />
+
+            <RelativeLayout
+                android:id="@+id/share_file_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp50"
+                android:layout_marginStart="@dimen/dp10"
+                android:layout_marginTop="@dimen/dp20"
+                android:layout_marginEnd="@dimen/dp10"
+                android:layout_marginBottom="@dimen/dp20"
+                android:background="@drawable/layout_boarder3"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/share_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dp20"
+                    android:src="@drawable/share_black_icon3" />
+
+                <TextView
+                    android:id="@+id/share_with_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dp60"
+                    android:text="@string/Share_file"
+                    android:textColor="@color/Black"
+                    android:textSize="@dimen/text_size_16sp" />
+
+                <ImageView
+                    android:id="@+id/share_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/dp20"
+                    android:src="@drawable/icon_arrow_right_black3" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

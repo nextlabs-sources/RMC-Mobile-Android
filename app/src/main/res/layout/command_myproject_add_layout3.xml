@@ -1,0 +1,157 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <!-- title -->
+    <!--<include layout="@layout/command_operate_title3" />-->
+    <include layout="@layout/command_operate_title" />
+    <!-- Content -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/Black"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/button_layout"
+            android:orientation="vertical">
+
+            <!-- change path -->
+            <include layout="@layout/command_change_path_layout3" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!-- display file preview -->
+                <LinearLayout
+                    android:id="@+id/ll_preview_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white"
+                    android:orientation="vertical" />
+
+                <LinearLayout
+                    android:id="@+id/ll_sub_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:text="@string/specify_user_defined_or_company_defined_rights"
+                            android:textColor="#333333"
+                            android:textSize="15sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="10dp"
+                            android:baselineAligned="false"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:id="@+id/rl_user_defined"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/rb_bg_myproject_add_layout_selected">
+
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:button="@null"
+                                    android:checked="true"
+                                    android:clickable="false"
+                                    android:drawableStart="@drawable/rb_button_selector"
+                                    android:drawablePadding="10dp"
+                                    android:paddingStart="10dp"
+                                    android:paddingTop="10dp"
+                                    android:paddingEnd="10dp"
+                                    android:paddingBottom="10dp"
+                                    android:text="@string/user_defined"
+                                    android:textColor="@color/rb_text_selector_myproject_add_layout"
+                                    android:textSize="15sp" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+
+                                android:id="@+id/rl_company_defined"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/rb_bg_selector_myproject_add_layout">
+
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:button="@null"
+                                    android:clickable="false"
+                                    android:drawableStart="@drawable/rb_button_selector"
+                                    android:drawablePadding="7dp"
+                                    android:paddingStart="8dp"
+                                    android:paddingTop="10dp"
+                                    android:paddingEnd="10dp"
+                                    android:paddingBottom="10dp"
+                                    android:text="@string/company_defined"
+                                    android:textColor="@color/rb_text_selector_myproject_add_layout"
+                                    android:textSize="15sp" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <com.skydrm.rmc.ui.widget.NoScrollViewPager
+                        android:id="@+id/nsvp_myproject_add_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white" />
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+        <!-- protect layout -->
+        <RelativeLayout
+            android:id="@+id/button_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white">
+
+            <Button
+                android:id="@+id/operate_button"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/button_background_3"
+                android:text="@string/Create_protected_file"
+                android:textAllCaps="false"
+                android:textColor="@color/button_login_color" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/projects_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/white"
+        android:elevation="@dimen/dp2"
+        android:minHeight="?attr/actionBarSize"
+        app:navigationIcon="@drawable/abc_btn_borderless_material"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:theme="@style/ThemeOverlay.AppCompat.Light">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/to_MySpace"
+                android:layout_width="@dimen/dp40"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@null"
+                android:rotation="-180"
+                android:src="@drawable/icon_down_arrow_black"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--<com.skydrm.rmc.ui.customControls.CustomSwipeToRefresh-->
+        <!--android:id="@+id/project_swipeRefreshLayout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+        <!--<com.skydrm.rmc.ui.customControls.PagerScrollView-->
+        <!--android:id="@+id/project_scrollView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="@color/projects_background"-->
+        <!--android:paddingLeft="@dimen/dp15">-->
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/projects_background"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/projects_background"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/go_to_MySpace"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp15"
+                    android:layout_marginStart="@dimen/dp15"
+                    android:layout_marginTop="@dimen/dp10"
+                    android:background="@color/white"
+                    android:padding="@dimen/dp10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:text="@string/Go_to"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="@dimen/text_size_16sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:background="@color/white"
+                        android:text="@string/mySpace"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_size_16sp"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_switch_to"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp15"
+                    android:layout_marginTop="@dimen/dp15"
+                    android:text="@string/Switch_to"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/text_size_16sp"/>
+
+                <include layout="@layout/projects_view"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <!--</com.skydrm.rmc.ui.customControls.PagerScrollView>-->
+
+        <!--</com.skydrm.rmc.ui.customControls.CustomSwipeToRefresh>-->
+
+        <include
+            layout="@layout/layout_loading"
+            android:visibility="gone"/>
+
+        <include
+            layout="@layout/layout_loading"
+            android:visibility="gone"/>
+
+        <include
+            android:id="@+id/project_home_empty_view"
+            layout="@layout/common_empty_project"
+            android:visibility="gone"/>
+
+        <include
+            android:id="@+id/project_home_netWork_exception_view"
+            layout="@layout/common_project_network_exception"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+
+</LinearLayout>

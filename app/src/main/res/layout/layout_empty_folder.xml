@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F3F5">
+
+    <ImageView
+        android:id="@+id/nxfile_empty_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@android:color/transparent"
+        android:src="@drawable/icon_empty_folder" />
+
+    <TextView
+        android:id="@+id/nxfile_empty_descript"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nxfile_empty_icon"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/transparent"
+        android:gravity="center"
+        android:text="@string/empty_folder"
+        android:textColor="@color/sub_text_color"
+        android:textSize="@dimen/text_size_20sp"
+        android:textStyle="bold" />
+</RelativeLayout>

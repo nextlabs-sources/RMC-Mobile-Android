@@ -1,0 +1,180 @@
+apply plugin: 'com.android.application'
+
+def keyproperty = System.getenv("SKYDRM_ANDROID_RELEASE_KEY_PROPERTY")
+def keystoreProperties = new Properties()
+def keystorePropertiesFile = file(keyproperty)
+if (keystorePropertiesFile.exists()) {
+   keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+}
+
+def androidConfig = rootProject.ext.androidConfig
+def saasConfig = rootProject.ext.saaSConfig
+def proConfig = rootProject.ext.proConfig
+def dependencyConfig = rootProject.ext.dependencies
+
+android {
+    compileSdkVersion androidConfig.compileSdkVersion
+    defaultConfig {
+        applicationId baseAppId
+        minSdkVersion androidConfig.minSdkVersion
+        targetSdkVersion androidConfig.targetSdkVersion
+        testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
+        /* resolve build problem: Execution failed to task ':app:transfromClassesWithDexForDebug' */
+        /* http://stackoverflow.com/questions/33717886/errorexecution-failed-for-task-apptransformclasseswithdexfordebug */
+        multiDexEnabled true
+    }
+
+    splits {
+        // Configures multiple APKs based on ABI.
+        abi {
+            // Enables building multiple APKs per ABI.
+            enable true;
+
+            // By default all ABIs are included, so use reset() and include to specify that we only
+            // want APKs for armeabi-v7a and arm64-v8a.
+            // Resets the list of ABIs that Gradle should create APKs for to none.
+            reset()
+
+            // Specifies a list of ABIs that Gradle should create APKs for.
+            include "armeabi-v7a", "arm64-v8a"
+
+            // Specifies that we do not want to also generate a universal APK that includes all ABIs.
+            universalApk false
+        }
+    }
+
+    signingConfigs {
+        config {
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+            storePassword 'android'
+            storeFile file('debug.keystore')
+        }
+        release {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            zipAlignEnabled true
+            shrinkResources false
+        }
+        debug {
+            signingConfig signingConfigs.config
+        }
+    }
+    productFlavors {
+        pro {
+            dimension = proConfig.dimension
+            versionCode proConfig.versionCode
+            versionName proConfig.versionName
+            applicationId = proConfig.applicationId
+            manifestPlaceholders = [authority_name: "${applicationId}.fileprovider"]
+        }
+        saas {
+            dimension = saasConfig.dimension
+            versionCode saasConfig.versionCode
+            versionName saasConfig.versionName
+            applicationId = saasConfig.applicationId
+            manifestPlaceholders = [authority_name: "${applicationId}.fileprovider"]
+        }
+    }
+    flavorDimensions 'default'
+
+    // fix Error:Conflict with depencency 'com.google.code.findbugs:jar***'
+    // http://stackoverflow.com/questions/37347326/errorconflict-with-dependency-com-google-code-findbugsjsr305
+    configurations.all {
+        resolutionStrategy.force dependencyConfig.findbugs
+    }
+}
+
+// Map for the version code that gives each ABI a value.
+ext.abiCodes = ['armeabi-v7a': 1, 'arm64-v8a': 2]
+
+import com.android.build.OutputFile
+
+// For each APK output variant, override versionCode with a combination of
+// ext.abiCodes * 1000 + variant.versionCode. In this example, variant.versionCode
+// is equal to defaultConfig.versionCode. If you configure product flavors that
+// define their own versionCode, variant.versionCode uses that value instead.
+android.applicationVariants.all { variant ->
+    // Assigns a different version code for each output APK
+    // other than the universal APK.
+    variant.outputs.each { output ->
+        // Stores the value of ext.abiCodes that is associated with the ABI for this variant.
+        def baseAbiVersionCode =
+                // Determines the ABI for this variant and returns the mapped value.
+                project.ext.abiCodes.get(output.getFilter(OutputFile.ABI))
+        // Because abiCodes.get() returns null for ABIs that are not mapped by ext.abiCodes,
+        // the following code does not override the version code for universal APKs.
+        // However, because we want universal APKs to have the lowest version code,
+        // this outcome is desirable.
+        if (baseAbiVersionCode != null) {
+            // Assigns the new version code to versionCodeOverride, which changes the version code
+            // for only the output APK, not for the variant itself. Skipping this step simply
+            // causes Gradle to use the value of variant.versionCode for the APK.
+            output.versionCodeOverride =
+                    baseAbiVersionCode * 1000 + variant.versionCode
+        }
+    }
+}
+
+def static getTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+
+dependencies {
+    // for local unit test
+    testImplementation 'junit:junit:4.12'
+    // for test
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    }
+    // for skyDRM sdk
+    implementation project(':skydrmsdk')
+
+    // for hoops sdk
+    implementation project(':hoops')
+
+    // for sap sdk.
+    implementation project(':sap')
+
+    // for pdf visualize.
+    implementation project(':pdfviewer')
+    //
+    // Include Android officials
+    //
+    implementation dependencyConfig.appcompatv7
+    implementation dependencyConfig.design
+    implementation dependencyConfig.supportv4
+    implementation dependencyConfig.recyclerviewv7
+    implementation dependencyConfig.cardviewv7
+    implementation dependencyConfig.constraintlayout
+
+    //
+    // Include Google officials
+    // https://mvnrepository.com/artifact/com.google.api.client/google-api-client-util
+    api 'com.google.api.client:google-api-client-util:1.2.3-alpha'
+    // https://mvnrepository.com/artifact/com.google.guava/guava
+    // for to use com.google.common.io.files
+    api dependencyConfig.guava
+    //
+    //  3rd party  event bus
+    //
+    api dependencyConfig.eventbus
+    // dropbox sdk
+    api dependencyConfig.dropboxcoresdk
+    //
+    //  3rd party  butterKnife
+    //
+    api dependencyConfig.butterknife
+    annotationProcessor dependencyConfig.butterknifecompiler
+    implementation files('libs/jcifs-1.3.19.jar')
+}
